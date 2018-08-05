@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- The identifier that must be unique within the hosting gallery -->
+        <id>$id$</id>
+        <title>Cloudmersive Validate API Client</title>
+
+        <!-- The package version number that is used when resolving dependencies -->
+        <version>$version$</version>
+
+        <iconUrl>https://cloudmersive.com/images/cmsdk.png</iconUrl>
+        <authors>Cloudmersive</authors>
+
+        <!-- Owners are typically nuget.org identities that allow gallery
+             users to earily find other packages by the same owners.  -->
+        <owners>Cloudmersive</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <developmentDependency>false</developmentDependency>
+
+        <!-- The description can be used in package manager UI. Note that the
+             nuget.org gallery uses information you add in the portal. -->
+        <description>The validation APIs help you validate data. Check if an E-mail address is real. Check if a domain is real. Check up on an IP address, and even where it is located. All this and much more is available in the validation API.</description>
+
+        <!-- Dependencies are automatically installed when the package is installed -->
+        <dependencies>
+
+            <dependency id="NewtonSoft.Json" version="10.0.3" />
+            <dependency id="JsonSubTypes" version="1.2.0" />
+            <dependency id="RestSharp" version="105.1.0" />
+
+        </dependencies>
+    </metadata>
+    <files>
+
+        <!-- A readme.txt will be displayed when the package is installed -->
+        <file src="..\..\README.md" target="" />
+        <file src="..\..\docs\**\*.*" target="docs" />
+
+    </files>
+</package>
