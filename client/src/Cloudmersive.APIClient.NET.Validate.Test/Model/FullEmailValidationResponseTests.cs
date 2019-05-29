@@ -82,6 +82,46 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         {
             // TODO unit test for the property 'MailServerUsedForValidation'
         }
+        /// <summary>
+        /// Test the property 'ValidSyntax'
+        /// </summary>
+        [Test]
+        public void ValidSyntaxTest()
+        {
+            // TODO unit test for the property 'ValidSyntax'
+        }
+        /// <summary>
+        /// Test the property 'ValidDomain'
+        /// </summary>
+        [Test]
+        public void ValidDomainTest()
+        {
+            // TODO unit test for the property 'ValidDomain'
+        }
+        /// <summary>
+        /// Test the property 'ValidSMTP'
+        /// </summary>
+        [Test]
+        public void ValidSMTPTest()
+        {
+            // TODO unit test for the property 'ValidSMTP'
+        }
+        /// <summary>
+        /// Test the property 'IsCatchallDomain'
+        /// </summary>
+        [Test]
+        public void IsCatchallDomainTest()
+        {
+            // TODO unit test for the property 'IsCatchallDomain'
+        }
+        /// <summary>
+        /// Test the property 'Domain'
+        /// </summary>
+        [Test]
+        public void DomainTest()
+        {
+            // TODO unit test for the property 'Domain'
+        }
 
     }
 

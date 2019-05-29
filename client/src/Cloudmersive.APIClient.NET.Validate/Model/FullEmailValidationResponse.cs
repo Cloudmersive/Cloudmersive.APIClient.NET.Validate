@@ -33,18 +33,28 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FullEmailValidationResponse" /> class.
         /// </summary>
-        /// <param name="ValidAddress">True if the email address is valid, false otherwise.</param>
+        /// <param name="ValidAddress">True if the email address is valid overall, false otherwise.</param>
         /// <param name="MailServerUsedForValidation">Email server connected to for verification.</param>
-        public FullEmailValidationResponse(bool? ValidAddress = default(bool?), string MailServerUsedForValidation = default(string))
+        /// <param name="ValidSyntax">True if the syntax of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
+        /// <param name="ValidDomain">True if the domain name of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
+        /// <param name="ValidSMTP">True if the email address was verified by the remote server, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
+        /// <param name="IsCatchallDomain">True if the domain is a catch-all domain name, false otherwise.  Catch-all domain names, while rare, always accept inbound email to ensure they do not lose any potentially useful emails.  Catch-all domain names can occassionally be configured to first accept and store all inbound email, but then later send a bounce email back to the sender after a delayed period of time..</param>
+        /// <param name="Domain">Domain name of the email address.</param>
+        public FullEmailValidationResponse(bool? ValidAddress = default(bool?), string MailServerUsedForValidation = default(string), bool? ValidSyntax = default(bool?), bool? ValidDomain = default(bool?), bool? ValidSMTP = default(bool?), bool? IsCatchallDomain = default(bool?), string Domain = default(string))
         {
             this.ValidAddress = ValidAddress;
             this.MailServerUsedForValidation = MailServerUsedForValidation;
+            this.ValidSyntax = ValidSyntax;
+            this.ValidDomain = ValidDomain;
+            this.ValidSMTP = ValidSMTP;
+            this.IsCatchallDomain = IsCatchallDomain;
+            this.Domain = Domain;
         }
         
         /// <summary>
-        /// True if the email address is valid, false otherwise
+        /// True if the email address is valid overall, false otherwise
         /// </summary>
-        /// <value>True if the email address is valid, false otherwise</value>
+        /// <value>True if the email address is valid overall, false otherwise</value>
         [DataMember(Name="ValidAddress", EmitDefaultValue=false)]
         public bool? ValidAddress { get; set; }
 
@@ -56,6 +66,41 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public string MailServerUsedForValidation { get; set; }
 
         /// <summary>
+        /// True if the syntax of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one.
+        /// </summary>
+        /// <value>True if the syntax of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one.</value>
+        [DataMember(Name="Valid_Syntax", EmitDefaultValue=false)]
+        public bool? ValidSyntax { get; set; }
+
+        /// <summary>
+        /// True if the domain name of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one.
+        /// </summary>
+        /// <value>True if the domain name of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one.</value>
+        [DataMember(Name="Valid_Domain", EmitDefaultValue=false)]
+        public bool? ValidDomain { get; set; }
+
+        /// <summary>
+        /// True if the email address was verified by the remote server, false otherwise.  This is one component of ValidAddress, but not the only one.
+        /// </summary>
+        /// <value>True if the email address was verified by the remote server, false otherwise.  This is one component of ValidAddress, but not the only one.</value>
+        [DataMember(Name="Valid_SMTP", EmitDefaultValue=false)]
+        public bool? ValidSMTP { get; set; }
+
+        /// <summary>
+        /// True if the domain is a catch-all domain name, false otherwise.  Catch-all domain names, while rare, always accept inbound email to ensure they do not lose any potentially useful emails.  Catch-all domain names can occassionally be configured to first accept and store all inbound email, but then later send a bounce email back to the sender after a delayed period of time.
+        /// </summary>
+        /// <value>True if the domain is a catch-all domain name, false otherwise.  Catch-all domain names, while rare, always accept inbound email to ensure they do not lose any potentially useful emails.  Catch-all domain names can occassionally be configured to first accept and store all inbound email, but then later send a bounce email back to the sender after a delayed period of time.</value>
+        [DataMember(Name="IsCatchallDomain", EmitDefaultValue=false)]
+        public bool? IsCatchallDomain { get; set; }
+
+        /// <summary>
+        /// Domain name of the email address
+        /// </summary>
+        /// <value>Domain name of the email address</value>
+        [DataMember(Name="Domain", EmitDefaultValue=false)]
+        public string Domain { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +110,11 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             sb.Append("class FullEmailValidationResponse {\n");
             sb.Append("  ValidAddress: ").Append(ValidAddress).Append("\n");
             sb.Append("  MailServerUsedForValidation: ").Append(MailServerUsedForValidation).Append("\n");
+            sb.Append("  ValidSyntax: ").Append(ValidSyntax).Append("\n");
+            sb.Append("  ValidDomain: ").Append(ValidDomain).Append("\n");
+            sb.Append("  ValidSMTP: ").Append(ValidSMTP).Append("\n");
+            sb.Append("  IsCatchallDomain: ").Append(IsCatchallDomain).Append("\n");
+            sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +158,31 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.MailServerUsedForValidation == input.MailServerUsedForValidation ||
                     (this.MailServerUsedForValidation != null &&
                     this.MailServerUsedForValidation.Equals(input.MailServerUsedForValidation))
+                ) && 
+                (
+                    this.ValidSyntax == input.ValidSyntax ||
+                    (this.ValidSyntax != null &&
+                    this.ValidSyntax.Equals(input.ValidSyntax))
+                ) && 
+                (
+                    this.ValidDomain == input.ValidDomain ||
+                    (this.ValidDomain != null &&
+                    this.ValidDomain.Equals(input.ValidDomain))
+                ) && 
+                (
+                    this.ValidSMTP == input.ValidSMTP ||
+                    (this.ValidSMTP != null &&
+                    this.ValidSMTP.Equals(input.ValidSMTP))
+                ) && 
+                (
+                    this.IsCatchallDomain == input.IsCatchallDomain ||
+                    (this.IsCatchallDomain != null &&
+                    this.IsCatchallDomain.Equals(input.IsCatchallDomain))
+                ) && 
+                (
+                    this.Domain == input.Domain ||
+                    (this.Domain != null &&
+                    this.Domain.Equals(input.Domain))
                 );
         }
 
@@ -124,6 +199,16 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     hashCode = hashCode * 59 + this.ValidAddress.GetHashCode();
                 if (this.MailServerUsedForValidation != null)
                     hashCode = hashCode * 59 + this.MailServerUsedForValidation.GetHashCode();
+                if (this.ValidSyntax != null)
+                    hashCode = hashCode * 59 + this.ValidSyntax.GetHashCode();
+                if (this.ValidDomain != null)
+                    hashCode = hashCode * 59 + this.ValidDomain.GetHashCode();
+                if (this.ValidSMTP != null)
+                    hashCode = hashCode * 59 + this.ValidSMTP.GetHashCode();
+                if (this.IsCatchallDomain != null)
+                    hashCode = hashCode * 59 + this.IsCatchallDomain.GetHashCode();
+                if (this.Domain != null)
+                    hashCode = hashCode * 59 + this.Domain.GetHashCode();
                 return hashCode;
             }
         }
