@@ -19,7 +19,7 @@ $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.Validate.sln
 (Get-Content $nuspecpath).replace('<owners>$author$</owners>', "<owners>Cloudmersive</owners>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<description>A library generated from a Swagger doc</description>', "<description>The validation APIs help you validate data. Check if an E-mail address is real. Check if a domain is real. Check up on an IP address, and even where it is located. All this and much more is available in the validation API.</description>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<!-- Authors contain text that appears directly on the gallery -->', "<iconUrl>https://cloudmersive.com/images/cmsdk.png</iconUrl>") | Set-Content $nuspecpath
-
+(Get-Content $nuspecpath).replace('<dependencies>', "<projectUrl>https://cloudmersive.com/validate-api</projectUrl><dependencies>") | Set-Content $nuspecpath
 
 
 
