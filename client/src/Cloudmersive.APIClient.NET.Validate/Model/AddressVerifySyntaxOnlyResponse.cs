@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressVerifySyntaxOnlyResponse" /> class.
         /// </summary>
-        /// <param name="ValidAddress">True if the email address is syntactically valid, false if it is not.</param>
-        public AddressVerifySyntaxOnlyResponse(bool? ValidAddress = default(bool?))
+        /// <param name="validAddress">True if the email address is syntactically valid, false if it is not.</param>
+        public AddressVerifySyntaxOnlyResponse(bool? validAddress = default(bool?))
         {
-            this.ValidAddress = ValidAddress;
+            this.ValidAddress = validAddress;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

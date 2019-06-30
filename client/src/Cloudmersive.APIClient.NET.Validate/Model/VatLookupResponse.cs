@@ -33,18 +33,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VatLookupResponse" /> class.
         /// </summary>
-        /// <param name="CountryCode">CountryCode.</param>
-        /// <param name="VatNumber">VatNumber.</param>
-        /// <param name="IsValid">IsValid.</param>
-        /// <param name="BusinessName">BusinessName.</param>
-        /// <param name="BusinessAddress">BusinessAddress.</param>
-        public VatLookupResponse(string CountryCode = default(string), string VatNumber = default(string), bool? IsValid = default(bool?), string BusinessName = default(string), string BusinessAddress = default(string))
+        /// <param name="countryCode">countryCode.</param>
+        /// <param name="vatNumber">vatNumber.</param>
+        /// <param name="isValid">isValid.</param>
+        /// <param name="businessName">businessName.</param>
+        /// <param name="businessAddress">businessAddress.</param>
+        public VatLookupResponse(string countryCode = default(string), string vatNumber = default(string), bool? isValid = default(bool?), string businessName = default(string), string businessAddress = default(string))
         {
-            this.CountryCode = CountryCode;
-            this.VatNumber = VatNumber;
-            this.IsValid = IsValid;
-            this.BusinessName = BusinessName;
-            this.BusinessAddress = BusinessAddress;
+            this.CountryCode = countryCode;
+            this.VatNumber = vatNumber;
+            this.IsValid = isValid;
+            this.BusinessName = businessName;
+            this.BusinessAddress = businessAddress;
         }
         
         /// <summary>
@@ -98,7 +98,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

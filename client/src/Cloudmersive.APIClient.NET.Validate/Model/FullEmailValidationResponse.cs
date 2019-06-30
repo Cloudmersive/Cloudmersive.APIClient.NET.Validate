@@ -33,22 +33,22 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FullEmailValidationResponse" /> class.
         /// </summary>
-        /// <param name="ValidAddress">True if the email address is valid overall, false otherwise.</param>
-        /// <param name="MailServerUsedForValidation">Email server connected to for verification.</param>
-        /// <param name="ValidSyntax">True if the syntax of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
-        /// <param name="ValidDomain">True if the domain name of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
-        /// <param name="ValidSMTP">True if the email address was verified by the remote server, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
-        /// <param name="IsCatchallDomain">True if the domain is a catch-all domain name, false otherwise.  Catch-all domain names, while rare, always accept inbound email to ensure they do not lose any potentially useful emails.  Catch-all domain names can occassionally be configured to first accept and store all inbound email, but then later send a bounce email back to the sender after a delayed period of time..</param>
-        /// <param name="Domain">Domain name of the email address.</param>
-        public FullEmailValidationResponse(bool? ValidAddress = default(bool?), string MailServerUsedForValidation = default(string), bool? ValidSyntax = default(bool?), bool? ValidDomain = default(bool?), bool? ValidSMTP = default(bool?), bool? IsCatchallDomain = default(bool?), string Domain = default(string))
+        /// <param name="validAddress">True if the email address is valid overall, false otherwise.</param>
+        /// <param name="mailServerUsedForValidation">Email server connected to for verification.</param>
+        /// <param name="validSyntax">True if the syntax of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
+        /// <param name="validDomain">True if the domain name of the email address is valid, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
+        /// <param name="validSMTP">True if the email address was verified by the remote server, false otherwise.  This is one component of ValidAddress, but not the only one..</param>
+        /// <param name="isCatchallDomain">True if the domain is a catch-all domain name, false otherwise.  Catch-all domain names, while rare, always accept inbound email to ensure they do not lose any potentially useful emails.  Catch-all domain names can occassionally be configured to first accept and store all inbound email, but then later send a bounce email back to the sender after a delayed period of time..</param>
+        /// <param name="domain">Domain name of the email address.</param>
+        public FullEmailValidationResponse(bool? validAddress = default(bool?), string mailServerUsedForValidation = default(string), bool? validSyntax = default(bool?), bool? validDomain = default(bool?), bool? validSMTP = default(bool?), bool? isCatchallDomain = default(bool?), string domain = default(string))
         {
-            this.ValidAddress = ValidAddress;
-            this.MailServerUsedForValidation = MailServerUsedForValidation;
-            this.ValidSyntax = ValidSyntax;
-            this.ValidDomain = ValidDomain;
-            this.ValidSMTP = ValidSMTP;
-            this.IsCatchallDomain = IsCatchallDomain;
-            this.Domain = Domain;
+            this.ValidAddress = validAddress;
+            this.MailServerUsedForValidation = mailServerUsedForValidation;
+            this.ValidSyntax = validSyntax;
+            this.ValidDomain = validDomain;
+            this.ValidSMTP = validSMTP;
+            this.IsCatchallDomain = isCatchallDomain;
+            this.Domain = domain;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

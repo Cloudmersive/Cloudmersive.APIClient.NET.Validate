@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressGetServersResponse" /> class.
         /// </summary>
-        /// <param name="Success">Success.</param>
-        /// <param name="Servers">Servers.</param>
-        public AddressGetServersResponse(bool? Success = default(bool?), List<string> Servers = default(List<string>))
+        /// <param name="success">success.</param>
+        /// <param name="servers">servers.</param>
+        public AddressGetServersResponse(bool? success = default(bool?), List<string> servers = default(List<string>))
         {
-            this.Success = Success;
-            this.Servers = Servers;
+            this.Success = success;
+            this.Servers = servers;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

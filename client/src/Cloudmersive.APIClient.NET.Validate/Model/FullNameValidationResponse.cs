@@ -33,28 +33,28 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FullNameValidationResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if the validation operation was successful, false otherwise.</param>
-        /// <param name="ValidationResultFirstName">Possible values are: ValidFirstName, ValidUnknownFirstName, InvalidSpamInput, InvalidCharacters, InvalidEmpty.</param>
-        /// <param name="ValidationResultLastName">Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty.</param>
-        /// <param name="Title">The person&#39;s title (if supplied), e.g. \&quot;Mr.\&quot; or \&quot;Ms.\&quot;.</param>
-        /// <param name="FirstName">The first name (given name).</param>
-        /// <param name="MiddleName">The middle name(s); if there are multiple names they will be separated by spaces.</param>
-        /// <param name="LastName">The last name (surname).</param>
-        /// <param name="NickName">Nickname (if supplied).</param>
-        /// <param name="Suffix">Suffix to the name, e.g. \&quot;Jr.\&quot; or \&quot;Sr.\&quot;.</param>
-        /// <param name="DisplayName">The full display name of the name.</param>
-        public FullNameValidationResponse(bool? Successful = default(bool?), string ValidationResultFirstName = default(string), string ValidationResultLastName = default(string), string Title = default(string), string FirstName = default(string), string MiddleName = default(string), string LastName = default(string), string NickName = default(string), string Suffix = default(string), string DisplayName = default(string))
+        /// <param name="successful">True if the validation operation was successful, false otherwise.</param>
+        /// <param name="validationResultFirstName">Possible values are: ValidFirstName, ValidUnknownFirstName, InvalidSpamInput, InvalidCharacters, InvalidEmpty.</param>
+        /// <param name="validationResultLastName">Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty.</param>
+        /// <param name="title">The person&#39;s title (if supplied), e.g. \&quot;Mr.\&quot; or \&quot;Ms.\&quot;.</param>
+        /// <param name="firstName">The first name (given name).</param>
+        /// <param name="middleName">The middle name(s); if there are multiple names they will be separated by spaces.</param>
+        /// <param name="lastName">The last name (surname).</param>
+        /// <param name="nickName">Nickname (if supplied).</param>
+        /// <param name="suffix">Suffix to the name, e.g. \&quot;Jr.\&quot; or \&quot;Sr.\&quot;.</param>
+        /// <param name="displayName">The full display name of the name.</param>
+        public FullNameValidationResponse(bool? successful = default(bool?), string validationResultFirstName = default(string), string validationResultLastName = default(string), string title = default(string), string firstName = default(string), string middleName = default(string), string lastName = default(string), string nickName = default(string), string suffix = default(string), string displayName = default(string))
         {
-            this.Successful = Successful;
-            this.ValidationResultFirstName = ValidationResultFirstName;
-            this.ValidationResultLastName = ValidationResultLastName;
-            this.Title = Title;
-            this.FirstName = FirstName;
-            this.MiddleName = MiddleName;
-            this.LastName = LastName;
-            this.NickName = NickName;
-            this.Suffix = Suffix;
-            this.DisplayName = DisplayName;
+            this.Successful = successful;
+            this.ValidationResultFirstName = validationResultFirstName;
+            this.ValidationResultLastName = validationResultLastName;
+            this.Title = title;
+            this.FirstName = firstName;
+            this.MiddleName = middleName;
+            this.LastName = lastName;
+            this.NickName = nickName;
+            this.Suffix = suffix;
+            this.DisplayName = displayName;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

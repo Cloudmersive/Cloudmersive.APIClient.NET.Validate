@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VatLookupRequest" /> class.
         /// </summary>
-        /// <param name="VatCode">VatCode.</param>
-        public VatLookupRequest(string VatCode = default(string))
+        /// <param name="vatCode">vatCode.</param>
+        public VatLookupRequest(string vatCode = default(string))
         {
-            this.VatCode = VatCode;
+            this.VatCode = vatCode;
         }
         
         /// <summary>
@@ -62,7 +62,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

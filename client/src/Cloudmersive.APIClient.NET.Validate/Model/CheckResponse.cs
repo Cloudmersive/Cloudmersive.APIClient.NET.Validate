@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CheckResponse" /> class.
         /// </summary>
-        /// <param name="ValidDomain">True if the domain name was valid, false if it is not.</param>
-        public CheckResponse(bool? ValidDomain = default(bool?))
+        /// <param name="validDomain">True if the domain name was valid, false if it is not.</param>
+        public CheckResponse(bool? validDomain = default(bool?))
         {
-            this.ValidDomain = ValidDomain;
+            this.ValidDomain = validDomain;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

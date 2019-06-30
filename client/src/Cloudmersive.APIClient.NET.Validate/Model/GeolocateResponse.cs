@@ -33,26 +33,26 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GeolocateResponse" /> class.
         /// </summary>
-        /// <param name="CountryCode">Two-letter country code of IP address.</param>
-        /// <param name="CountryName">Country name of IP address.</param>
-        /// <param name="City">City of IP address.</param>
-        /// <param name="RegionCode">State/region code of IP address.</param>
-        /// <param name="RegionName">State/region of IP address.</param>
-        /// <param name="ZipCode">Zip or postal code of IP address.</param>
-        /// <param name="TimezoneStandardName">Timezone of IP address.</param>
-        /// <param name="Latitude">Latitude of IP address.</param>
-        /// <param name="Longitude">Longitude of IP address.</param>
-        public GeolocateResponse(string CountryCode = default(string), string CountryName = default(string), string City = default(string), string RegionCode = default(string), string RegionName = default(string), string ZipCode = default(string), string TimezoneStandardName = default(string), double? Latitude = default(double?), double? Longitude = default(double?))
+        /// <param name="countryCode">Two-letter country code of IP address.</param>
+        /// <param name="countryName">Country name of IP address.</param>
+        /// <param name="city">City of IP address.</param>
+        /// <param name="regionCode">State/region code of IP address.</param>
+        /// <param name="regionName">State/region of IP address.</param>
+        /// <param name="zipCode">Zip or postal code of IP address.</param>
+        /// <param name="timezoneStandardName">Timezone of IP address.</param>
+        /// <param name="latitude">Latitude of IP address.</param>
+        /// <param name="longitude">Longitude of IP address.</param>
+        public GeolocateResponse(string countryCode = default(string), string countryName = default(string), string city = default(string), string regionCode = default(string), string regionName = default(string), string zipCode = default(string), string timezoneStandardName = default(string), double? latitude = default(double?), double? longitude = default(double?))
         {
-            this.CountryCode = CountryCode;
-            this.CountryName = CountryName;
-            this.City = City;
-            this.RegionCode = RegionCode;
-            this.RegionName = RegionName;
-            this.ZipCode = ZipCode;
-            this.TimezoneStandardName = TimezoneStandardName;
-            this.Latitude = Latitude;
-            this.Longitude = Longitude;
+            this.CountryCode = countryCode;
+            this.CountryName = countryName;
+            this.City = city;
+            this.RegionCode = regionCode;
+            this.RegionName = regionName;
+            this.ZipCode = zipCode;
+            this.TimezoneStandardName = timezoneStandardName;
+            this.Latitude = latitude;
+            this.Longitude = longitude;
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

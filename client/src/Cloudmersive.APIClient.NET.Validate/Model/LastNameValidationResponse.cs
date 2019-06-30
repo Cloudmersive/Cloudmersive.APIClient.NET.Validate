@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LastNameValidationResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if the validation operation was successful, false otherwise.</param>
-        /// <param name="ValidationResult">Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty.</param>
-        public LastNameValidationResponse(bool? Successful = default(bool?), string ValidationResult = default(string))
+        /// <param name="successful">True if the validation operation was successful, false otherwise.</param>
+        /// <param name="validationResult">Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty.</param>
+        public LastNameValidationResponse(bool? successful = default(bool?), string validationResult = default(string))
         {
-            this.Successful = Successful;
-            this.ValidationResult = ValidationResult;
+            this.Successful = successful;
+            this.ValidationResult = validationResult;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FullNameValidationRequest" /> class.
         /// </summary>
-        /// <param name="FullNameString">Full name to process as a free-form string; supports many components such as First Name, Middle Name, Last Name, Title, Nickname, Suffix, and Display Name.</param>
-        public FullNameValidationRequest(string FullNameString = default(string))
+        /// <param name="fullNameString">Full name to process as a free-form string; supports many components such as First Name, Middle Name, Last Name, Title, Nickname, Suffix, and Display Name.</param>
+        public FullNameValidationRequest(string fullNameString = default(string))
         {
-            this.FullNameString = FullNameString;
+            this.FullNameString = fullNameString;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

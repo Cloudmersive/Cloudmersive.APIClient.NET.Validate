@@ -33,24 +33,24 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberValidationResponse" /> class.
         /// </summary>
-        /// <param name="IsValid">True if the phone number is valid, false otherwise.</param>
-        /// <param name="Successful">True if the operation was successful, false if there was an error during validation.  See IsValid for validation result..</param>
-        /// <param name="PhoneNumberType">Type of phone number; possible values are: FixedLine, Mobile, FixedLineOrMobile, TollFree, PremiumRate,   SharedCost, Voip, PersonalNumber, Pager, Uan, Voicemail, Unknown.</param>
-        /// <param name="E164Format">E.164 format of the phone number.</param>
-        /// <param name="InternationalFormat">Internaltional format of the phone number.</param>
-        /// <param name="NationalFormat">National format of the phone number.</param>
-        /// <param name="CountryCode">Two digit country code of the phone number.</param>
-        /// <param name="CountryName">User-friendly long name of the country for the phone number.</param>
-        public PhoneNumberValidationResponse(bool? IsValid = default(bool?), bool? Successful = default(bool?), string PhoneNumberType = default(string), string E164Format = default(string), string InternationalFormat = default(string), string NationalFormat = default(string), string CountryCode = default(string), string CountryName = default(string))
+        /// <param name="isValid">True if the phone number is valid, false otherwise.</param>
+        /// <param name="successful">True if the operation was successful, false if there was an error during validation.  See IsValid for validation result..</param>
+        /// <param name="phoneNumberType">Type of phone number; possible values are: FixedLine, Mobile, FixedLineOrMobile, TollFree, PremiumRate,   SharedCost, Voip, PersonalNumber, Pager, Uan, Voicemail, Unknown.</param>
+        /// <param name="e164Format">E.164 format of the phone number.</param>
+        /// <param name="internationalFormat">Internaltional format of the phone number.</param>
+        /// <param name="nationalFormat">National format of the phone number.</param>
+        /// <param name="countryCode">Two digit country code of the phone number.</param>
+        /// <param name="countryName">User-friendly long name of the country for the phone number.</param>
+        public PhoneNumberValidationResponse(bool? isValid = default(bool?), bool? successful = default(bool?), string phoneNumberType = default(string), string e164Format = default(string), string internationalFormat = default(string), string nationalFormat = default(string), string countryCode = default(string), string countryName = default(string))
         {
-            this.IsValid = IsValid;
-            this.Successful = Successful;
-            this.PhoneNumberType = PhoneNumberType;
-            this.E164Format = E164Format;
-            this.InternationalFormat = InternationalFormat;
-            this.NationalFormat = NationalFormat;
-            this.CountryCode = CountryCode;
-            this.CountryName = CountryName;
+            this.IsValid = isValid;
+            this.Successful = successful;
+            this.PhoneNumberType = phoneNumberType;
+            this.E164Format = e164Format;
+            this.InternationalFormat = internationalFormat;
+            this.NationalFormat = nationalFormat;
+            this.CountryCode = countryCode;
+            this.CountryName = countryName;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

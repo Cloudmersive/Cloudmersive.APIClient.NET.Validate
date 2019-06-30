@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FirstNameValidationRequest" /> class.
         /// </summary>
-        /// <param name="FirstName">First name to process.</param>
-        public FirstNameValidationRequest(string FirstName = default(string))
+        /// <param name="firstName">First name to process.</param>
+        public FirstNameValidationRequest(string firstName = default(string))
         {
-            this.FirstName = FirstName;
+            this.FirstName = firstName;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

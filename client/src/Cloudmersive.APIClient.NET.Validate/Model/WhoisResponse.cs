@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisResponse" /> class.
         /// </summary>
-        /// <param name="ValidDomain">True if the domain is valid, false if it is not.</param>
-        /// <param name="WhoisServer">Server used to lookup WHOIS information (may change based on lookup)..</param>
-        /// <param name="RawTextRecord">WHOIS raw text record.</param>
-        /// <param name="CreatedDt">Creation date for the record.</param>
-        public WhoisResponse(bool? ValidDomain = default(bool?), string WhoisServer = default(string), string RawTextRecord = default(string), DateTime? CreatedDt = default(DateTime?))
+        /// <param name="validDomain">True if the domain is valid, false if it is not.</param>
+        /// <param name="whoisServer">Server used to lookup WHOIS information (may change based on lookup)..</param>
+        /// <param name="rawTextRecord">WHOIS raw text record.</param>
+        /// <param name="createdDt">Creation date for the record.</param>
+        public WhoisResponse(bool? validDomain = default(bool?), string whoisServer = default(string), string rawTextRecord = default(string), DateTime? createdDt = default(DateTime?))
         {
-            this.ValidDomain = ValidDomain;
-            this.WhoisServer = WhoisServer;
-            this.RawTextRecord = RawTextRecord;
-            this.CreatedDt = CreatedDt;
+            this.ValidDomain = validDomain;
+            this.WhoisServer = whoisServer;
+            this.RawTextRecord = rawTextRecord;
+            this.CreatedDt = createdDt;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
