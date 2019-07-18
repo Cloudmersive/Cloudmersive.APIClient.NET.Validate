@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 2.0.2
+- SDK version: 2.0.3
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -75,18 +75,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("Apikey", "Bearer");
 
-            var apiInstance = new DomainApi();
-            var domain = domain_example;  // string | Domain name to check, for example \"cloudmersive.com\".  The input is a string so be sure to enclose it in double-quotes.
+            var apiInstance = new AddressApi();
+            var input = new ParseAddressRequest(); // ParseAddressRequest | Input parse request
 
             try
             {
-                // Validate a domain name
-                CheckResponse result = apiInstance.DomainCheck(domain);
+                // Parse an unstructured input text string into an international, formatted address
+                ParseAddressResponse result = apiInstance.AddressParseString(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DomainApi.DomainCheck: " + e.Message );
+                Debug.Print("Exception when calling AddressApi.AddressParseString: " + e.Message );
             }
 
         }
@@ -101,6 +101,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AddressApi* | [**AddressParseString**](docs/AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *EmailApi* | [**EmailAddressGetServers**](docs/EmailApi.md#emailaddressgetservers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
@@ -131,6 +132,8 @@ Class | Method | HTTP request | Description
  - [Model.GetGenderResponse](docs/GetGenderResponse.md)
  - [Model.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [Model.LastNameValidationResponse](docs/LastNameValidationResponse.md)
+ - [Model.ParseAddressRequest](docs/ParseAddressRequest.md)
+ - [Model.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [Model.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [Model.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [Model.VatLookupRequest](docs/VatLookupRequest.md)
