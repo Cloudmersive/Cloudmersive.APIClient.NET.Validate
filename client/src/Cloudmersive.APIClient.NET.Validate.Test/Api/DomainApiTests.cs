@@ -88,6 +88,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //Assert.IsInstanceOf<WhoisResponse> (response, "response is WhoisResponse");
         }
         
+        /// <summary>
+        /// Test DomainUrlSyntaxOnly
+        /// </summary>
+        [Test]
+        public void DomainUrlSyntaxOnlyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateUrlRequestSyntaxOnly request = null;
+            //var response = instance.DomainUrlSyntaxOnly(request);
+            //Assert.IsInstanceOf<ValidateUrlResponseSyntaxOnly> (response, "response is ValidateUrlResponseSyntaxOnly");
+        }
+        
     }
 
 }

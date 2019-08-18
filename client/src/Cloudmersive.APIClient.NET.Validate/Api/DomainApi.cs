@@ -66,6 +66,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.   The input is a string so be sure to enclose it in double-quotes.</param>
         /// <returns>ApiResponse of WhoisResponse</returns>
         ApiResponse<WhoisResponse> DomainPostWithHttpInfo (string domain);
+        /// <summary>
+        /// Validate a URL syntactically
+        /// </summary>
+        /// <remarks>
+        /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ValidateUrlResponseSyntaxOnly</returns>
+        ValidateUrlResponseSyntaxOnly DomainUrlSyntaxOnly (ValidateUrlRequestSyntaxOnly request);
+
+        /// <summary>
+        /// Validate a URL syntactically
+        /// </summary>
+        /// <remarks>
+        /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
+        ApiResponse<ValidateUrlResponseSyntaxOnly> DomainUrlSyntaxOnlyWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -110,6 +131,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.   The input is a string so be sure to enclose it in double-quotes.</param>
         /// <returns>Task of ApiResponse (WhoisResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WhoisResponse>> DomainPostAsyncWithHttpInfo (string domain);
+        /// <summary>
+        /// Validate a URL syntactically
+        /// </summary>
+        /// <remarks>
+        /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ValidateUrlResponseSyntaxOnly</returns>
+        System.Threading.Tasks.Task<ValidateUrlResponseSyntaxOnly> DomainUrlSyntaxOnlyAsync (ValidateUrlRequestSyntaxOnly request);
+
+        /// <summary>
+        /// Validate a URL syntactically
+        /// </summary>
+        /// <remarks>
+        /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainUrlSyntaxOnlyAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         #endregion Asynchronous Operations
     }
 
@@ -554,6 +596,179 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<WhoisResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WhoisResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhoisResponse)));
+        }
+
+        /// <summary>
+        /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ValidateUrlResponseSyntaxOnly</returns>
+        public ValidateUrlResponseSyntaxOnly DomainUrlSyntaxOnly (ValidateUrlRequestSyntaxOnly request)
+        {
+             ApiResponse<ValidateUrlResponseSyntaxOnly> localVarResponse = DomainUrlSyntaxOnlyWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
+        public ApiResponse< ValidateUrlResponseSyntaxOnly > DomainUrlSyntaxOnlyWithHttpInfo (ValidateUrlRequestSyntaxOnly request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainUrlSyntaxOnly");
+
+            var localVarPath = "/validate/domain/url/syntax-only";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainUrlSyntaxOnly", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateUrlResponseSyntaxOnly>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateUrlResponseSyntaxOnly) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateUrlResponseSyntaxOnly)));
+        }
+
+        /// <summary>
+        /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ValidateUrlResponseSyntaxOnly</returns>
+        public async System.Threading.Tasks.Task<ValidateUrlResponseSyntaxOnly> DomainUrlSyntaxOnlyAsync (ValidateUrlRequestSyntaxOnly request)
+        {
+             ApiResponse<ValidateUrlResponseSyntaxOnly> localVarResponse = await DomainUrlSyntaxOnlyAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainUrlSyntaxOnlyAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainUrlSyntaxOnly");
+
+            var localVarPath = "/validate/domain/url/syntax-only";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainUrlSyntaxOnly", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateUrlResponseSyntaxOnly>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateUrlResponseSyntaxOnly) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateUrlResponseSyntaxOnly)));
         }
 
     }
