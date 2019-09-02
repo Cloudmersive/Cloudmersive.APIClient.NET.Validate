@@ -14,7 +14,7 @@ $nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.Validate/Clou
 $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.Validate.sln
 
 
-(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive Validate API Client</title>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive Validate API Client</title><licenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<authors>$author$</authors>', "<authors>Cloudmersive</authors>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<owners>$author$</owners>', "<owners>Cloudmersive</owners>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<description>A library generated from a Swagger doc</description>', "<description>The validation APIs help you validate data. Check if an E-mail address is real. Check if a domain is real. Check up on an IP address, and even where it is located. All this and much more is available in the validation API.</description>") | Set-Content $nuspecpath

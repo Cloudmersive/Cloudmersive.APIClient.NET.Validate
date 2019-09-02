@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test DomainUrlFull
+        /// </summary>
+        [Test]
+        public void DomainUrlFullTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateUrlRequestFull request = null;
+            //var response = instance.DomainUrlFull(request);
+            //Assert.IsInstanceOf<ValidateUrlResponseFull> (response, "response is ValidateUrlResponseFull");
+        }
+        
+        /// <summary>
         /// Test DomainUrlSyntaxOnly
         /// </summary>
         [Test]

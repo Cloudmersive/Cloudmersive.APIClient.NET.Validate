@@ -25,35 +25,25 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.Validate.Client.SwaggerD
 namespace Cloudmersive.APIClient.NET.Validate.Model
 {
     /// <summary>
-    /// Result of validating a URL with syntax only
+    /// Request to determine if a URL is valid
     /// </summary>
     [DataContract]
-    public partial class ValidateUrlResponseSyntaxOnly :  IEquatable<ValidateUrlResponseSyntaxOnly>, IValidatableObject
+    public partial class ValidateUrlRequestFull :  IEquatable<ValidateUrlRequestFull>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ValidateUrlResponseSyntaxOnly" /> class.
+        /// Initializes a new instance of the <see cref="ValidateUrlRequestFull" /> class.
         /// </summary>
-        /// <param name="validURL">True if the URL is valid, false otherwise.</param>
-        /// <param name="wellFormedURL">Well-formed version of the URL.</param>
-        public ValidateUrlResponseSyntaxOnly(bool? validURL = default(bool?), string wellFormedURL = default(string))
+        /// <param name="uRL">uRL.</param>
+        public ValidateUrlRequestFull(string uRL = default(string))
         {
-            this.ValidURL = validURL;
-            this.WellFormedURL = wellFormedURL;
+            this.URL = uRL;
         }
         
         /// <summary>
-        /// True if the URL is valid, false otherwise
+        /// Gets or Sets URL
         /// </summary>
-        /// <value>True if the URL is valid, false otherwise</value>
-        [DataMember(Name="ValidURL", EmitDefaultValue=false)]
-        public bool? ValidURL { get; set; }
-
-        /// <summary>
-        /// Well-formed version of the URL
-        /// </summary>
-        /// <value>Well-formed version of the URL</value>
-        [DataMember(Name="WellFormedURL", EmitDefaultValue=false)]
-        public string WellFormedURL { get; set; }
+        [DataMember(Name="URL", EmitDefaultValue=false)]
+        public string URL { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +52,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ValidateUrlResponseSyntaxOnly {\n");
-            sb.Append("  ValidURL: ").Append(ValidURL).Append("\n");
-            sb.Append("  WellFormedURL: ").Append(WellFormedURL).Append("\n");
+            sb.Append("class ValidateUrlRequestFull {\n");
+            sb.Append("  URL: ").Append(URL).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +74,24 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ValidateUrlResponseSyntaxOnly);
+            return this.Equals(input as ValidateUrlRequestFull);
         }
 
         /// <summary>
-        /// Returns true if ValidateUrlResponseSyntaxOnly instances are equal
+        /// Returns true if ValidateUrlRequestFull instances are equal
         /// </summary>
-        /// <param name="input">Instance of ValidateUrlResponseSyntaxOnly to be compared</param>
+        /// <param name="input">Instance of ValidateUrlRequestFull to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ValidateUrlResponseSyntaxOnly input)
+        public bool Equals(ValidateUrlRequestFull input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ValidURL == input.ValidURL ||
-                    (this.ValidURL != null &&
-                    this.ValidURL.Equals(input.ValidURL))
-                ) && 
-                (
-                    this.WellFormedURL == input.WellFormedURL ||
-                    (this.WellFormedURL != null &&
-                    this.WellFormedURL.Equals(input.WellFormedURL))
+                    this.URL == input.URL ||
+                    (this.URL != null &&
+                    this.URL.Equals(input.URL))
                 );
         }
 
@@ -120,10 +104,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ValidURL != null)
-                    hashCode = hashCode * 59 + this.ValidURL.GetHashCode();
-                if (this.WellFormedURL != null)
-                    hashCode = hashCode * 59 + this.WellFormedURL.GetHashCode();
+                if (this.URL != null)
+                    hashCode = hashCode * 59 + this.URL.GetHashCode();
                 return hashCode;
             }
         }
