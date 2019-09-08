@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 2.0.5
+- SDK version: 2.0.6
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -115,6 +115,7 @@ Class | Method | HTTP request | Description
 *NameApi* | [**NameValidateFullName**](docs/NameApi.md#namevalidatefullname) | **POST** /validate/name/full-name | Parse and validate a full name
 *NameApi* | [**NameValidateLastName**](docs/NameApi.md#namevalidatelastname) | **POST** /validate/name/last | Validate a last name
 *PhoneNumberApi* | [**PhoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phonenumbersyntaxonly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
+*UserAgentApi* | [**UserAgentParse**](docs/UserAgentApi.md#useragentparse) | **POST** /validate/useragent/parse | Parse an HTTP User-Agent string, identify robots
 *VatApi* | [**VatVatLookup**](docs/VatApi.md#vatvatlookup) | **POST** /validate/vat/lookup | Lookup a VAT code
 
 
@@ -138,6 +139,8 @@ Class | Method | HTTP request | Description
  - [Model.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [Model.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [Model.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
+ - [Model.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
+ - [Model.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
  - [Model.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)
  - [Model.ValidateUrlRequestSyntaxOnly](docs/ValidateUrlRequestSyntaxOnly.md)
  - [Model.ValidateUrlResponseFull](docs/ValidateUrlResponseFull.md)
