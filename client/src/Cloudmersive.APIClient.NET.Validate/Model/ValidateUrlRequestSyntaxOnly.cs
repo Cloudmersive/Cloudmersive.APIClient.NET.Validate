@@ -33,15 +33,16 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateUrlRequestSyntaxOnly" /> class.
         /// </summary>
-        /// <param name="uRL">uRL.</param>
+        /// <param name="uRL">URL to validate.</param>
         public ValidateUrlRequestSyntaxOnly(string uRL = default(string))
         {
             this.URL = uRL;
         }
         
         /// <summary>
-        /// Gets or Sets URL
+        /// URL to validate
         /// </summary>
+        /// <value>URL to validate</value>
         [DataMember(Name="URL", EmitDefaultValue=false)]
         public string URL { get; set; }
 

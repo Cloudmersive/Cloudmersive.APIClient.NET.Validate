@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**NameGetGender**](NameApi.md#namegetgender) | **POST** /validate/name/get-gender | Get the gender of a first name
+[**NameIdentifier**](NameApi.md#nameidentifier) | **POST** /validate/name/identifier | Validate a code identifier
 [**NameValidateFirstName**](NameApi.md#namevalidatefirstname) | **POST** /validate/name/first | Validate a first name
 [**NameValidateFullName**](NameApi.md#namevalidatefullname) | **POST** /validate/name/full-name | Parse and validate a full name
 [**NameValidateLastName**](NameApi.md#namevalidatelastname) | **POST** /validate/name/last | Validate a last name
@@ -64,6 +65,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetGenderResponse**](GetGenderResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="nameidentifier"></a>
+# **NameIdentifier**
+> ValidateIdentifierResponse NameIdentifier (ValidateIdentifierRequest input)
+
+Validate a code identifier
+
+Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \"helloWorld\" but not \"hello*World\".
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class NameIdentifierExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new NameApi();
+            var input = new ValidateIdentifierRequest(); // ValidateIdentifierRequest | Identifier validation request information
+
+            try
+            {
+                // Validate a code identifier
+                ValidateIdentifierResponse result = apiInstance.NameIdentifier(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling NameApi.NameIdentifier: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ValidateIdentifierRequest**](ValidateIdentifierRequest.md)| Identifier validation request information | 
+
+### Return type
+
+[**ValidateIdentifierResponse**](ValidateIdentifierResponse.md)
 
 ### Authorization
 

@@ -46,6 +46,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of GetGenderResponse</returns>
         ApiResponse<GetGenderResponse> NameGetGenderWithHttpInfo (GetGenderRequest input);
         /// <summary>
+        /// Validate a code identifier
+        /// </summary>
+        /// <remarks>
+        /// Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>ValidateIdentifierResponse</returns>
+        ValidateIdentifierResponse NameIdentifier (ValidateIdentifierRequest input);
+
+        /// <summary>
+        /// Validate a code identifier
+        /// </summary>
+        /// <remarks>
+        /// Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>ApiResponse of ValidateIdentifierResponse</returns>
+        ApiResponse<ValidateIdentifierResponse> NameIdentifierWithHttpInfo (ValidateIdentifierRequest input);
+        /// <summary>
         /// Validate a first name
         /// </summary>
         /// <remarks>
@@ -131,6 +152,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Gender request information</param>
         /// <returns>Task of ApiResponse (GetGenderResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetGenderResponse>> NameGetGenderAsyncWithHttpInfo (GetGenderRequest input);
+        /// <summary>
+        /// Validate a code identifier
+        /// </summary>
+        /// <remarks>
+        /// Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>Task of ValidateIdentifierResponse</returns>
+        System.Threading.Tasks.Task<ValidateIdentifierResponse> NameIdentifierAsync (ValidateIdentifierRequest input);
+
+        /// <summary>
+        /// Validate a code identifier
+        /// </summary>
+        /// <remarks>
+        /// Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>Task of ApiResponse (ValidateIdentifierResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateIdentifierResponse>> NameIdentifierAsyncWithHttpInfo (ValidateIdentifierRequest input);
         /// <summary>
         /// Validate a first name
         /// </summary>
@@ -465,6 +507,179 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<GetGenderResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetGenderResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetGenderResponse)));
+        }
+
+        /// <summary>
+        /// Validate a code identifier Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>ValidateIdentifierResponse</returns>
+        public ValidateIdentifierResponse NameIdentifier (ValidateIdentifierRequest input)
+        {
+             ApiResponse<ValidateIdentifierResponse> localVarResponse = NameIdentifierWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a code identifier Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>ApiResponse of ValidateIdentifierResponse</returns>
+        public ApiResponse< ValidateIdentifierResponse > NameIdentifierWithHttpInfo (ValidateIdentifierRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling NameApi->NameIdentifier");
+
+            var localVarPath = "/validate/name/identifier";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("NameIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateIdentifierResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateIdentifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateIdentifierResponse)));
+        }
+
+        /// <summary>
+        /// Validate a code identifier Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>Task of ValidateIdentifierResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateIdentifierResponse> NameIdentifierAsync (ValidateIdentifierRequest input)
+        {
+             ApiResponse<ValidateIdentifierResponse> localVarResponse = await NameIdentifierAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a code identifier Determines if the input name is a valid technical / code identifier.  Configure input rules such as whether whitespace, hyphens, underscores, etc. are allowed.  For example, a valid identifier might be \&quot;helloWorld\&quot; but not \&quot;hello*World\&quot;.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Identifier validation request information</param>
+        /// <returns>Task of ApiResponse (ValidateIdentifierResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateIdentifierResponse>> NameIdentifierAsyncWithHttpInfo (ValidateIdentifierRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling NameApi->NameIdentifier");
+
+            var localVarPath = "/validate/name/identifier";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("NameIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateIdentifierResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateIdentifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateIdentifierResponse)));
         }
 
         /// <summary>

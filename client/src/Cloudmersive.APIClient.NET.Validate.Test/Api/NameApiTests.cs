@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test NameIdentifier
+        /// </summary>
+        [Test]
+        public void NameIdentifierTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateIdentifierRequest input = null;
+            //var response = instance.NameIdentifier(input);
+            //Assert.IsInstanceOf<ValidateIdentifierResponse> (response, "response is ValidateIdentifierResponse");
+        }
+        
+        /// <summary>
         /// Test NameValidateFirstName
         /// </summary>
         [Test]

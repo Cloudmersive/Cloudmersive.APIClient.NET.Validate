@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 2.0.6
+- SDK version: 2.0.7
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**EmailPost**](docs/EmailApi.md#emailpost) | **POST** /validate/email/address/syntaxOnly | Validate email adddress for syntactic correctness only
 *IPAddressApi* | [**IPAddressPost**](docs/IPAddressApi.md#ipaddresspost) | **POST** /validate/ip/geolocate | Geolocate an IP address
 *NameApi* | [**NameGetGender**](docs/NameApi.md#namegetgender) | **POST** /validate/name/get-gender | Get the gender of a first name
+*NameApi* | [**NameIdentifier**](docs/NameApi.md#nameidentifier) | **POST** /validate/name/identifier | Validate a code identifier
 *NameApi* | [**NameValidateFirstName**](docs/NameApi.md#namevalidatefirstname) | **POST** /validate/name/first | Validate a first name
 *NameApi* | [**NameValidateFullName**](docs/NameApi.md#namevalidatefullname) | **POST** /validate/name/full-name | Parse and validate a full name
 *NameApi* | [**NameValidateLastName**](docs/NameApi.md#namevalidatelastname) | **POST** /validate/name/last | Validate a last name
@@ -141,6 +142,8 @@ Class | Method | HTTP request | Description
  - [Model.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [Model.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [Model.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
+ - [Model.ValidateIdentifierRequest](docs/ValidateIdentifierRequest.md)
+ - [Model.ValidateIdentifierResponse](docs/ValidateIdentifierResponse.md)
  - [Model.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)
  - [Model.ValidateUrlRequestSyntaxOnly](docs/ValidateUrlRequestSyntaxOnly.md)
  - [Model.ValidateUrlResponseFull](docs/ValidateUrlResponseFull.md)
