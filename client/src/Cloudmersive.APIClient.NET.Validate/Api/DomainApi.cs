@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>ValidateUrlResponseFull</returns>
         ValidateUrlResponseFull DomainUrlFull (ValidateUrlRequestFull request);
 
@@ -84,7 +84,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>ApiResponse of ValidateUrlResponseFull</returns>
         ApiResponse<ValidateUrlResponseFull> DomainUrlFullWithHttpInfo (ValidateUrlRequestFull request);
         /// <summary>
@@ -94,7 +94,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>ValidateUrlResponseSyntaxOnly</returns>
         ValidateUrlResponseSyntaxOnly DomainUrlSyntaxOnly (ValidateUrlRequestSyntaxOnly request);
 
@@ -105,7 +105,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
         ApiResponse<ValidateUrlResponseSyntaxOnly> DomainUrlSyntaxOnlyWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         #endregion Synchronous Operations
@@ -159,7 +159,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>Task of ValidateUrlResponseFull</returns>
         System.Threading.Tasks.Task<ValidateUrlResponseFull> DomainUrlFullAsync (ValidateUrlRequestFull request);
 
@@ -170,7 +170,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>Task of ApiResponse (ValidateUrlResponseFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseFull>> DomainUrlFullAsyncWithHttpInfo (ValidateUrlRequestFull request);
         /// <summary>
@@ -180,7 +180,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>Task of ValidateUrlResponseSyntaxOnly</returns>
         System.Threading.Tasks.Task<ValidateUrlResponseSyntaxOnly> DomainUrlSyntaxOnlyAsync (ValidateUrlRequestSyntaxOnly request);
 
@@ -191,7 +191,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainUrlSyntaxOnlyAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         #endregion Asynchronous Operations
@@ -328,10 +328,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "text/xml", 
+                "text/plain", 
+                "text/javascript", 
                 "application/json", 
                 "text/json", 
                 "application/xml", 
-                "text/xml", 
                 "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -415,10 +417,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "text/xml", 
+                "text/plain", 
+                "text/javascript", 
                 "application/json", 
                 "text/json", 
                 "application/xml", 
-                "text/xml", 
                 "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -501,10 +505,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "text/xml", 
+                "text/plain", 
+                "text/javascript", 
                 "application/json", 
                 "text/json", 
                 "application/xml", 
-                "text/xml", 
                 "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -588,10 +594,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "text/xml", 
+                "text/plain", 
+                "text/javascript", 
                 "application/json", 
                 "text/json", 
                 "application/xml", 
-                "text/xml", 
                 "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
@@ -644,7 +652,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL fully Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>ValidateUrlResponseFull</returns>
         public ValidateUrlResponseFull DomainUrlFull (ValidateUrlRequestFull request)
         {
@@ -656,7 +664,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL fully Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>ApiResponse of ValidateUrlResponseFull</returns>
         public ApiResponse< ValidateUrlResponseFull > DomainUrlFullWithHttpInfo (ValidateUrlRequestFull request)
         {
@@ -730,7 +738,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL fully Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>Task of ValidateUrlResponseFull</returns>
         public async System.Threading.Tasks.Task<ValidateUrlResponseFull> DomainUrlFullAsync (ValidateUrlRequestFull request)
         {
@@ -743,7 +751,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL fully Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL request</param>
         /// <returns>Task of ApiResponse (ValidateUrlResponseFull)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseFull>> DomainUrlFullAsyncWithHttpInfo (ValidateUrlRequestFull request)
         {
@@ -817,7 +825,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>ValidateUrlResponseSyntaxOnly</returns>
         public ValidateUrlResponseSyntaxOnly DomainUrlSyntaxOnly (ValidateUrlRequestSyntaxOnly request)
         {
@@ -829,7 +837,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
         public ApiResponse< ValidateUrlResponseSyntaxOnly > DomainUrlSyntaxOnlyWithHttpInfo (ValidateUrlRequestSyntaxOnly request)
         {
@@ -903,7 +911,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>Task of ValidateUrlResponseSyntaxOnly</returns>
         public async System.Threading.Tasks.Task<ValidateUrlResponseSyntaxOnly> DomainUrlSyntaxOnlyAsync (ValidateUrlRequestSyntaxOnly request)
         {
@@ -916,7 +924,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a URL syntactically Validate whether a URL is syntactically valid (does not check endpoint for validity).  Accepts various types of input and produces a well-formed URL as output.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input URL information</param>
         /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainUrlSyntaxOnlyAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request)
         {
