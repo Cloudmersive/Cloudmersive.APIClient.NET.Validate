@@ -34,12 +34,34 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Initializes a new instance of the <see cref="WhoisResponse" /> class.
         /// </summary>
         /// <param name="validDomain">True if the domain is valid, false if it is not.</param>
+        /// <param name="registrantName">Name of the domain registrant.</param>
+        /// <param name="registrantOrganization">Organization name of the domain registrant.</param>
+        /// <param name="registrantEmail">Email address of the domain registrant.</param>
+        /// <param name="registrantStreetNumber">Street number of the address of the domain registrant, if available.</param>
+        /// <param name="registrantStreet">Street name of the address of the domain registrant, if available.</param>
+        /// <param name="registrantCity">City of the domain registrant, if available.</param>
+        /// <param name="registrantStateOrProvince">State or Province of the address of the domain registrant, if available.</param>
+        /// <param name="registrantPostalCode">Postal code of the address of the domain registrant, if available.</param>
+        /// <param name="registrantCountry">Country of the address of the domain registrant, if available.</param>
+        /// <param name="registrantRawAddress">Raw address string of the domain registrant, if available.</param>
+        /// <param name="registrantTelephone">Telephone number of the address of the domain registrant.</param>
         /// <param name="whoisServer">Server used to lookup WHOIS information (may change based on lookup)..</param>
         /// <param name="rawTextRecord">WHOIS raw text record.</param>
         /// <param name="createdDt">Creation date for the record.</param>
-        public WhoisResponse(bool? validDomain = default(bool?), string whoisServer = default(string), string rawTextRecord = default(string), DateTime? createdDt = default(DateTime?))
+        public WhoisResponse(bool? validDomain = default(bool?), string registrantName = default(string), string registrantOrganization = default(string), string registrantEmail = default(string), string registrantStreetNumber = default(string), string registrantStreet = default(string), string registrantCity = default(string), string registrantStateOrProvince = default(string), string registrantPostalCode = default(string), string registrantCountry = default(string), string registrantRawAddress = default(string), string registrantTelephone = default(string), string whoisServer = default(string), string rawTextRecord = default(string), DateTime? createdDt = default(DateTime?))
         {
             this.ValidDomain = validDomain;
+            this.RegistrantName = registrantName;
+            this.RegistrantOrganization = registrantOrganization;
+            this.RegistrantEmail = registrantEmail;
+            this.RegistrantStreetNumber = registrantStreetNumber;
+            this.RegistrantStreet = registrantStreet;
+            this.RegistrantCity = registrantCity;
+            this.RegistrantStateOrProvince = registrantStateOrProvince;
+            this.RegistrantPostalCode = registrantPostalCode;
+            this.RegistrantCountry = registrantCountry;
+            this.RegistrantRawAddress = registrantRawAddress;
+            this.RegistrantTelephone = registrantTelephone;
             this.WhoisServer = whoisServer;
             this.RawTextRecord = rawTextRecord;
             this.CreatedDt = createdDt;
@@ -51,6 +73,83 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <value>True if the domain is valid, false if it is not</value>
         [DataMember(Name="ValidDomain", EmitDefaultValue=false)]
         public bool? ValidDomain { get; set; }
+
+        /// <summary>
+        /// Name of the domain registrant
+        /// </summary>
+        /// <value>Name of the domain registrant</value>
+        [DataMember(Name="RegistrantName", EmitDefaultValue=false)]
+        public string RegistrantName { get; set; }
+
+        /// <summary>
+        /// Organization name of the domain registrant
+        /// </summary>
+        /// <value>Organization name of the domain registrant</value>
+        [DataMember(Name="RegistrantOrganization", EmitDefaultValue=false)]
+        public string RegistrantOrganization { get; set; }
+
+        /// <summary>
+        /// Email address of the domain registrant
+        /// </summary>
+        /// <value>Email address of the domain registrant</value>
+        [DataMember(Name="RegistrantEmail", EmitDefaultValue=false)]
+        public string RegistrantEmail { get; set; }
+
+        /// <summary>
+        /// Street number of the address of the domain registrant, if available
+        /// </summary>
+        /// <value>Street number of the address of the domain registrant, if available</value>
+        [DataMember(Name="RegistrantStreetNumber", EmitDefaultValue=false)]
+        public string RegistrantStreetNumber { get; set; }
+
+        /// <summary>
+        /// Street name of the address of the domain registrant, if available
+        /// </summary>
+        /// <value>Street name of the address of the domain registrant, if available</value>
+        [DataMember(Name="RegistrantStreet", EmitDefaultValue=false)]
+        public string RegistrantStreet { get; set; }
+
+        /// <summary>
+        /// City of the domain registrant, if available
+        /// </summary>
+        /// <value>City of the domain registrant, if available</value>
+        [DataMember(Name="RegistrantCity", EmitDefaultValue=false)]
+        public string RegistrantCity { get; set; }
+
+        /// <summary>
+        /// State or Province of the address of the domain registrant, if available
+        /// </summary>
+        /// <value>State or Province of the address of the domain registrant, if available</value>
+        [DataMember(Name="RegistrantStateOrProvince", EmitDefaultValue=false)]
+        public string RegistrantStateOrProvince { get; set; }
+
+        /// <summary>
+        /// Postal code of the address of the domain registrant, if available
+        /// </summary>
+        /// <value>Postal code of the address of the domain registrant, if available</value>
+        [DataMember(Name="RegistrantPostalCode", EmitDefaultValue=false)]
+        public string RegistrantPostalCode { get; set; }
+
+        /// <summary>
+        /// Country of the address of the domain registrant, if available
+        /// </summary>
+        /// <value>Country of the address of the domain registrant, if available</value>
+        [DataMember(Name="RegistrantCountry", EmitDefaultValue=false)]
+        public string RegistrantCountry { get; set; }
+
+        /// <summary>
+        /// Raw address string of the domain registrant, if available
+        /// </summary>
+        /// <value>Raw address string of the domain registrant, if available</value>
+        [DataMember(Name="RegistrantRawAddress", EmitDefaultValue=false)]
+        public string RegistrantRawAddress { get; set; }
+
+        /// <summary>
+        /// Telephone number of the address of the domain registrant
+        /// </summary>
+        /// <value>Telephone number of the address of the domain registrant</value>
+        [DataMember(Name="RegistrantTelephone", EmitDefaultValue=false)]
+        public string RegistrantTelephone { get; set; }
 
         /// <summary>
         /// Server used to lookup WHOIS information (may change based on lookup).
@@ -82,6 +181,17 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             var sb = new StringBuilder();
             sb.Append("class WhoisResponse {\n");
             sb.Append("  ValidDomain: ").Append(ValidDomain).Append("\n");
+            sb.Append("  RegistrantName: ").Append(RegistrantName).Append("\n");
+            sb.Append("  RegistrantOrganization: ").Append(RegistrantOrganization).Append("\n");
+            sb.Append("  RegistrantEmail: ").Append(RegistrantEmail).Append("\n");
+            sb.Append("  RegistrantStreetNumber: ").Append(RegistrantStreetNumber).Append("\n");
+            sb.Append("  RegistrantStreet: ").Append(RegistrantStreet).Append("\n");
+            sb.Append("  RegistrantCity: ").Append(RegistrantCity).Append("\n");
+            sb.Append("  RegistrantStateOrProvince: ").Append(RegistrantStateOrProvince).Append("\n");
+            sb.Append("  RegistrantPostalCode: ").Append(RegistrantPostalCode).Append("\n");
+            sb.Append("  RegistrantCountry: ").Append(RegistrantCountry).Append("\n");
+            sb.Append("  RegistrantRawAddress: ").Append(RegistrantRawAddress).Append("\n");
+            sb.Append("  RegistrantTelephone: ").Append(RegistrantTelephone).Append("\n");
             sb.Append("  WhoisServer: ").Append(WhoisServer).Append("\n");
             sb.Append("  RawTextRecord: ").Append(RawTextRecord).Append("\n");
             sb.Append("  CreatedDt: ").Append(CreatedDt).Append("\n");
@@ -125,6 +235,61 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.ValidDomain.Equals(input.ValidDomain))
                 ) && 
                 (
+                    this.RegistrantName == input.RegistrantName ||
+                    (this.RegistrantName != null &&
+                    this.RegistrantName.Equals(input.RegistrantName))
+                ) && 
+                (
+                    this.RegistrantOrganization == input.RegistrantOrganization ||
+                    (this.RegistrantOrganization != null &&
+                    this.RegistrantOrganization.Equals(input.RegistrantOrganization))
+                ) && 
+                (
+                    this.RegistrantEmail == input.RegistrantEmail ||
+                    (this.RegistrantEmail != null &&
+                    this.RegistrantEmail.Equals(input.RegistrantEmail))
+                ) && 
+                (
+                    this.RegistrantStreetNumber == input.RegistrantStreetNumber ||
+                    (this.RegistrantStreetNumber != null &&
+                    this.RegistrantStreetNumber.Equals(input.RegistrantStreetNumber))
+                ) && 
+                (
+                    this.RegistrantStreet == input.RegistrantStreet ||
+                    (this.RegistrantStreet != null &&
+                    this.RegistrantStreet.Equals(input.RegistrantStreet))
+                ) && 
+                (
+                    this.RegistrantCity == input.RegistrantCity ||
+                    (this.RegistrantCity != null &&
+                    this.RegistrantCity.Equals(input.RegistrantCity))
+                ) && 
+                (
+                    this.RegistrantStateOrProvince == input.RegistrantStateOrProvince ||
+                    (this.RegistrantStateOrProvince != null &&
+                    this.RegistrantStateOrProvince.Equals(input.RegistrantStateOrProvince))
+                ) && 
+                (
+                    this.RegistrantPostalCode == input.RegistrantPostalCode ||
+                    (this.RegistrantPostalCode != null &&
+                    this.RegistrantPostalCode.Equals(input.RegistrantPostalCode))
+                ) && 
+                (
+                    this.RegistrantCountry == input.RegistrantCountry ||
+                    (this.RegistrantCountry != null &&
+                    this.RegistrantCountry.Equals(input.RegistrantCountry))
+                ) && 
+                (
+                    this.RegistrantRawAddress == input.RegistrantRawAddress ||
+                    (this.RegistrantRawAddress != null &&
+                    this.RegistrantRawAddress.Equals(input.RegistrantRawAddress))
+                ) && 
+                (
+                    this.RegistrantTelephone == input.RegistrantTelephone ||
+                    (this.RegistrantTelephone != null &&
+                    this.RegistrantTelephone.Equals(input.RegistrantTelephone))
+                ) && 
+                (
                     this.WhoisServer == input.WhoisServer ||
                     (this.WhoisServer != null &&
                     this.WhoisServer.Equals(input.WhoisServer))
@@ -152,6 +317,28 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                 int hashCode = 41;
                 if (this.ValidDomain != null)
                     hashCode = hashCode * 59 + this.ValidDomain.GetHashCode();
+                if (this.RegistrantName != null)
+                    hashCode = hashCode * 59 + this.RegistrantName.GetHashCode();
+                if (this.RegistrantOrganization != null)
+                    hashCode = hashCode * 59 + this.RegistrantOrganization.GetHashCode();
+                if (this.RegistrantEmail != null)
+                    hashCode = hashCode * 59 + this.RegistrantEmail.GetHashCode();
+                if (this.RegistrantStreetNumber != null)
+                    hashCode = hashCode * 59 + this.RegistrantStreetNumber.GetHashCode();
+                if (this.RegistrantStreet != null)
+                    hashCode = hashCode * 59 + this.RegistrantStreet.GetHashCode();
+                if (this.RegistrantCity != null)
+                    hashCode = hashCode * 59 + this.RegistrantCity.GetHashCode();
+                if (this.RegistrantStateOrProvince != null)
+                    hashCode = hashCode * 59 + this.RegistrantStateOrProvince.GetHashCode();
+                if (this.RegistrantPostalCode != null)
+                    hashCode = hashCode * 59 + this.RegistrantPostalCode.GetHashCode();
+                if (this.RegistrantCountry != null)
+                    hashCode = hashCode * 59 + this.RegistrantCountry.GetHashCode();
+                if (this.RegistrantRawAddress != null)
+                    hashCode = hashCode * 59 + this.RegistrantRawAddress.GetHashCode();
+                if (this.RegistrantTelephone != null)
+                    hashCode = hashCode * 59 + this.RegistrantTelephone.GetHashCode();
                 if (this.WhoisServer != null)
                     hashCode = hashCode * 59 + this.WhoisServer.GetHashCode();
                 if (this.RawTextRecord != null)

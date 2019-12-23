@@ -75,6 +75,94 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             // TODO unit test for the property 'ValidDomain'
         }
         /// <summary>
+        /// Test the property 'RegistrantName'
+        /// </summary>
+        [Test]
+        public void RegistrantNameTest()
+        {
+            // TODO unit test for the property 'RegistrantName'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantOrganization'
+        /// </summary>
+        [Test]
+        public void RegistrantOrganizationTest()
+        {
+            // TODO unit test for the property 'RegistrantOrganization'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantEmail'
+        /// </summary>
+        [Test]
+        public void RegistrantEmailTest()
+        {
+            // TODO unit test for the property 'RegistrantEmail'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantStreetNumber'
+        /// </summary>
+        [Test]
+        public void RegistrantStreetNumberTest()
+        {
+            // TODO unit test for the property 'RegistrantStreetNumber'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantStreet'
+        /// </summary>
+        [Test]
+        public void RegistrantStreetTest()
+        {
+            // TODO unit test for the property 'RegistrantStreet'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantCity'
+        /// </summary>
+        [Test]
+        public void RegistrantCityTest()
+        {
+            // TODO unit test for the property 'RegistrantCity'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantStateOrProvince'
+        /// </summary>
+        [Test]
+        public void RegistrantStateOrProvinceTest()
+        {
+            // TODO unit test for the property 'RegistrantStateOrProvince'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantPostalCode'
+        /// </summary>
+        [Test]
+        public void RegistrantPostalCodeTest()
+        {
+            // TODO unit test for the property 'RegistrantPostalCode'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantCountry'
+        /// </summary>
+        [Test]
+        public void RegistrantCountryTest()
+        {
+            // TODO unit test for the property 'RegistrantCountry'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantRawAddress'
+        /// </summary>
+        [Test]
+        public void RegistrantRawAddressTest()
+        {
+            // TODO unit test for the property 'RegistrantRawAddress'
+        }
+        /// <summary>
+        /// Test the property 'RegistrantTelephone'
+        /// </summary>
+        [Test]
+        public void RegistrantTelephoneTest()
+        {
+            // TODO unit test for the property 'RegistrantTelephone'
+        }
+        /// <summary>
         /// Test the property 'WhoisServer'
         /// </summary>
         [Test]

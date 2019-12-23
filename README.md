@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.0.1
+- SDK version: 3.0.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**EmailFullValidation**](docs/EmailApi.md#emailfullvalidation) | **POST** /validate/email/address/full | Fully validate an email address
 *EmailApi* | [**EmailPost**](docs/EmailApi.md#emailpost) | **POST** /validate/email/address/syntaxOnly | Validate email adddress for syntactic correctness only
 *IPAddressApi* | [**IPAddressPost**](docs/IPAddressApi.md#ipaddresspost) | **POST** /validate/ip/geolocate | Geolocate an IP address
+*LeadEnrichmentApi* | [**LeadEnrichmentEnrichLead**](docs/LeadEnrichmentApi.md#leadenrichmentenrichlead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
 *NameApi* | [**NameGetGender**](docs/NameApi.md#namegetgender) | **POST** /validate/name/get-gender | Get the gender of a first name
 *NameApi* | [**NameIdentifier**](docs/NameApi.md#nameidentifier) | **POST** /validate/name/identifier | Validate a code identifier
 *NameApi* | [**NameValidateFirstName**](docs/NameApi.md#namevalidatefirstname) | **POST** /validate/name/first | Validate a first name
@@ -136,6 +137,8 @@ Class | Method | HTTP request | Description
  - [Model.GetGenderResponse](docs/GetGenderResponse.md)
  - [Model.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [Model.LastNameValidationResponse](docs/LastNameValidationResponse.md)
+ - [Model.LeadEnrichmentRequest](docs/LeadEnrichmentRequest.md)
+ - [Model.LeadEnrichmentResponse](docs/LeadEnrichmentResponse.md)
  - [Model.ParseAddressRequest](docs/ParseAddressRequest.md)
  - [Model.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [Model.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)

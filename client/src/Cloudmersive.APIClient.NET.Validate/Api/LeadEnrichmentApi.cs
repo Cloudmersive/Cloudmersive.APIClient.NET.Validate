@@ -21,68 +21,68 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IUserAgentApi : IApiAccessor
+    public interface ILeadEnrichmentApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots
+        /// Enrich an input lead with additional fields of data
         /// </summary>
         /// <remarks>
-        /// Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// 
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>UserAgentValidateResponse</returns>
-        UserAgentValidateResponse UserAgentParse (UserAgentValidateRequest request);
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>LeadEnrichmentResponse</returns>
+        LeadEnrichmentResponse LeadEnrichmentEnrichLead (LeadEnrichmentRequest request);
 
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots
+        /// Enrich an input lead with additional fields of data
         /// </summary>
         /// <remarks>
-        /// Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// 
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>ApiResponse of UserAgentValidateResponse</returns>
-        ApiResponse<UserAgentValidateResponse> UserAgentParseWithHttpInfo (UserAgentValidateRequest request);
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>ApiResponse of LeadEnrichmentResponse</returns>
+        ApiResponse<LeadEnrichmentResponse> LeadEnrichmentEnrichLeadWithHttpInfo (LeadEnrichmentRequest request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots
+        /// Enrich an input lead with additional fields of data
         /// </summary>
         /// <remarks>
-        /// Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// 
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>Task of UserAgentValidateResponse</returns>
-        System.Threading.Tasks.Task<UserAgentValidateResponse> UserAgentParseAsync (UserAgentValidateRequest request);
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>Task of LeadEnrichmentResponse</returns>
+        System.Threading.Tasks.Task<LeadEnrichmentResponse> LeadEnrichmentEnrichLeadAsync (LeadEnrichmentRequest request);
 
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots
+        /// Enrich an input lead with additional fields of data
         /// </summary>
         /// <remarks>
-        /// Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// 
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>Task of ApiResponse (UserAgentValidateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserAgentValidateResponse>> UserAgentParseAsyncWithHttpInfo (UserAgentValidateRequest request);
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>Task of ApiResponse (LeadEnrichmentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LeadEnrichmentResponse>> LeadEnrichmentEnrichLeadAsyncWithHttpInfo (LeadEnrichmentRequest request);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class UserAgentApi : IUserAgentApi
+    public partial class LeadEnrichmentApi : ILeadEnrichmentApi
     {
         private Cloudmersive.APIClient.NET.Validate.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserAgentApi"/> class.
+        /// Initializes a new instance of the <see cref="LeadEnrichmentApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UserAgentApi(String basePath)
+        public LeadEnrichmentApi(String basePath)
         {
             this.Configuration = new Cloudmersive.APIClient.NET.Validate.Client.Configuration { BasePath = basePath };
 
@@ -90,12 +90,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserAgentApi"/> class
+        /// Initializes a new instance of the <see cref="LeadEnrichmentApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public UserAgentApi(Cloudmersive.APIClient.NET.Validate.Client.Configuration configuration = null)
+        public LeadEnrichmentApi(Cloudmersive.APIClient.NET.Validate.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Cloudmersive.APIClient.NET.Validate.Client.Configuration.Default;
@@ -169,30 +169,30 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// Enrich an input lead with additional fields of data 
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>UserAgentValidateResponse</returns>
-        public UserAgentValidateResponse UserAgentParse (UserAgentValidateRequest request)
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>LeadEnrichmentResponse</returns>
+        public LeadEnrichmentResponse LeadEnrichmentEnrichLead (LeadEnrichmentRequest request)
         {
-             ApiResponse<UserAgentValidateResponse> localVarResponse = UserAgentParseWithHttpInfo(request);
+             ApiResponse<LeadEnrichmentResponse> localVarResponse = LeadEnrichmentEnrichLeadWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// Enrich an input lead with additional fields of data 
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>ApiResponse of UserAgentValidateResponse</returns>
-        public ApiResponse< UserAgentValidateResponse > UserAgentParseWithHttpInfo (UserAgentValidateRequest request)
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>ApiResponse of LeadEnrichmentResponse</returns>
+        public ApiResponse< LeadEnrichmentResponse > LeadEnrichmentEnrichLeadWithHttpInfo (LeadEnrichmentRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling UserAgentApi->UserAgentParse");
+                throw new ApiException(400, "Missing required parameter 'request' when calling LeadEnrichmentApi->LeadEnrichmentEnrichLead");
 
-            var localVarPath = "/validate/useragent/parse";
+            var localVarPath = "/validate/lead-enrichment/lead/enrich";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -242,41 +242,41 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UserAgentParse", localVarResponse);
+                Exception exception = ExceptionFactory("LeadEnrichmentEnrichLead", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UserAgentValidateResponse>(localVarStatusCode,
+            return new ApiResponse<LeadEnrichmentResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserAgentValidateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAgentValidateResponse)));
+                (LeadEnrichmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LeadEnrichmentResponse)));
         }
 
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// Enrich an input lead with additional fields of data 
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>Task of UserAgentValidateResponse</returns>
-        public async System.Threading.Tasks.Task<UserAgentValidateResponse> UserAgentParseAsync (UserAgentValidateRequest request)
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>Task of LeadEnrichmentResponse</returns>
+        public async System.Threading.Tasks.Task<LeadEnrichmentResponse> LeadEnrichmentEnrichLeadAsync (LeadEnrichmentRequest request)
         {
-             ApiResponse<UserAgentValidateResponse> localVarResponse = await UserAgentParseAsyncWithHttpInfo(request);
+             ApiResponse<LeadEnrichmentResponse> localVarResponse = await LeadEnrichmentEnrichLeadAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Parse an HTTP User-Agent string, identify robots Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
+        /// Enrich an input lead with additional fields of data 
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">Input parse request</param>
-        /// <returns>Task of ApiResponse (UserAgentValidateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserAgentValidateResponse>> UserAgentParseAsyncWithHttpInfo (UserAgentValidateRequest request)
+        /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
+        /// <returns>Task of ApiResponse (LeadEnrichmentResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LeadEnrichmentResponse>> LeadEnrichmentEnrichLeadAsyncWithHttpInfo (LeadEnrichmentRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling UserAgentApi->UserAgentParse");
+                throw new ApiException(400, "Missing required parameter 'request' when calling LeadEnrichmentApi->LeadEnrichmentEnrichLead");
 
-            var localVarPath = "/validate/useragent/parse";
+            var localVarPath = "/validate/lead-enrichment/lead/enrich";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -326,13 +326,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UserAgentParse", localVarResponse);
+                Exception exception = ExceptionFactory("LeadEnrichmentEnrichLead", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UserAgentValidateResponse>(localVarStatusCode,
+            return new ApiResponse<LeadEnrichmentResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserAgentValidateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAgentValidateResponse)));
+                (LeadEnrichmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LeadEnrichmentResponse)));
         }
 
     }

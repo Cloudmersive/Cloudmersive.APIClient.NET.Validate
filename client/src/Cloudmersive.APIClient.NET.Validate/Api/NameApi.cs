@@ -371,10 +371,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -458,10 +455,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -544,10 +538,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -631,10 +622,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -717,10 +705,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -804,10 +789,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -890,10 +872,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -977,10 +956,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1063,10 +1039,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1150,10 +1123,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
+                "text/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

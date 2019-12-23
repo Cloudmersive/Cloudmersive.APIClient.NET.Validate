@@ -74,6 +74,30 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         {
             // TODO unit test for the property 'ValidAddress'
         }
+        /// <summary>
+        /// Test the property 'Domain'
+        /// </summary>
+        [Test]
+        public void DomainTest()
+        {
+            // TODO unit test for the property 'Domain'
+        }
+        /// <summary>
+        /// Test the property 'IsFreeEmailProvider'
+        /// </summary>
+        [Test]
+        public void IsFreeEmailProviderTest()
+        {
+            // TODO unit test for the property 'IsFreeEmailProvider'
+        }
+        /// <summary>
+        /// Test the property 'IsDisposable'
+        /// </summary>
+        [Test]
+        public void IsDisposableTest()
+        {
+            // TODO unit test for the property 'IsDisposable'
+        }
 
     }
 

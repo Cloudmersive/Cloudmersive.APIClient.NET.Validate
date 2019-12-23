@@ -1,19 +1,17 @@
-# Cloudmersive.APIClient.NET.Validate.Api.AddressApi
+# Cloudmersive.APIClient.NET.Validate.Api.LeadEnrichmentApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddressParseString**](AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
+[**LeadEnrichmentEnrichLead**](LeadEnrichmentApi.md#leadenrichmentenrichlead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
 
 
-<a name="addressparsestring"></a>
-# **AddressParseString**
-> ParseAddressResponse AddressParseString (ParseAddressRequest input)
+<a name="leadenrichmentenrichlead"></a>
+# **LeadEnrichmentEnrichLead**
+> LeadEnrichmentResponse LeadEnrichmentEnrichLead (LeadEnrichmentRequest request)
 
-Parse an unstructured input text string into an international, formatted address
-
-Uses machine learning and Natural Language Processing (NLP) to handle a wide array of cases, including non-standard and unstructured address strings across a wide array of countries and address formatting norms.
+Enrich an input lead with additional fields of data
 
 ### Example
 ```csharp
@@ -25,7 +23,7 @@ using Cloudmersive.APIClient.NET.Validate.Model;
 
 namespace Example
 {
-    public class AddressParseStringExample
+    public class LeadEnrichmentEnrichLeadExample
     {
         public void main()
         {
@@ -34,18 +32,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
-            var apiInstance = new AddressApi();
-            var input = new ParseAddressRequest(); // ParseAddressRequest | Input parse request
+            var apiInstance = new LeadEnrichmentApi();
+            var request = new LeadEnrichmentRequest(); // LeadEnrichmentRequest | Input lead with known fields set, and unknown fields left blank (null)
 
             try
             {
-                // Parse an unstructured input text string into an international, formatted address
-                ParseAddressResponse result = apiInstance.AddressParseString(input);
+                // Enrich an input lead with additional fields of data
+                LeadEnrichmentResponse result = apiInstance.LeadEnrichmentEnrichLead(request);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddressApi.AddressParseString: " + e.Message );
+                Debug.Print("Exception when calling LeadEnrichmentApi.LeadEnrichmentEnrichLead: " + e.Message );
             }
         }
     }
@@ -56,11 +54,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**ParseAddressRequest**](ParseAddressRequest.md)| Input parse request | 
+ **request** | [**LeadEnrichmentRequest**](LeadEnrichmentRequest.md)| Input lead with known fields set, and unknown fields left blank (null) | 
 
 ### Return type
 
-[**ParseAddressResponse**](ParseAddressResponse.md)
+[**LeadEnrichmentResponse**](LeadEnrichmentResponse.md)
 
 ### Authorization
 
