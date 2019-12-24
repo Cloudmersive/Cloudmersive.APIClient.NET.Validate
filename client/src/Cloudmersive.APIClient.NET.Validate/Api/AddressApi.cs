@@ -25,6 +25,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name
+        /// </summary>
+        /// <remarks>
+        /// Validates and normalizes country information, and returns key information about a country.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ValidateCountryResponse</returns>
+        ValidateCountryResponse AddressCountry (ValidateCountryRequest input);
+
+        /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name
+        /// </summary>
+        /// <remarks>
+        /// Validates and normalizes country information, and returns key information about a country.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of ValidateCountryResponse</returns>
+        ApiResponse<ValidateCountryResponse> AddressCountryWithHttpInfo (ValidateCountryRequest input);
+        /// <summary>
         /// Parse an unstructured input text string into an international, formatted address
         /// </summary>
         /// <remarks>
@@ -47,6 +68,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         ApiResponse<ParseAddressResponse> AddressParseStringWithHttpInfo (ParseAddressRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name
+        /// </summary>
+        /// <remarks>
+        /// Validates and normalizes country information, and returns key information about a country.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ValidateCountryResponse</returns>
+        System.Threading.Tasks.Task<ValidateCountryResponse> AddressCountryAsync (ValidateCountryRequest input);
+
+        /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name
+        /// </summary>
+        /// <remarks>
+        /// Validates and normalizes country information, and returns key information about a country.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (ValidateCountryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateCountryResponse>> AddressCountryAsyncWithHttpInfo (ValidateCountryRequest input);
         /// <summary>
         /// Parse an unstructured input text string into an international, formatted address
         /// </summary>
@@ -166,6 +208,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name Validates and normalizes country information, and returns key information about a country.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ValidateCountryResponse</returns>
+        public ValidateCountryResponse AddressCountry (ValidateCountryRequest input)
+        {
+             ApiResponse<ValidateCountryResponse> localVarResponse = AddressCountryWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name Validates and normalizes country information, and returns key information about a country.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of ValidateCountryResponse</returns>
+        public ApiResponse< ValidateCountryResponse > AddressCountryWithHttpInfo (ValidateCountryRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressCountry");
+
+            var localVarPath = "/validate/address/country";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressCountry", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateCountryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateCountryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateCountryResponse)));
+        }
+
+        /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name Validates and normalizes country information, and returns key information about a country.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ValidateCountryResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateCountryResponse> AddressCountryAsync (ValidateCountryRequest input)
+        {
+             ApiResponse<ValidateCountryResponse> localVarResponse = await AddressCountryAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate and normalize country information, return ISO 3166-1 country codes and country name Validates and normalizes country information, and returns key information about a country.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (ValidateCountryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateCountryResponse>> AddressCountryAsyncWithHttpInfo (ValidateCountryRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressCountry");
+
+            var localVarPath = "/validate/address/country";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressCountry", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateCountryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateCountryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateCountryResponse)));
         }
 
         /// <summary>

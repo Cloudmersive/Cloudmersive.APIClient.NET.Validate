@@ -40,8 +40,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <param name="city">The city of the address..</param>
         /// <param name="stateOrProvince">The state or province of the address..</param>
         /// <param name="postalCode">The postal code or zip code of the address..</param>
-        /// <param name="country">Country of the address, if present in the address.  If not included in the address it will be null..</param>
-        public ParseAddressResponse(bool? successful = default(bool?), string building = default(string), string streetNumber = default(string), string street = default(string), string city = default(string), string stateOrProvince = default(string), string postalCode = default(string), string country = default(string))
+        /// <param name="countryFullName">Country of the address, if present in the address.  If not included in the address it will be null..</param>
+        /// <param name="iSOTwoLetterCode">Two-letter ISO 3166-1 country code.</param>
+        public ParseAddressResponse(bool? successful = default(bool?), string building = default(string), string streetNumber = default(string), string street = default(string), string city = default(string), string stateOrProvince = default(string), string postalCode = default(string), string countryFullName = default(string), string iSOTwoLetterCode = default(string))
         {
             this.Successful = successful;
             this.Building = building;
@@ -50,7 +51,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             this.City = city;
             this.StateOrProvince = stateOrProvince;
             this.PostalCode = postalCode;
-            this.Country = country;
+            this.CountryFullName = countryFullName;
+            this.ISOTwoLetterCode = iSOTwoLetterCode;
         }
         
         /// <summary>
@@ -106,8 +108,15 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// Country of the address, if present in the address.  If not included in the address it will be null.
         /// </summary>
         /// <value>Country of the address, if present in the address.  If not included in the address it will be null.</value>
-        [DataMember(Name="Country", EmitDefaultValue=false)]
-        public string Country { get; set; }
+        [DataMember(Name="CountryFullName", EmitDefaultValue=false)]
+        public string CountryFullName { get; set; }
+
+        /// <summary>
+        /// Two-letter ISO 3166-1 country code
+        /// </summary>
+        /// <value>Two-letter ISO 3166-1 country code</value>
+        [DataMember(Name="ISOTwoLetterCode", EmitDefaultValue=false)]
+        public string ISOTwoLetterCode { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -124,7 +133,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  StateOrProvince: ").Append(StateOrProvince).Append("\n");
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
-            sb.Append("  Country: ").Append(Country).Append("\n");
+            sb.Append("  CountryFullName: ").Append(CountryFullName).Append("\n");
+            sb.Append("  ISOTwoLetterCode: ").Append(ISOTwoLetterCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -195,9 +205,14 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.PostalCode.Equals(input.PostalCode))
                 ) && 
                 (
-                    this.Country == input.Country ||
-                    (this.Country != null &&
-                    this.Country.Equals(input.Country))
+                    this.CountryFullName == input.CountryFullName ||
+                    (this.CountryFullName != null &&
+                    this.CountryFullName.Equals(input.CountryFullName))
+                ) && 
+                (
+                    this.ISOTwoLetterCode == input.ISOTwoLetterCode ||
+                    (this.ISOTwoLetterCode != null &&
+                    this.ISOTwoLetterCode.Equals(input.ISOTwoLetterCode))
                 );
         }
 
@@ -224,8 +239,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     hashCode = hashCode * 59 + this.StateOrProvince.GetHashCode();
                 if (this.PostalCode != null)
                     hashCode = hashCode * 59 + this.PostalCode.GetHashCode();
-                if (this.Country != null)
-                    hashCode = hashCode * 59 + this.Country.GetHashCode();
+                if (this.CountryFullName != null)
+                    hashCode = hashCode * 59 + this.CountryFullName.GetHashCode();
+                if (this.ISOTwoLetterCode != null)
+                    hashCode = hashCode * 59 + this.ISOTwoLetterCode.GetHashCode();
                 return hashCode;
             }
         }

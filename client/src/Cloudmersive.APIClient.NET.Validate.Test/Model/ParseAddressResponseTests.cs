@@ -123,12 +123,20 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             // TODO unit test for the property 'PostalCode'
         }
         /// <summary>
-        /// Test the property 'Country'
+        /// Test the property 'CountryFullName'
         /// </summary>
         [Test]
-        public void CountryTest()
+        public void CountryFullNameTest()
         {
-            // TODO unit test for the property 'Country'
+            // TODO unit test for the property 'CountryFullName'
+        }
+        /// <summary>
+        /// Test the property 'ISOTwoLetterCode'
+        /// </summary>
+        [Test]
+        public void ISOTwoLetterCodeTest()
+        {
+            // TODO unit test for the property 'ISOTwoLetterCode'
         }
 
     }

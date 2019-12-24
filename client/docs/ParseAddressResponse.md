@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **City** | **string** | The city of the address. | [optional] 
 **StateOrProvince** | **string** | The state or province of the address. | [optional] 
 **PostalCode** | **string** | The postal code or zip code of the address. | [optional] 
-**Country** | **string** | Country of the address, if present in the address.  If not included in the address it will be null. | [optional] 
+**CountryFullName** | **string** | Country of the address, if present in the address.  If not included in the address it will be null. | [optional] 
+**ISOTwoLetterCode** | **string** | Two-letter ISO 3166-1 country code | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

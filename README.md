@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.0.2
+- SDK version: 3.0.3
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -76,17 +76,17 @@ namespace Example
             // Configuration.Default.ApiKeyPrefix.Add("Apikey", "Bearer");
 
             var apiInstance = new AddressApi();
-            var input = new ParseAddressRequest(); // ParseAddressRequest | Input parse request
+            var input = new ValidateCountryRequest(); // ValidateCountryRequest | Input request
 
             try
             {
-                // Parse an unstructured input text string into an international, formatted address
-                ParseAddressResponse result = apiInstance.AddressParseString(input);
+                // Validate and normalize country information, return ISO 3166-1 country codes and country name
+                ValidateCountryResponse result = apiInstance.AddressCountry(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddressApi.AddressParseString: " + e.Message );
+                Debug.Print("Exception when calling AddressApi.AddressCountry: " + e.Message );
             }
 
         }
@@ -101,6 +101,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AddressApi* | [**AddressCountry**](docs/AddressApi.md#addresscountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
 *AddressApi* | [**AddressParseString**](docs/AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
@@ -145,6 +146,8 @@ Class | Method | HTTP request | Description
  - [Model.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
  - [Model.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [Model.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
+ - [Model.ValidateCountryRequest](docs/ValidateCountryRequest.md)
+ - [Model.ValidateCountryResponse](docs/ValidateCountryResponse.md)
  - [Model.ValidateIdentifierRequest](docs/ValidateIdentifierRequest.md)
  - [Model.ValidateIdentifierResponse](docs/ValidateIdentifierResponse.md)
  - [Model.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)

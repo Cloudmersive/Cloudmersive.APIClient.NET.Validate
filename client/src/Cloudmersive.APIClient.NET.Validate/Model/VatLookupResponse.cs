@@ -37,14 +37,28 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <param name="vatNumber">VAT number.</param>
         /// <param name="isValid">True if the VAT code is valid, false otherwise.</param>
         /// <param name="businessName">Name of the business.</param>
-        /// <param name="businessAddress">Business address.</param>
-        public VatLookupResponse(string countryCode = default(string), string vatNumber = default(string), bool? isValid = default(bool?), string businessName = default(string), string businessAddress = default(string))
+        /// <param name="businessAddress">Business address as a single string.</param>
+        /// <param name="businessBuilding">For the business address, the name of the building, house or structure if applicable, such as \&quot;Cloudmersive Building 2\&quot;.  This will often by null..</param>
+        /// <param name="businessStreetNumber">For the business address, the street number or house number of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;1600\&quot;.  This value will typically be populated for most addresses..</param>
+        /// <param name="businessStreet">For the business address, the name of the street or road of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;Pennsylvania Avenue NW\&quot;..</param>
+        /// <param name="businessCity">For the business address, the city of the address..</param>
+        /// <param name="businessStateOrProvince">For the business address, the state or province of the address..</param>
+        /// <param name="businessPostalCode">For the business address, the postal code or zip code of the address..</param>
+        /// <param name="businessCountry">For the business address, country of the address, if present in the address.  If not included in the address it will be null..</param>
+        public VatLookupResponse(string countryCode = default(string), string vatNumber = default(string), bool? isValid = default(bool?), string businessName = default(string), string businessAddress = default(string), string businessBuilding = default(string), string businessStreetNumber = default(string), string businessStreet = default(string), string businessCity = default(string), string businessStateOrProvince = default(string), string businessPostalCode = default(string), string businessCountry = default(string))
         {
             this.CountryCode = countryCode;
             this.VatNumber = vatNumber;
             this.IsValid = isValid;
             this.BusinessName = businessName;
             this.BusinessAddress = businessAddress;
+            this.BusinessBuilding = businessBuilding;
+            this.BusinessStreetNumber = businessStreetNumber;
+            this.BusinessStreet = businessStreet;
+            this.BusinessCity = businessCity;
+            this.BusinessStateOrProvince = businessStateOrProvince;
+            this.BusinessPostalCode = businessPostalCode;
+            this.BusinessCountry = businessCountry;
         }
         
         /// <summary>
@@ -76,11 +90,60 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public string BusinessName { get; set; }
 
         /// <summary>
-        /// Business address
+        /// Business address as a single string
         /// </summary>
-        /// <value>Business address</value>
+        /// <value>Business address as a single string</value>
         [DataMember(Name="BusinessAddress", EmitDefaultValue=false)]
         public string BusinessAddress { get; set; }
+
+        /// <summary>
+        /// For the business address, the name of the building, house or structure if applicable, such as \&quot;Cloudmersive Building 2\&quot;.  This will often by null.
+        /// </summary>
+        /// <value>For the business address, the name of the building, house or structure if applicable, such as \&quot;Cloudmersive Building 2\&quot;.  This will often by null.</value>
+        [DataMember(Name="BusinessBuilding", EmitDefaultValue=false)]
+        public string BusinessBuilding { get; set; }
+
+        /// <summary>
+        /// For the business address, the street number or house number of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;1600\&quot;.  This value will typically be populated for most addresses.
+        /// </summary>
+        /// <value>For the business address, the street number or house number of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;1600\&quot;.  This value will typically be populated for most addresses.</value>
+        [DataMember(Name="BusinessStreetNumber", EmitDefaultValue=false)]
+        public string BusinessStreetNumber { get; set; }
+
+        /// <summary>
+        /// For the business address, the name of the street or road of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;Pennsylvania Avenue NW\&quot;.
+        /// </summary>
+        /// <value>For the business address, the name of the street or road of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;Pennsylvania Avenue NW\&quot;.</value>
+        [DataMember(Name="BusinessStreet", EmitDefaultValue=false)]
+        public string BusinessStreet { get; set; }
+
+        /// <summary>
+        /// For the business address, the city of the address.
+        /// </summary>
+        /// <value>For the business address, the city of the address.</value>
+        [DataMember(Name="BusinessCity", EmitDefaultValue=false)]
+        public string BusinessCity { get; set; }
+
+        /// <summary>
+        /// For the business address, the state or province of the address.
+        /// </summary>
+        /// <value>For the business address, the state or province of the address.</value>
+        [DataMember(Name="BusinessStateOrProvince", EmitDefaultValue=false)]
+        public string BusinessStateOrProvince { get; set; }
+
+        /// <summary>
+        /// For the business address, the postal code or zip code of the address.
+        /// </summary>
+        /// <value>For the business address, the postal code or zip code of the address.</value>
+        [DataMember(Name="BusinessPostalCode", EmitDefaultValue=false)]
+        public string BusinessPostalCode { get; set; }
+
+        /// <summary>
+        /// For the business address, country of the address, if present in the address.  If not included in the address it will be null.
+        /// </summary>
+        /// <value>For the business address, country of the address, if present in the address.  If not included in the address it will be null.</value>
+        [DataMember(Name="BusinessCountry", EmitDefaultValue=false)]
+        public string BusinessCountry { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -95,6 +158,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
             sb.Append("  BusinessName: ").Append(BusinessName).Append("\n");
             sb.Append("  BusinessAddress: ").Append(BusinessAddress).Append("\n");
+            sb.Append("  BusinessBuilding: ").Append(BusinessBuilding).Append("\n");
+            sb.Append("  BusinessStreetNumber: ").Append(BusinessStreetNumber).Append("\n");
+            sb.Append("  BusinessStreet: ").Append(BusinessStreet).Append("\n");
+            sb.Append("  BusinessCity: ").Append(BusinessCity).Append("\n");
+            sb.Append("  BusinessStateOrProvince: ").Append(BusinessStateOrProvince).Append("\n");
+            sb.Append("  BusinessPostalCode: ").Append(BusinessPostalCode).Append("\n");
+            sb.Append("  BusinessCountry: ").Append(BusinessCountry).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +223,41 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.BusinessAddress == input.BusinessAddress ||
                     (this.BusinessAddress != null &&
                     this.BusinessAddress.Equals(input.BusinessAddress))
+                ) && 
+                (
+                    this.BusinessBuilding == input.BusinessBuilding ||
+                    (this.BusinessBuilding != null &&
+                    this.BusinessBuilding.Equals(input.BusinessBuilding))
+                ) && 
+                (
+                    this.BusinessStreetNumber == input.BusinessStreetNumber ||
+                    (this.BusinessStreetNumber != null &&
+                    this.BusinessStreetNumber.Equals(input.BusinessStreetNumber))
+                ) && 
+                (
+                    this.BusinessStreet == input.BusinessStreet ||
+                    (this.BusinessStreet != null &&
+                    this.BusinessStreet.Equals(input.BusinessStreet))
+                ) && 
+                (
+                    this.BusinessCity == input.BusinessCity ||
+                    (this.BusinessCity != null &&
+                    this.BusinessCity.Equals(input.BusinessCity))
+                ) && 
+                (
+                    this.BusinessStateOrProvince == input.BusinessStateOrProvince ||
+                    (this.BusinessStateOrProvince != null &&
+                    this.BusinessStateOrProvince.Equals(input.BusinessStateOrProvince))
+                ) && 
+                (
+                    this.BusinessPostalCode == input.BusinessPostalCode ||
+                    (this.BusinessPostalCode != null &&
+                    this.BusinessPostalCode.Equals(input.BusinessPostalCode))
+                ) && 
+                (
+                    this.BusinessCountry == input.BusinessCountry ||
+                    (this.BusinessCountry != null &&
+                    this.BusinessCountry.Equals(input.BusinessCountry))
                 );
         }
 
@@ -175,6 +280,20 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     hashCode = hashCode * 59 + this.BusinessName.GetHashCode();
                 if (this.BusinessAddress != null)
                     hashCode = hashCode * 59 + this.BusinessAddress.GetHashCode();
+                if (this.BusinessBuilding != null)
+                    hashCode = hashCode * 59 + this.BusinessBuilding.GetHashCode();
+                if (this.BusinessStreetNumber != null)
+                    hashCode = hashCode * 59 + this.BusinessStreetNumber.GetHashCode();
+                if (this.BusinessStreet != null)
+                    hashCode = hashCode * 59 + this.BusinessStreet.GetHashCode();
+                if (this.BusinessCity != null)
+                    hashCode = hashCode * 59 + this.BusinessCity.GetHashCode();
+                if (this.BusinessStateOrProvince != null)
+                    hashCode = hashCode * 59 + this.BusinessStateOrProvince.GetHashCode();
+                if (this.BusinessPostalCode != null)
+                    hashCode = hashCode * 59 + this.BusinessPostalCode.GetHashCode();
+                if (this.BusinessCountry != null)
+                    hashCode = hashCode * 59 + this.BusinessCountry.GetHashCode();
                 return hashCode;
             }
         }

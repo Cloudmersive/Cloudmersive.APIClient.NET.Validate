@@ -75,6 +75,22 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             // TODO unit test for the property 'ContactBusinessEmail'
         }
         /// <summary>
+        /// Test the property 'ContactFirstName'
+        /// </summary>
+        [Test]
+        public void ContactFirstNameTest()
+        {
+            // TODO unit test for the property 'ContactFirstName'
+        }
+        /// <summary>
+        /// Test the property 'ContactLastName'
+        /// </summary>
+        [Test]
+        public void ContactLastNameTest()
+        {
+            // TODO unit test for the property 'ContactLastName'
+        }
+        /// <summary>
         /// Test the property 'CompanyName'
         /// </summary>
         [Test]
@@ -137,6 +153,22 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         public void CompanyCountryTest()
         {
             // TODO unit test for the property 'CompanyCountry'
+        }
+        /// <summary>
+        /// Test the property 'CompanyCountryCode'
+        /// </summary>
+        [Test]
+        public void CompanyCountryCodeTest()
+        {
+            // TODO unit test for the property 'CompanyCountryCode'
+        }
+        /// <summary>
+        /// Test the property 'CompanyTelephone'
+        /// </summary>
+        [Test]
+        public void CompanyTelephoneTest()
+        {
+            // TODO unit test for the property 'CompanyTelephone'
         }
         /// <summary>
         /// Test the property 'CompanyVATNumber'

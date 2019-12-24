@@ -106,6 +106,62 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         {
             // TODO unit test for the property 'BusinessAddress'
         }
+        /// <summary>
+        /// Test the property 'BusinessBuilding'
+        /// </summary>
+        [Test]
+        public void BusinessBuildingTest()
+        {
+            // TODO unit test for the property 'BusinessBuilding'
+        }
+        /// <summary>
+        /// Test the property 'BusinessStreetNumber'
+        /// </summary>
+        [Test]
+        public void BusinessStreetNumberTest()
+        {
+            // TODO unit test for the property 'BusinessStreetNumber'
+        }
+        /// <summary>
+        /// Test the property 'BusinessStreet'
+        /// </summary>
+        [Test]
+        public void BusinessStreetTest()
+        {
+            // TODO unit test for the property 'BusinessStreet'
+        }
+        /// <summary>
+        /// Test the property 'BusinessCity'
+        /// </summary>
+        [Test]
+        public void BusinessCityTest()
+        {
+            // TODO unit test for the property 'BusinessCity'
+        }
+        /// <summary>
+        /// Test the property 'BusinessStateOrProvince'
+        /// </summary>
+        [Test]
+        public void BusinessStateOrProvinceTest()
+        {
+            // TODO unit test for the property 'BusinessStateOrProvince'
+        }
+        /// <summary>
+        /// Test the property 'BusinessPostalCode'
+        /// </summary>
+        [Test]
+        public void BusinessPostalCodeTest()
+        {
+            // TODO unit test for the property 'BusinessPostalCode'
+        }
+        /// <summary>
+        /// Test the property 'BusinessCountry'
+        /// </summary>
+        [Test]
+        public void BusinessCountryTest()
+        {
+            // TODO unit test for the property 'BusinessCountry'
+        }
 
     }
 
