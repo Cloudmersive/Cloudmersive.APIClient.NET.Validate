@@ -1,4 +1,4 @@
-# Cloudmersive.APIClient.NET.Validate.Model.ValidateCountryResponse
+# Cloudmersive.APIClient.NET.Validate.Model.GetTimezonesResponse
 ## Properties
 
 Name | Type | Description | Notes

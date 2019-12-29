@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.0.3
+- SDK version: 3.0.4
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -102,6 +102,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AddressApi* | [**AddressCountry**](docs/AddressApi.md#addresscountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
+*AddressApi* | [**AddressGetTimezone**](docs/AddressApi.md#addressgettimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 *AddressApi* | [**AddressParseString**](docs/AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
@@ -136,6 +137,8 @@ Class | Method | HTTP request | Description
  - [Model.GeolocateResponse](docs/GeolocateResponse.md)
  - [Model.GetGenderRequest](docs/GetGenderRequest.md)
  - [Model.GetGenderResponse](docs/GetGenderResponse.md)
+ - [Model.GetTimezonesRequest](docs/GetTimezonesRequest.md)
+ - [Model.GetTimezonesResponse](docs/GetTimezonesResponse.md)
  - [Model.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [Model.LastNameValidationResponse](docs/LastNameValidationResponse.md)
  - [Model.LeadEnrichmentRequest](docs/LeadEnrichmentRequest.md)
@@ -144,6 +147,7 @@ Class | Method | HTTP request | Description
  - [Model.ParseAddressResponse](docs/ParseAddressResponse.md)
  - [Model.PhoneNumberValidateRequest](docs/PhoneNumberValidateRequest.md)
  - [Model.PhoneNumberValidationResponse](docs/PhoneNumberValidationResponse.md)
+ - [Model.Timezone](docs/Timezone.md)
  - [Model.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [Model.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
  - [Model.ValidateCountryRequest](docs/ValidateCountryRequest.md)

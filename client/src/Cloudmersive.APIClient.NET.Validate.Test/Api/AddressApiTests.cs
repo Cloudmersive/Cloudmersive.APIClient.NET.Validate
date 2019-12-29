@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test AddressGetTimezone
+        /// </summary>
+        [Test]
+        public void AddressGetTimezoneTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetTimezonesRequest input = null;
+            //var response = instance.AddressGetTimezone(input);
+            //Assert.IsInstanceOf<GetTimezonesResponse> (response, "response is GetTimezonesResponse");
+        }
+        
+        /// <summary>
         /// Test AddressParseString
         /// </summary>
         [Test]
