@@ -82,6 +82,14 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         {
             // TODO unit test for the property 'BaseUTCOffset'
         }
+        /// <summary>
+        /// Test the property 'Now'
+        /// </summary>
+        [Test]
+        public void NowTest()
+        {
+            // TODO unit test for the property 'Now'
+        }
 
     }
 

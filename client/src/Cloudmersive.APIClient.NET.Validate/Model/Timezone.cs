@@ -35,10 +35,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// </summary>
         /// <param name="name">Name of the Time Zone.</param>
         /// <param name="baseUTCOffset">UTC offset for this time zone.</param>
-        public Timezone(string name = default(string), string baseUTCOffset = default(string))
+        /// <param name="now">The current time (Now) in this time zone.</param>
+        public Timezone(string name = default(string), string baseUTCOffset = default(string), DateTime? now = default(DateTime?))
         {
             this.Name = name;
             this.BaseUTCOffset = baseUTCOffset;
+            this.Now = now;
         }
         
         /// <summary>
@@ -56,6 +58,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public string BaseUTCOffset { get; set; }
 
         /// <summary>
+        /// The current time (Now) in this time zone
+        /// </summary>
+        /// <value>The current time (Now) in this time zone</value>
+        [DataMember(Name="Now", EmitDefaultValue=false)]
+        public DateTime? Now { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +74,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             sb.Append("class Timezone {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  BaseUTCOffset: ").Append(BaseUTCOffset).Append("\n");
+            sb.Append("  Now: ").Append(Now).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +118,11 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.BaseUTCOffset == input.BaseUTCOffset ||
                     (this.BaseUTCOffset != null &&
                     this.BaseUTCOffset.Equals(input.BaseUTCOffset))
+                ) && 
+                (
+                    this.Now == input.Now ||
+                    (this.Now != null &&
+                    this.Now.Equals(input.Now))
                 );
         }
 
@@ -124,6 +139,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.BaseUTCOffset != null)
                     hashCode = hashCode * 59 + this.BaseUTCOffset.GetHashCode();
+                if (this.Now != null)
+                    hashCode = hashCode * 59 + this.Now.GetHashCode();
                 return hashCode;
             }
         }
