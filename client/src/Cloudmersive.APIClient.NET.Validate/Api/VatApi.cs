@@ -25,10 +25,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Lookup a VAT code
+        /// Validate a VAT number
         /// </summary>
         /// <remarks>
-        /// Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>
@@ -36,10 +36,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         VatLookupResponse VatVatLookup (VatLookupRequest input);
 
         /// <summary>
-        /// Lookup a VAT code
+        /// Validate a VAT number
         /// </summary>
         /// <remarks>
-        /// Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>
@@ -48,10 +48,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Lookup a VAT code
+        /// Validate a VAT number
         /// </summary>
         /// <remarks>
-        /// Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>
@@ -59,10 +59,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         System.Threading.Tasks.Task<VatLookupResponse> VatVatLookupAsync (VatLookupRequest input);
 
         /// <summary>
-        /// Lookup a VAT code
+        /// Validate a VAT number
         /// </summary>
         /// <remarks>
-        /// Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>
@@ -169,7 +169,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Lookup a VAT code Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Validate a VAT number Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>
@@ -181,7 +181,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Lookup a VAT code Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Validate a VAT number Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>
@@ -252,7 +252,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Lookup a VAT code Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Validate a VAT number Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>
@@ -265,7 +265,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Lookup a VAT code Checks if a VAT code is valid, and if it is, returns more information about it
+        /// Validate a VAT number Checks if a VAT code is valid, and if it is, returns more information about it.  The first two letters of the VAT number must be letters that indicate the country, such as LU20260743.  Possible country codes include Austria (AT), Belgium (BE), Bulgaria (BG), Cyprus (CY), Czech Republic (CZ), Germany (DE), Denmark (DK), Estonia (EE), Greece (EL), Spain (ES), Finland (FI), France (FR), United Kingdom (GB), Croatia (HR), Hungary (HU), Ireland (IE), Italy (IT), Lithuania (LT), Luxembourg (LU), Latvia (LV), Malta (MT), The Netherlands (NL), Poland (PL), Portugal (PT), Romania (RO), Sweden (SE), Slovenia (SI), Slovakia (SK).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input VAT code</param>

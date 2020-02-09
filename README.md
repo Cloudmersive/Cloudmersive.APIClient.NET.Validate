@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.0.5
+- SDK version: 3.0.6
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**AddressCountry**](docs/AddressApi.md#addresscountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
 *AddressApi* | [**AddressGetTimezone**](docs/AddressApi.md#addressgettimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 *AddressApi* | [**AddressParseString**](docs/AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
+*AddressApi* | [**AddressValidateAddress**](docs/AddressApi.md#addressvalidateaddress) | **POST** /validate/address/street-address | Validate a street address
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *DomainApi* | [**DomainUrlFull**](docs/DomainApi.md#domainurlfull) | **POST** /validate/domain/url/full | Validate a URL fully
@@ -120,7 +121,7 @@ Class | Method | HTTP request | Description
 *NameApi* | [**NameValidateLastName**](docs/NameApi.md#namevalidatelastname) | **POST** /validate/name/last | Validate a last name
 *PhoneNumberApi* | [**PhoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phonenumbersyntaxonly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
 *UserAgentApi* | [**UserAgentParse**](docs/UserAgentApi.md#useragentparse) | **POST** /validate/useragent/parse | Parse an HTTP User-Agent string, identify robots
-*VatApi* | [**VatVatLookup**](docs/VatApi.md#vatvatlookup) | **POST** /validate/vat/lookup | Lookup a VAT code
+*VatApi* | [**VatVatLookup**](docs/VatApi.md#vatvatlookup) | **POST** /validate/vat/lookup | Validate a VAT number
 
 
 <a name="documentation-for-models"></a>
@@ -150,6 +151,8 @@ Class | Method | HTTP request | Description
  - [Model.Timezone](docs/Timezone.md)
  - [Model.UserAgentValidateRequest](docs/UserAgentValidateRequest.md)
  - [Model.UserAgentValidateResponse](docs/UserAgentValidateResponse.md)
+ - [Model.ValidateAddressRequest](docs/ValidateAddressRequest.md)
+ - [Model.ValidateAddressResponse](docs/ValidateAddressResponse.md)
  - [Model.ValidateCountryRequest](docs/ValidateCountryRequest.md)
  - [Model.ValidateCountryResponse](docs/ValidateCountryResponse.md)
  - [Model.ValidateIdentifierRequest](docs/ValidateIdentifierRequest.md)

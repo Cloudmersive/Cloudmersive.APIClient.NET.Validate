@@ -87,6 +87,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input parse request</param>
         /// <returns>ApiResponse of ParseAddressResponse</returns>
         ApiResponse<ParseAddressResponse> AddressParseStringWithHttpInfo (ParseAddressRequest input);
+        /// <summary>
+        /// Validate a street address
+        /// </summary>
+        /// <remarks>
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateAddressResponse</returns>
+        ValidateAddressResponse AddressValidateAddress (ValidateAddressRequest input);
+
+        /// <summary>
+        /// Validate a street address
+        /// </summary>
+        /// <remarks>
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateAddressResponse</returns>
+        ApiResponse<ValidateAddressResponse> AddressValidateAddressWithHttpInfo (ValidateAddressRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -152,6 +173,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input parse request</param>
         /// <returns>Task of ApiResponse (ParseAddressResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ParseAddressResponse>> AddressParseStringAsyncWithHttpInfo (ParseAddressRequest input);
+        /// <summary>
+        /// Validate a street address
+        /// </summary>
+        /// <remarks>
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateAddressResponse</returns>
+        System.Threading.Tasks.Task<ValidateAddressResponse> AddressValidateAddressAsync (ValidateAddressRequest input);
+
+        /// <summary>
+        /// Validate a street address
+        /// </summary>
+        /// <remarks>
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> AddressValidateAddressAsyncWithHttpInfo (ValidateAddressRequest input);
         #endregion Asynchronous Operations
     }
 
@@ -751,6 +793,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<ParseAddressResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ParseAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParseAddressResponse)));
+        }
+
+        /// <summary>
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateAddressResponse</returns>
+        public ValidateAddressResponse AddressValidateAddress (ValidateAddressRequest input)
+        {
+             ApiResponse<ValidateAddressResponse> localVarResponse = AddressValidateAddressWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateAddressResponse</returns>
+        public ApiResponse< ValidateAddressResponse > AddressValidateAddressWithHttpInfo (ValidateAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressValidateAddress");
+
+            var localVarPath = "/validate/address/street-address";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressValidateAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateAddressResponse)));
+        }
+
+        /// <summary>
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateAddressResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateAddressResponse> AddressValidateAddressAsync (ValidateAddressRequest input)
+        {
+             ApiResponse<ValidateAddressResponse> localVarResponse = await AddressValidateAddressAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> AddressValidateAddressAsyncWithHttpInfo (ValidateAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressValidateAddress");
+
+            var localVarPath = "/validate/address/street-address";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressValidateAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateAddressResponse)));
         }
 
     }

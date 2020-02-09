@@ -100,6 +100,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //Assert.IsInstanceOf<ParseAddressResponse> (response, "response is ParseAddressResponse");
         }
         
+        /// <summary>
+        /// Test AddressValidateAddress
+        /// </summary>
+        [Test]
+        public void AddressValidateAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateAddressRequest input = null;
+            //var response = instance.AddressValidateAddress(input);
+            //Assert.IsInstanceOf<ValidateAddressResponse> (response, "response is ValidateAddressResponse");
+        }
+        
     }
 
 }

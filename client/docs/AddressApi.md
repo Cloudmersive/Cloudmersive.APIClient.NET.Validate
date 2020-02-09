@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**AddressCountry**](AddressApi.md#addresscountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
 [**AddressGetTimezone**](AddressApi.md#addressgettimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 [**AddressParseString**](AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
+[**AddressValidateAddress**](AddressApi.md#addressvalidateaddress) | **POST** /validate/address/street-address | Validate a street address
 
 
 <a name="addresscountry"></a>
@@ -195,6 +196,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ParseAddressResponse**](ParseAddressResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="addressvalidateaddress"></a>
+# **AddressValidateAddress**
+> ValidateAddressResponse AddressValidateAddress (ValidateAddressRequest input)
+
+Validate a street address
+
+Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class AddressValidateAddressExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new AddressApi();
+            var input = new ValidateAddressRequest(); // ValidateAddressRequest | Input parse request
+
+            try
+            {
+                // Validate a street address
+                ValidateAddressResponse result = apiInstance.AddressValidateAddress(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddressApi.AddressValidateAddress: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ValidateAddressRequest**](ValidateAddressRequest.md)| Input parse request | 
+
+### Return type
+
+[**ValidateAddressResponse**](ValidateAddressResponse.md)
 
 ### Authorization
 
