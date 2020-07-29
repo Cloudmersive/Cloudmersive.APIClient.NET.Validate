@@ -65,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
 
         
         /// <summary>
+        /// Test AddressCheckEUMembership
+        /// </summary>
+        [Test]
+        public void AddressCheckEUMembershipTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateCountryRequest input = null;
+            //var response = instance.AddressCheckEUMembership(input);
+            //Assert.IsInstanceOf<ValidateCountryResponse> (response, "response is ValidateCountryResponse");
+        }
+        
+        /// <summary>
         /// Test AddressCountry
         /// </summary>
         [Test]
@@ -110,6 +122,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //ValidateAddressRequest input = null;
             //var response = instance.AddressValidateAddress(input);
             //Assert.IsInstanceOf<ValidateAddressResponse> (response, "response is ValidateAddressResponse");
+        }
+        
+        /// <summary>
+        /// Test AddressValidatePostalCode
+        /// </summary>
+        [Test]
+        public void AddressValidatePostalCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidatePostalCodeRequest input = null;
+            //var response = instance.AddressValidatePostalCode(input);
+            //Assert.IsInstanceOf<ValidatePostalCodeResponse> (response, "response is ValidatePostalCodeResponse");
         }
         
     }

@@ -38,14 +38,16 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <param name="iSOTwoLetterCode">Two-letter ISO 3166-1 country code.</param>
         /// <param name="fIPSTwoLetterCode">Two-letter FIPS 10-4 country code.</param>
         /// <param name="threeLetterCode">Three-letter ISO 3166-1 country code.</param>
+        /// <param name="isEuropeanUnionMember">True if this country is currently a member of the European Union (EU), false otherwise.</param>
         /// <param name="timezones">Time zones (IANA/Olsen) in the country.</param>
-        public ValidateCountryResponse(bool? successful = default(bool?), string countryFullName = default(string), string iSOTwoLetterCode = default(string), string fIPSTwoLetterCode = default(string), string threeLetterCode = default(string), List<Timezone> timezones = default(List<Timezone>))
+        public ValidateCountryResponse(bool? successful = default(bool?), string countryFullName = default(string), string iSOTwoLetterCode = default(string), string fIPSTwoLetterCode = default(string), string threeLetterCode = default(string), bool? isEuropeanUnionMember = default(bool?), List<Timezone> timezones = default(List<Timezone>))
         {
             this.Successful = successful;
             this.CountryFullName = countryFullName;
             this.ISOTwoLetterCode = iSOTwoLetterCode;
             this.FIPSTwoLetterCode = fIPSTwoLetterCode;
             this.ThreeLetterCode = threeLetterCode;
+            this.IsEuropeanUnionMember = isEuropeanUnionMember;
             this.Timezones = timezones;
         }
         
@@ -85,6 +87,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public string ThreeLetterCode { get; set; }
 
         /// <summary>
+        /// True if this country is currently a member of the European Union (EU), false otherwise
+        /// </summary>
+        /// <value>True if this country is currently a member of the European Union (EU), false otherwise</value>
+        [DataMember(Name="IsEuropeanUnionMember", EmitDefaultValue=false)]
+        public bool? IsEuropeanUnionMember { get; set; }
+
+        /// <summary>
         /// Time zones (IANA/Olsen) in the country
         /// </summary>
         /// <value>Time zones (IANA/Olsen) in the country</value>
@@ -104,6 +113,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             sb.Append("  ISOTwoLetterCode: ").Append(ISOTwoLetterCode).Append("\n");
             sb.Append("  FIPSTwoLetterCode: ").Append(FIPSTwoLetterCode).Append("\n");
             sb.Append("  ThreeLetterCode: ").Append(ThreeLetterCode).Append("\n");
+            sb.Append("  IsEuropeanUnionMember: ").Append(IsEuropeanUnionMember).Append("\n");
             sb.Append("  Timezones: ").Append(Timezones).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -165,6 +175,11 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.ThreeLetterCode.Equals(input.ThreeLetterCode))
                 ) && 
                 (
+                    this.IsEuropeanUnionMember == input.IsEuropeanUnionMember ||
+                    (this.IsEuropeanUnionMember != null &&
+                    this.IsEuropeanUnionMember.Equals(input.IsEuropeanUnionMember))
+                ) && 
+                (
                     this.Timezones == input.Timezones ||
                     this.Timezones != null &&
                     this.Timezones.SequenceEqual(input.Timezones)
@@ -190,6 +205,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     hashCode = hashCode * 59 + this.FIPSTwoLetterCode.GetHashCode();
                 if (this.ThreeLetterCode != null)
                     hashCode = hashCode * 59 + this.ThreeLetterCode.GetHashCode();
+                if (this.IsEuropeanUnionMember != null)
+                    hashCode = hashCode * 59 + this.IsEuropeanUnionMember.GetHashCode();
                 if (this.Timezones != null)
                     hashCode = hashCode * 59 + this.Timezones.GetHashCode();
                 return hashCode;

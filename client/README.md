@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.0.6
+- SDK version: 3.0.7
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -80,13 +80,13 @@ namespace Example
 
             try
             {
-                // Validate and normalize country information, return ISO 3166-1 country codes and country name
-                ValidateCountryResponse result = apiInstance.AddressCountry(input);
+                // Check if a country is a member of the European Union (EU)
+                ValidateCountryResponse result = apiInstance.AddressCheckEUMembership(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AddressApi.AddressCountry: " + e.Message );
+                Debug.Print("Exception when calling AddressApi.AddressCheckEUMembership: " + e.Message );
             }
 
         }
@@ -101,10 +101,12 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AddressApi* | [**AddressCheckEUMembership**](docs/AddressApi.md#addresscheckeumembership) | **POST** /validate/address/country/check-eu-membership | Check if a country is a member of the European Union (EU)
 *AddressApi* | [**AddressCountry**](docs/AddressApi.md#addresscountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
 *AddressApi* | [**AddressGetTimezone**](docs/AddressApi.md#addressgettimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 *AddressApi* | [**AddressParseString**](docs/AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 *AddressApi* | [**AddressValidateAddress**](docs/AddressApi.md#addressvalidateaddress) | **POST** /validate/address/street-address | Validate a street address
+*AddressApi* | [**AddressValidatePostalCode**](docs/AddressApi.md#addressvalidatepostalcode) | **POST** /validate/address/postal-code | Validate a postal code, get location information about it
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *DomainApi* | [**DomainUrlFull**](docs/DomainApi.md#domainurlfull) | **POST** /validate/domain/url/full | Validate a URL fully
@@ -157,6 +159,8 @@ Class | Method | HTTP request | Description
  - [Model.ValidateCountryResponse](docs/ValidateCountryResponse.md)
  - [Model.ValidateIdentifierRequest](docs/ValidateIdentifierRequest.md)
  - [Model.ValidateIdentifierResponse](docs/ValidateIdentifierResponse.md)
+ - [Model.ValidatePostalCodeRequest](docs/ValidatePostalCodeRequest.md)
+ - [Model.ValidatePostalCodeResponse](docs/ValidatePostalCodeResponse.md)
  - [Model.ValidateUrlRequestFull](docs/ValidateUrlRequestFull.md)
  - [Model.ValidateUrlRequestSyntaxOnly](docs/ValidateUrlRequestSyntaxOnly.md)
  - [Model.ValidateUrlResponseFull](docs/ValidateUrlResponseFull.md)

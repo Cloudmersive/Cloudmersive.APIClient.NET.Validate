@@ -107,6 +107,14 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             // TODO unit test for the property 'ThreeLetterCode'
         }
         /// <summary>
+        /// Test the property 'IsEuropeanUnionMember'
+        /// </summary>
+        [Test]
+        public void IsEuropeanUnionMemberTest()
+        {
+            // TODO unit test for the property 'IsEuropeanUnionMember'
+        }
+        /// <summary>
         /// Test the property 'Timezones'
         /// </summary>
         [Test]
