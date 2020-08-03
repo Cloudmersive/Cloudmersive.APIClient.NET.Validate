@@ -25,30 +25,30 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.Validate.Client.SwaggerD
 namespace Cloudmersive.APIClient.NET.Validate.Model
 {
     /// <summary>
-    /// Request to Validate a Postal Code
+    /// Request to Validate a State or Province in a country
     /// </summary>
     [DataContract]
-    public partial class ValidatePostalCodeRequest :  IEquatable<ValidatePostalCodeRequest>, IValidatableObject
+    public partial class ValidateStateRequest :  IEquatable<ValidateStateRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ValidatePostalCodeRequest" /> class.
+        /// Initializes a new instance of the <see cref="ValidateStateRequest" /> class.
         /// </summary>
-        /// <param name="postalCode">Required: Zip code or postal code of the address to validate, such as &#39;94597&#39;.</param>
+        /// <param name="stateOrProvince">Required: State or province of the address to validate, such as &#39;California&#39; or &#39;CA&#39;.</param>
         /// <param name="countryFullName">Optional (recommended); Name of the country, such as &#39;United States&#39;.  If left blank, and CountryCode is also left blank, will default to United States.  Global countries are supported..</param>
         /// <param name="countryCode">Optional; two-letter country code (Two-letter ISO 3166-1 country code) of the country.  If left blank, and CountryFullName is also left blank, will default to United States.  Global countries are supported..</param>
-        public ValidatePostalCodeRequest(string postalCode = default(string), string countryFullName = default(string), string countryCode = default(string))
+        public ValidateStateRequest(string stateOrProvince = default(string), string countryFullName = default(string), string countryCode = default(string))
         {
-            this.PostalCode = postalCode;
+            this.StateOrProvince = stateOrProvince;
             this.CountryFullName = countryFullName;
             this.CountryCode = countryCode;
         }
         
         /// <summary>
-        /// Required: Zip code or postal code of the address to validate, such as &#39;94597&#39;
+        /// Required: State or province of the address to validate, such as &#39;California&#39; or &#39;CA&#39;
         /// </summary>
-        /// <value>Required: Zip code or postal code of the address to validate, such as &#39;94597&#39;</value>
-        [DataMember(Name="PostalCode", EmitDefaultValue=false)]
-        public string PostalCode { get; set; }
+        /// <value>Required: State or province of the address to validate, such as &#39;California&#39; or &#39;CA&#39;</value>
+        [DataMember(Name="StateOrProvince", EmitDefaultValue=false)]
+        public string StateOrProvince { get; set; }
 
         /// <summary>
         /// Optional (recommended); Name of the country, such as &#39;United States&#39;.  If left blank, and CountryCode is also left blank, will default to United States.  Global countries are supported.
@@ -71,8 +71,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ValidatePostalCodeRequest {\n");
-            sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
+            sb.Append("class ValidateStateRequest {\n");
+            sb.Append("  StateOrProvince: ").Append(StateOrProvince).Append("\n");
             sb.Append("  CountryFullName: ").Append(CountryFullName).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             sb.Append("}\n");
@@ -95,24 +95,24 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ValidatePostalCodeRequest);
+            return this.Equals(input as ValidateStateRequest);
         }
 
         /// <summary>
-        /// Returns true if ValidatePostalCodeRequest instances are equal
+        /// Returns true if ValidateStateRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of ValidatePostalCodeRequest to be compared</param>
+        /// <param name="input">Instance of ValidateStateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ValidatePostalCodeRequest input)
+        public bool Equals(ValidateStateRequest input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.PostalCode == input.PostalCode ||
-                    (this.PostalCode != null &&
-                    this.PostalCode.Equals(input.PostalCode))
+                    this.StateOrProvince == input.StateOrProvince ||
+                    (this.StateOrProvince != null &&
+                    this.StateOrProvince.Equals(input.StateOrProvince))
                 ) && 
                 (
                     this.CountryFullName == input.CountryFullName ||
@@ -135,8 +135,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PostalCode != null)
-                    hashCode = hashCode * 59 + this.PostalCode.GetHashCode();
+                if (this.StateOrProvince != null)
+                    hashCode = hashCode * 59 + this.StateOrProvince.GetHashCode();
                 if (this.CountryFullName != null)
                     hashCode = hashCode * 59 + this.CountryFullName.GetHashCode();
                 if (this.CountryCode != null)

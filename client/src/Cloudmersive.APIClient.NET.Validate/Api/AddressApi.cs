@@ -67,6 +67,25 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of ValidateCountryResponse</returns>
         ApiResponse<ValidateCountryResponse> AddressCountryWithHttpInfo (ValidateCountryRequest input);
         /// <summary>
+        /// Get a list of ISO 3166-1 countries
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CountryListResult</returns>
+        CountryListResult AddressCountryList ();
+
+        /// <summary>
+        /// Get a list of ISO 3166-1 countries
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CountryListResult</returns>
+        ApiResponse<CountryListResult> AddressCountryListWithHttpInfo ();
+        /// <summary>
         /// Gets IANA/Olsen time zones for a country
         /// </summary>
         /// <remarks>
@@ -130,6 +149,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of ValidateAddressResponse</returns>
         ApiResponse<ValidateAddressResponse> AddressValidateAddressWithHttpInfo (ValidateAddressRequest input);
         /// <summary>
+        /// Validate a City and State/Province combination, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateCityResponse</returns>
+        ValidateCityResponse AddressValidateCity (ValidateCityRequest input);
+
+        /// <summary>
+        /// Validate a City and State/Province combination, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateCityResponse</returns>
+        ApiResponse<ValidateCityResponse> AddressValidateCityWithHttpInfo (ValidateCityRequest input);
+        /// <summary>
         /// Validate a postal code, get location information about it
         /// </summary>
         /// <remarks>
@@ -150,6 +190,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input parse request</param>
         /// <returns>ApiResponse of ValidatePostalCodeResponse</returns>
         ApiResponse<ValidatePostalCodeResponse> AddressValidatePostalCodeWithHttpInfo (ValidatePostalCodeRequest input);
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateStateResponse</returns>
+        ValidateStateResponse AddressValidateState (ValidateStateRequest input);
+
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateStateResponse</returns>
+        ApiResponse<ValidateStateResponse> AddressValidateStateWithHttpInfo (ValidateStateRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -194,6 +255,25 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input request</param>
         /// <returns>Task of ApiResponse (ValidateCountryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateCountryResponse>> AddressCountryAsyncWithHttpInfo (ValidateCountryRequest input);
+        /// <summary>
+        /// Get a list of ISO 3166-1 countries
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CountryListResult</returns>
+        System.Threading.Tasks.Task<CountryListResult> AddressCountryListAsync ();
+
+        /// <summary>
+        /// Get a list of ISO 3166-1 countries
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CountryListResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CountryListResult>> AddressCountryListAsyncWithHttpInfo ();
         /// <summary>
         /// Gets IANA/Olsen time zones for a country
         /// </summary>
@@ -258,6 +338,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> AddressValidateAddressAsyncWithHttpInfo (ValidateAddressRequest input);
         /// <summary>
+        /// Validate a City and State/Province combination, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateCityResponse</returns>
+        System.Threading.Tasks.Task<ValidateCityResponse> AddressValidateCityAsync (ValidateCityRequest input);
+
+        /// <summary>
+        /// Validate a City and State/Province combination, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateCityResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateCityResponse>> AddressValidateCityAsyncWithHttpInfo (ValidateCityRequest input);
+        /// <summary>
         /// Validate a postal code, get location information about it
         /// </summary>
         /// <remarks>
@@ -278,6 +379,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input parse request</param>
         /// <returns>Task of ApiResponse (ValidatePostalCodeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidatePostalCodeResponse>> AddressValidatePostalCodeAsyncWithHttpInfo (ValidatePostalCodeRequest input);
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateStateResponse</returns>
+        System.Threading.Tasks.Task<ValidateStateResponse> AddressValidateStateAsync (ValidateStateRequest input);
+
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it
+        /// </summary>
+        /// <remarks>
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateStateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateStateResponse>> AddressValidateStateAsyncWithHttpInfo (ValidateStateRequest input);
         #endregion Asynchronous Operations
     }
 
@@ -710,6 +832,143 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<ValidateCountryResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ValidateCountryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateCountryResponse)));
+        }
+
+        /// <summary>
+        /// Get a list of ISO 3166-1 countries Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CountryListResult</returns>
+        public CountryListResult AddressCountryList ()
+        {
+             ApiResponse<CountryListResult> localVarResponse = AddressCountryListWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of ISO 3166-1 countries Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CountryListResult</returns>
+        public ApiResponse< CountryListResult > AddressCountryListWithHttpInfo ()
+        {
+
+            var localVarPath = "/validate/address/country/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressCountryList", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CountryListResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CountryListResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CountryListResult)));
+        }
+
+        /// <summary>
+        /// Get a list of ISO 3166-1 countries Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CountryListResult</returns>
+        public async System.Threading.Tasks.Task<CountryListResult> AddressCountryListAsync ()
+        {
+             ApiResponse<CountryListResult> localVarResponse = await AddressCountryListAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of ISO 3166-1 countries Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CountryListResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CountryListResult>> AddressCountryListAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/validate/address/country/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressCountryList", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CountryListResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CountryListResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CountryListResult)));
         }
 
         /// <summary>
@@ -1214,6 +1473,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateCityResponse</returns>
+        public ValidateCityResponse AddressValidateCity (ValidateCityRequest input)
+        {
+             ApiResponse<ValidateCityResponse> localVarResponse = AddressValidateCityWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateCityResponse</returns>
+        public ApiResponse< ValidateCityResponse > AddressValidateCityWithHttpInfo (ValidateCityRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressValidateCity");
+
+            var localVarPath = "/validate/address/city";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressValidateCity", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateCityResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateCityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateCityResponse)));
+        }
+
+        /// <summary>
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateCityResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateCityResponse> AddressValidateCityAsync (ValidateCityRequest input)
+        {
+             ApiResponse<ValidateCityResponse> localVarResponse = await AddressValidateCityAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateCityResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateCityResponse>> AddressValidateCityAsyncWithHttpInfo (ValidateCityRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressValidateCity");
+
+            var localVarPath = "/validate/address/city";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressValidateCity", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateCityResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateCityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateCityResponse)));
+        }
+
+        /// <summary>
         /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1378,6 +1804,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<ValidatePostalCodeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ValidatePostalCodeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidatePostalCodeResponse)));
+        }
+
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateStateResponse</returns>
+        public ValidateStateResponse AddressValidateState (ValidateStateRequest input)
+        {
+             ApiResponse<ValidateStateResponse> localVarResponse = AddressValidateStateWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateStateResponse</returns>
+        public ApiResponse< ValidateStateResponse > AddressValidateStateWithHttpInfo (ValidateStateRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressValidateState");
+
+            var localVarPath = "/validate/address/state";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressValidateState", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateStateResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateStateResponse)));
+        }
+
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateStateResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateStateResponse> AddressValidateStateAsync (ValidateStateRequest input)
+        {
+             ApiResponse<ValidateStateResponse> localVarResponse = await AddressValidateStateAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateStateResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateStateResponse>> AddressValidateStateAsyncWithHttpInfo (ValidateStateRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressValidateState");
+
+            var localVarPath = "/validate/address/state";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressValidateState", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateStateResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateStateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateStateResponse)));
         }
 
     }

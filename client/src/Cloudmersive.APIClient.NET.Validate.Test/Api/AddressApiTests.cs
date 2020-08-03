@@ -89,6 +89,17 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test AddressCountryList
+        /// </summary>
+        [Test]
+        public void AddressCountryListTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.AddressCountryList();
+            //Assert.IsInstanceOf<CountryListResult> (response, "response is CountryListResult");
+        }
+        
+        /// <summary>
         /// Test AddressGetTimezone
         /// </summary>
         [Test]
@@ -125,6 +136,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test AddressValidateCity
+        /// </summary>
+        [Test]
+        public void AddressValidateCityTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateCityRequest input = null;
+            //var response = instance.AddressValidateCity(input);
+            //Assert.IsInstanceOf<ValidateCityResponse> (response, "response is ValidateCityResponse");
+        }
+        
+        /// <summary>
         /// Test AddressValidatePostalCode
         /// </summary>
         [Test]
@@ -134,6 +157,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //ValidatePostalCodeRequest input = null;
             //var response = instance.AddressValidatePostalCode(input);
             //Assert.IsInstanceOf<ValidatePostalCodeResponse> (response, "response is ValidatePostalCodeResponse");
+        }
+        
+        /// <summary>
+        /// Test AddressValidateState
+        /// </summary>
+        [Test]
+        public void AddressValidateStateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateStateRequest input = null;
+            //var response = instance.AddressValidateState(input);
+            //Assert.IsInstanceOf<ValidateStateResponse> (response, "response is ValidateStateResponse");
         }
         
     }

@@ -25,60 +25,51 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.Validate.Client.SwaggerD
 namespace Cloudmersive.APIClient.NET.Validate.Model
 {
     /// <summary>
-    /// Result of validating a postal code
+    /// Result of validating a state
     /// </summary>
     [DataContract]
-    public partial class ValidatePostalCodeResponse :  IEquatable<ValidatePostalCodeResponse>, IValidatableObject
+    public partial class ValidateStateResponse :  IEquatable<ValidateStateResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ValidatePostalCodeResponse" /> class.
+        /// Initializes a new instance of the <see cref="ValidateStateResponse" /> class.
         /// </summary>
-        /// <param name="validPostalCode">True if the Postal Code is valid, false otherwise.</param>
-        /// <param name="city">If valid, City corresponding to the input postal code, such as &#39;Walnut Creek&#39;.</param>
-        /// <param name="stateOrProvince">If valid; State or province corresponding to the input postal code, such as &#39;CA&#39; or &#39;California&#39;.</param>
-        /// <param name="latitude">If the postal code is valid, the degrees latitude of the centroid of the postal code, null otherwise.</param>
-        /// <param name="longitude">If the postal code is valid, the degrees longitude of the centroid of the postal code, null otherwise.</param>
-        public ValidatePostalCodeResponse(bool? validPostalCode = default(bool?), string city = default(string), string stateOrProvince = default(string), double? latitude = default(double?), double? longitude = default(double?))
+        /// <param name="validState">True if the address is valid, false otherwise.</param>
+        /// <param name="stateOrProvince">If valid; State or province corresponding to the input state name, such as &#39;CA&#39; or &#39;California&#39;.</param>
+        /// <param name="latitude">If the postal code is valid, the degrees latitude of the centroid of the state, null otherwise.</param>
+        /// <param name="longitude">If the postal code is valid, the degrees longitude of the centroid of the state, null otherwise.</param>
+        public ValidateStateResponse(bool? validState = default(bool?), string stateOrProvince = default(string), double? latitude = default(double?), double? longitude = default(double?))
         {
-            this.ValidPostalCode = validPostalCode;
-            this.City = city;
+            this.ValidState = validState;
             this.StateOrProvince = stateOrProvince;
             this.Latitude = latitude;
             this.Longitude = longitude;
         }
         
         /// <summary>
-        /// True if the Postal Code is valid, false otherwise
+        /// True if the address is valid, false otherwise
         /// </summary>
-        /// <value>True if the Postal Code is valid, false otherwise</value>
-        [DataMember(Name="ValidPostalCode", EmitDefaultValue=false)]
-        public bool? ValidPostalCode { get; set; }
+        /// <value>True if the address is valid, false otherwise</value>
+        [DataMember(Name="ValidState", EmitDefaultValue=false)]
+        public bool? ValidState { get; set; }
 
         /// <summary>
-        /// If valid, City corresponding to the input postal code, such as &#39;Walnut Creek&#39;
+        /// If valid; State or province corresponding to the input state name, such as &#39;CA&#39; or &#39;California&#39;
         /// </summary>
-        /// <value>If valid, City corresponding to the input postal code, such as &#39;Walnut Creek&#39;</value>
-        [DataMember(Name="City", EmitDefaultValue=false)]
-        public string City { get; set; }
-
-        /// <summary>
-        /// If valid; State or province corresponding to the input postal code, such as &#39;CA&#39; or &#39;California&#39;
-        /// </summary>
-        /// <value>If valid; State or province corresponding to the input postal code, such as &#39;CA&#39; or &#39;California&#39;</value>
+        /// <value>If valid; State or province corresponding to the input state name, such as &#39;CA&#39; or &#39;California&#39;</value>
         [DataMember(Name="StateOrProvince", EmitDefaultValue=false)]
         public string StateOrProvince { get; set; }
 
         /// <summary>
-        /// If the postal code is valid, the degrees latitude of the centroid of the postal code, null otherwise
+        /// If the postal code is valid, the degrees latitude of the centroid of the state, null otherwise
         /// </summary>
-        /// <value>If the postal code is valid, the degrees latitude of the centroid of the postal code, null otherwise</value>
+        /// <value>If the postal code is valid, the degrees latitude of the centroid of the state, null otherwise</value>
         [DataMember(Name="Latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
 
         /// <summary>
-        /// If the postal code is valid, the degrees longitude of the centroid of the postal code, null otherwise
+        /// If the postal code is valid, the degrees longitude of the centroid of the state, null otherwise
         /// </summary>
-        /// <value>If the postal code is valid, the degrees longitude of the centroid of the postal code, null otherwise</value>
+        /// <value>If the postal code is valid, the degrees longitude of the centroid of the state, null otherwise</value>
         [DataMember(Name="Longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
 
@@ -89,9 +80,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ValidatePostalCodeResponse {\n");
-            sb.Append("  ValidPostalCode: ").Append(ValidPostalCode).Append("\n");
-            sb.Append("  City: ").Append(City).Append("\n");
+            sb.Append("class ValidateStateResponse {\n");
+            sb.Append("  ValidState: ").Append(ValidState).Append("\n");
             sb.Append("  StateOrProvince: ").Append(StateOrProvince).Append("\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
             sb.Append("  Longitude: ").Append(Longitude).Append("\n");
@@ -115,29 +105,24 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ValidatePostalCodeResponse);
+            return this.Equals(input as ValidateStateResponse);
         }
 
         /// <summary>
-        /// Returns true if ValidatePostalCodeResponse instances are equal
+        /// Returns true if ValidateStateResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of ValidatePostalCodeResponse to be compared</param>
+        /// <param name="input">Instance of ValidateStateResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ValidatePostalCodeResponse input)
+        public bool Equals(ValidateStateResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ValidPostalCode == input.ValidPostalCode ||
-                    (this.ValidPostalCode != null &&
-                    this.ValidPostalCode.Equals(input.ValidPostalCode))
-                ) && 
-                (
-                    this.City == input.City ||
-                    (this.City != null &&
-                    this.City.Equals(input.City))
+                    this.ValidState == input.ValidState ||
+                    (this.ValidState != null &&
+                    this.ValidState.Equals(input.ValidState))
                 ) && 
                 (
                     this.StateOrProvince == input.StateOrProvince ||
@@ -165,10 +150,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ValidPostalCode != null)
-                    hashCode = hashCode * 59 + this.ValidPostalCode.GetHashCode();
-                if (this.City != null)
-                    hashCode = hashCode * 59 + this.City.GetHashCode();
+                if (this.ValidState != null)
+                    hashCode = hashCode * 59 + this.ValidState.GetHashCode();
                 if (this.StateOrProvince != null)
                     hashCode = hashCode * 59 + this.StateOrProvince.GetHashCode();
                 if (this.Latitude != null)

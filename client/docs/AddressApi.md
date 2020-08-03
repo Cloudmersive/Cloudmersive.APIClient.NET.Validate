@@ -6,10 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AddressCheckEUMembership**](AddressApi.md#addresscheckeumembership) | **POST** /validate/address/country/check-eu-membership | Check if a country is a member of the European Union (EU)
 [**AddressCountry**](AddressApi.md#addresscountry) | **POST** /validate/address/country | Validate and normalize country information, return ISO 3166-1 country codes and country name
+[**AddressCountryList**](AddressApi.md#addresscountrylist) | **POST** /validate/address/country/list | Get a list of ISO 3166-1 countries
 [**AddressGetTimezone**](AddressApi.md#addressgettimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
 [**AddressParseString**](AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 [**AddressValidateAddress**](AddressApi.md#addressvalidateaddress) | **POST** /validate/address/street-address | Validate a street address
+[**AddressValidateCity**](AddressApi.md#addressvalidatecity) | **POST** /validate/address/city | Validate a City and State/Province combination, get location information about it
 [**AddressValidatePostalCode**](AddressApi.md#addressvalidatepostalcode) | **POST** /validate/address/postal-code | Validate a postal code, get location information about it
+[**AddressValidateState**](AddressApi.md#addressvalidatestate) | **POST** /validate/address/state | Validate a state or province, name or abbreviation, get location information about it
 
 
 <a name="addresscheckeumembership"></a>
@@ -140,6 +143,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="addresscountrylist"></a>
+# **AddressCountryList**
+> CountryListResult AddressCountryList ()
+
+Get a list of ISO 3166-1 countries
+
+Enumerates the list of ISO 3166-1 countries, including name, country codes, and more.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class AddressCountryListExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new AddressApi();
+
+            try
+            {
+                // Get a list of ISO 3166-1 countries
+                CountryListResult result = apiInstance.AddressCountryList();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddressApi.AddressCountryList: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**CountryListResult**](CountryListResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -342,6 +407,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="addressvalidatecity"></a>
+# **AddressValidateCity**
+> ValidateCityResponse AddressValidateCity (ValidateCityRequest input)
+
+Validate a City and State/Province combination, get location information about it
+
+Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class AddressValidateCityExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new AddressApi();
+            var input = new ValidateCityRequest(); // ValidateCityRequest | Input parse request
+
+            try
+            {
+                // Validate a City and State/Province combination, get location information about it
+                ValidateCityResponse result = apiInstance.AddressValidateCity(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddressApi.AddressValidateCity: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ValidateCityRequest**](ValidateCityRequest.md)| Input parse request | 
+
+### Return type
+
+[**ValidateCityResponse**](ValidateCityResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="addressvalidatepostalcode"></a>
 # **AddressValidatePostalCode**
 > ValidatePostalCodeResponse AddressValidatePostalCode (ValidatePostalCodeRequest input)
@@ -396,6 +527,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ValidatePostalCodeResponse**](ValidatePostalCodeResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="addressvalidatestate"></a>
+# **AddressValidateState**
+> ValidateStateResponse AddressValidateState (ValidateStateRequest input)
+
+Validate a state or province, name or abbreviation, get location information about it
+
+Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class AddressValidateStateExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new AddressApi();
+            var input = new ValidateStateRequest(); // ValidateStateRequest | Input parse request
+
+            try
+            {
+                // Validate a state or province, name or abbreviation, get location information about it
+                ValidateStateResponse result = apiInstance.AddressValidateState(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddressApi.AddressValidateState: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ValidateStateRequest**](ValidateStateRequest.md)| Input parse request | 
+
+### Return type
+
+[**ValidateStateResponse**](ValidateStateResponse.md)
 
 ### Authorization
 
