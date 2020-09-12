@@ -100,6 +100,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test AddressGetCountryCurrency
+        /// </summary>
+        [Test]
+        public void AddressGetCountryCurrencyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateCountryRequest input = null;
+            //var response = instance.AddressGetCountryCurrency(input);
+            //Assert.IsInstanceOf<ValidateCountryResponse> (response, "response is ValidateCountryResponse");
+        }
+        
+        /// <summary>
         /// Test AddressGetTimezone
         /// </summary>
         [Test]

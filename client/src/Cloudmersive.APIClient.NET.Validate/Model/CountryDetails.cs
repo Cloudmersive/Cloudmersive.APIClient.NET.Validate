@@ -37,12 +37,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <param name="threeLetterCode">Three-letter ISO 3166-1 country code.</param>
         /// <param name="iSOTwoLetterCode">Two-letter ISO 3166-1 country code.</param>
         /// <param name="isEuropeanUnionMember">True if this country is currently a member of the European Union (EU), false otherwise.</param>
-        public CountryDetails(string countryName = default(string), string threeLetterCode = default(string), string iSOTwoLetterCode = default(string), bool? isEuropeanUnionMember = default(bool?))
+        /// <param name="iSOCurrencyCode">ISO 4217 currency three-letter code associated with the country.</param>
+        /// <param name="currencySymbol">Symbol associated with the currency.</param>
+        /// <param name="currencyEnglishName">Full name of the currency.</param>
+        public CountryDetails(string countryName = default(string), string threeLetterCode = default(string), string iSOTwoLetterCode = default(string), bool? isEuropeanUnionMember = default(bool?), string iSOCurrencyCode = default(string), string currencySymbol = default(string), string currencyEnglishName = default(string))
         {
             this.CountryName = countryName;
             this.ThreeLetterCode = threeLetterCode;
             this.ISOTwoLetterCode = iSOTwoLetterCode;
             this.IsEuropeanUnionMember = isEuropeanUnionMember;
+            this.ISOCurrencyCode = iSOCurrencyCode;
+            this.CurrencySymbol = currencySymbol;
+            this.CurrencyEnglishName = currencyEnglishName;
         }
         
         /// <summary>
@@ -74,6 +80,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public bool? IsEuropeanUnionMember { get; set; }
 
         /// <summary>
+        /// ISO 4217 currency three-letter code associated with the country
+        /// </summary>
+        /// <value>ISO 4217 currency three-letter code associated with the country</value>
+        [DataMember(Name="ISOCurrencyCode", EmitDefaultValue=false)]
+        public string ISOCurrencyCode { get; set; }
+
+        /// <summary>
+        /// Symbol associated with the currency
+        /// </summary>
+        /// <value>Symbol associated with the currency</value>
+        [DataMember(Name="CurrencySymbol", EmitDefaultValue=false)]
+        public string CurrencySymbol { get; set; }
+
+        /// <summary>
+        /// Full name of the currency
+        /// </summary>
+        /// <value>Full name of the currency</value>
+        [DataMember(Name="CurrencyEnglishName", EmitDefaultValue=false)]
+        public string CurrencyEnglishName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +112,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             sb.Append("  ThreeLetterCode: ").Append(ThreeLetterCode).Append("\n");
             sb.Append("  ISOTwoLetterCode: ").Append(ISOTwoLetterCode).Append("\n");
             sb.Append("  IsEuropeanUnionMember: ").Append(IsEuropeanUnionMember).Append("\n");
+            sb.Append("  ISOCurrencyCode: ").Append(ISOCurrencyCode).Append("\n");
+            sb.Append("  CurrencySymbol: ").Append(CurrencySymbol).Append("\n");
+            sb.Append("  CurrencyEnglishName: ").Append(CurrencyEnglishName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +168,21 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.IsEuropeanUnionMember == input.IsEuropeanUnionMember ||
                     (this.IsEuropeanUnionMember != null &&
                     this.IsEuropeanUnionMember.Equals(input.IsEuropeanUnionMember))
+                ) && 
+                (
+                    this.ISOCurrencyCode == input.ISOCurrencyCode ||
+                    (this.ISOCurrencyCode != null &&
+                    this.ISOCurrencyCode.Equals(input.ISOCurrencyCode))
+                ) && 
+                (
+                    this.CurrencySymbol == input.CurrencySymbol ||
+                    (this.CurrencySymbol != null &&
+                    this.CurrencySymbol.Equals(input.CurrencySymbol))
+                ) && 
+                (
+                    this.CurrencyEnglishName == input.CurrencyEnglishName ||
+                    (this.CurrencyEnglishName != null &&
+                    this.CurrencyEnglishName.Equals(input.CurrencyEnglishName))
                 );
         }
 
@@ -158,6 +203,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     hashCode = hashCode * 59 + this.ISOTwoLetterCode.GetHashCode();
                 if (this.IsEuropeanUnionMember != null)
                     hashCode = hashCode * 59 + this.IsEuropeanUnionMember.GetHashCode();
+                if (this.ISOCurrencyCode != null)
+                    hashCode = hashCode * 59 + this.ISOCurrencyCode.GetHashCode();
+                if (this.CurrencySymbol != null)
+                    hashCode = hashCode * 59 + this.CurrencySymbol.GetHashCode();
+                if (this.CurrencyEnglishName != null)
+                    hashCode = hashCode * 59 + this.CurrencyEnglishName.GetHashCode();
                 return hashCode;
             }
         }

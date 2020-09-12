@@ -86,6 +86,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of CountryListResult</returns>
         ApiResponse<CountryListResult> AddressCountryListWithHttpInfo ();
         /// <summary>
+        /// Get the currency of the input country
+        /// </summary>
+        /// <remarks>
+        /// Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ValidateCountryResponse</returns>
+        ValidateCountryResponse AddressGetCountryCurrency (ValidateCountryRequest input);
+
+        /// <summary>
+        /// Get the currency of the input country
+        /// </summary>
+        /// <remarks>
+        /// Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of ValidateCountryResponse</returns>
+        ApiResponse<ValidateCountryResponse> AddressGetCountryCurrencyWithHttpInfo (ValidateCountryRequest input);
+        /// <summary>
         /// Gets IANA/Olsen time zones for a country
         /// </summary>
         /// <remarks>
@@ -274,6 +295,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CountryListResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<CountryListResult>> AddressCountryListAsyncWithHttpInfo ();
+        /// <summary>
+        /// Get the currency of the input country
+        /// </summary>
+        /// <remarks>
+        /// Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ValidateCountryResponse</returns>
+        System.Threading.Tasks.Task<ValidateCountryResponse> AddressGetCountryCurrencyAsync (ValidateCountryRequest input);
+
+        /// <summary>
+        /// Get the currency of the input country
+        /// </summary>
+        /// <remarks>
+        /// Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (ValidateCountryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateCountryResponse>> AddressGetCountryCurrencyAsyncWithHttpInfo (ValidateCountryRequest input);
         /// <summary>
         /// Gets IANA/Olsen time zones for a country
         /// </summary>
@@ -969,6 +1011,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<CountryListResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CountryListResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CountryListResult)));
+        }
+
+        /// <summary>
+        /// Get the currency of the input country Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ValidateCountryResponse</returns>
+        public ValidateCountryResponse AddressGetCountryCurrency (ValidateCountryRequest input)
+        {
+             ApiResponse<ValidateCountryResponse> localVarResponse = AddressGetCountryCurrencyWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the currency of the input country Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of ValidateCountryResponse</returns>
+        public ApiResponse< ValidateCountryResponse > AddressGetCountryCurrencyWithHttpInfo (ValidateCountryRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressGetCountryCurrency");
+
+            var localVarPath = "/validate/address/country/get-currency";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressGetCountryCurrency", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateCountryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateCountryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateCountryResponse)));
+        }
+
+        /// <summary>
+        /// Get the currency of the input country Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ValidateCountryResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateCountryResponse> AddressGetCountryCurrencyAsync (ValidateCountryRequest input)
+        {
+             ApiResponse<ValidateCountryResponse> localVarResponse = await AddressGetCountryCurrencyAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the currency of the input country Gets the currency information for the input country, including the ISO three-letter country code, currency symbol, and English currency name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (ValidateCountryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateCountryResponse>> AddressGetCountryCurrencyAsyncWithHttpInfo (ValidateCountryRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressGetCountryCurrency");
+
+            var localVarPath = "/validate/address/country/get-currency";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressGetCountryCurrency", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateCountryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateCountryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateCountryResponse)));
         }
 
         /// <summary>

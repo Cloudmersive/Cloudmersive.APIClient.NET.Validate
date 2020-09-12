@@ -98,6 +98,30 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         {
             // TODO unit test for the property 'IsEuropeanUnionMember'
         }
+        /// <summary>
+        /// Test the property 'ISOCurrencyCode'
+        /// </summary>
+        [Test]
+        public void ISOCurrencyCodeTest()
+        {
+            // TODO unit test for the property 'ISOCurrencyCode'
+        }
+        /// <summary>
+        /// Test the property 'CurrencySymbol'
+        /// </summary>
+        [Test]
+        public void CurrencySymbolTest()
+        {
+            // TODO unit test for the property 'CurrencySymbol'
+        }
+        /// <summary>
+        /// Test the property 'CurrencyEnglishName'
+        /// </summary>
+        [Test]
+        public void CurrencyEnglishNameTest()
+        {
+            // TODO unit test for the property 'CurrencyEnglishName'
+        }
 
     }
 
