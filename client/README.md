@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.0.9
+- SDK version: 3.1.0
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -117,6 +117,7 @@ Class | Method | HTTP request | Description
 *EmailApi* | [**EmailAddressGetServers**](docs/EmailApi.md#emailaddressgetservers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
 *EmailApi* | [**EmailFullValidation**](docs/EmailApi.md#emailfullvalidation) | **POST** /validate/email/address/full | Fully validate an email address
 *EmailApi* | [**EmailPost**](docs/EmailApi.md#emailpost) | **POST** /validate/email/address/syntaxOnly | Validate email adddress for syntactic correctness only
+*IPAddressApi* | [**IPAddressIsThreat**](docs/IPAddressApi.md#ipaddressisthreat) | **POST** /validate/ip/is-threat | Check if IP address is a known threat
 *IPAddressApi* | [**IPAddressIsTorNode**](docs/IPAddressApi.md#ipaddressistornode) | **POST** /validate/ip/is-tor-node | Check if IP address is a Tor node server
 *IPAddressApi* | [**IPAddressPost**](docs/IPAddressApi.md#ipaddresspost) | **POST** /validate/ip/geolocate | Geolocate an IP address
 *LeadEnrichmentApi* | [**LeadEnrichmentEnrichLead**](docs/LeadEnrichmentApi.md#leadenrichmentenrichlead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
@@ -148,6 +149,7 @@ Class | Method | HTTP request | Description
  - [Model.GetGenderResponse](docs/GetGenderResponse.md)
  - [Model.GetTimezonesRequest](docs/GetTimezonesRequest.md)
  - [Model.GetTimezonesResponse](docs/GetTimezonesResponse.md)
+ - [Model.IPThreatResponse](docs/IPThreatResponse.md)
  - [Model.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [Model.LastNameValidationResponse](docs/LastNameValidationResponse.md)
  - [Model.LeadEnrichmentRequest](docs/LeadEnrichmentRequest.md)

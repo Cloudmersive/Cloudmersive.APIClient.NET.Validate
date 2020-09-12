@@ -131,7 +131,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a street address
         /// </summary>
         /// <remarks>
-        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -142,7 +142,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a street address
         /// </summary>
         /// <remarks>
-        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -152,7 +152,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a City and State/Province combination, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -163,7 +163,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a City and State/Province combination, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -173,7 +173,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a postal code, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -184,7 +184,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a postal code, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -194,7 +194,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a state or province, name or abbreviation, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -205,7 +205,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a state or province, name or abbreviation, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -320,7 +320,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a street address
         /// </summary>
         /// <remarks>
-        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -331,7 +331,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a street address
         /// </summary>
         /// <remarks>
-        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -341,7 +341,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a City and State/Province combination, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -352,7 +352,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a City and State/Province combination, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -362,7 +362,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a postal code, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -373,7 +373,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a postal code, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -383,7 +383,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a state or province, name or abbreviation, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -394,7 +394,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a state or province, name or abbreviation, get location information about it
         /// </summary>
         /// <remarks>
-        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1306,7 +1306,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1318,7 +1318,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1389,7 +1389,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1402,7 +1402,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.
+        /// Validate a street address Determines if an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1473,7 +1473,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1485,7 +1485,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1556,7 +1556,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1569,7 +1569,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.
+        /// Validate a City and State/Province combination, get location information about it Checks if the input city and state name or code is valid, and returns information about it such as normalized City name, State name and more.  Supports all major international addresses.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1640,7 +1640,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1652,7 +1652,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1723,7 +1723,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1736,7 +1736,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.
+        /// Validate a postal code, get location information about it Checks if the input postal code is valid, and returns information about it such as City, State and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1807,7 +1807,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1819,7 +1819,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1890,7 +1890,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>
@@ -1903,7 +1903,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.
+        /// Validate a state or province, name or abbreviation, get location information about it Checks if the input state name or code is valid, and returns information about it such as normalized State name and more.  Supports all major countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input parse request</param>

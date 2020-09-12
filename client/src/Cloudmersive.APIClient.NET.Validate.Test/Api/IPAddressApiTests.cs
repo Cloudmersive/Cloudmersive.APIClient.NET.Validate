@@ -65,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
 
         
         /// <summary>
+        /// Test IPAddressIsThreat
+        /// </summary>
+        [Test]
+        public void IPAddressIsThreatTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //var response = instance.IPAddressIsThreat(value);
+            //Assert.IsInstanceOf<IPThreatResponse> (response, "response is IPThreatResponse");
+        }
+        
+        /// <summary>
         /// Test IPAddressIsTorNode
         /// </summary>
         [Test]
