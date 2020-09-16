@@ -43,7 +43,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         /// <param name="iSOCurrencyCode">ISO 4217 currency three-letter code associated with the country.</param>
         /// <param name="currencySymbol">Symbol associated with the currency.</param>
         /// <param name="currencyEnglishName">Full name of the currency.</param>
-        public ValidateCountryResponse(bool? successful = default(bool?), string countryFullName = default(string), string iSOTwoLetterCode = default(string), string fIPSTwoLetterCode = default(string), string threeLetterCode = default(string), bool? isEuropeanUnionMember = default(bool?), List<Timezone> timezones = default(List<Timezone>), string iSOCurrencyCode = default(string), string currencySymbol = default(string), string currencyEnglishName = default(string))
+        /// <param name="region">Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania.</param>
+        /// <param name="subregion">Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,.</param>
+        public ValidateCountryResponse(bool? successful = default(bool?), string countryFullName = default(string), string iSOTwoLetterCode = default(string), string fIPSTwoLetterCode = default(string), string threeLetterCode = default(string), bool? isEuropeanUnionMember = default(bool?), List<Timezone> timezones = default(List<Timezone>), string iSOCurrencyCode = default(string), string currencySymbol = default(string), string currencyEnglishName = default(string), string region = default(string), string subregion = default(string))
         {
             this.Successful = successful;
             this.CountryFullName = countryFullName;
@@ -55,6 +57,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             this.ISOCurrencyCode = iSOCurrencyCode;
             this.CurrencySymbol = currencySymbol;
             this.CurrencyEnglishName = currencyEnglishName;
+            this.Region = region;
+            this.Subregion = subregion;
         }
         
         /// <summary>
@@ -128,6 +132,20 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
         public string CurrencyEnglishName { get; set; }
 
         /// <summary>
+        /// Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania
+        /// </summary>
+        /// <value>Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania</value>
+        [DataMember(Name="Region", EmitDefaultValue=false)]
+        public string Region { get; set; }
+
+        /// <summary>
+        /// Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,
+        /// </summary>
+        /// <value>Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,</value>
+        [DataMember(Name="Subregion", EmitDefaultValue=false)]
+        public string Subregion { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -145,6 +163,8 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
             sb.Append("  ISOCurrencyCode: ").Append(ISOCurrencyCode).Append("\n");
             sb.Append("  CurrencySymbol: ").Append(CurrencySymbol).Append("\n");
             sb.Append("  CurrencyEnglishName: ").Append(CurrencyEnglishName).Append("\n");
+            sb.Append("  Region: ").Append(Region).Append("\n");
+            sb.Append("  Subregion: ").Append(Subregion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -228,6 +248,16 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     this.CurrencyEnglishName == input.CurrencyEnglishName ||
                     (this.CurrencyEnglishName != null &&
                     this.CurrencyEnglishName.Equals(input.CurrencyEnglishName))
+                ) && 
+                (
+                    this.Region == input.Region ||
+                    (this.Region != null &&
+                    this.Region.Equals(input.Region))
+                ) && 
+                (
+                    this.Subregion == input.Subregion ||
+                    (this.Subregion != null &&
+                    this.Subregion.Equals(input.Subregion))
                 );
         }
 
@@ -260,6 +290,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Model
                     hashCode = hashCode * 59 + this.CurrencySymbol.GetHashCode();
                 if (this.CurrencyEnglishName != null)
                     hashCode = hashCode * 59 + this.CurrencyEnglishName.GetHashCode();
+                if (this.Region != null)
+                    hashCode = hashCode * 59 + this.Region.GetHashCode();
+                if (this.Subregion != null)
+                    hashCode = hashCode * 59 + this.Subregion.GetHashCode();
                 return hashCode;
             }
         }

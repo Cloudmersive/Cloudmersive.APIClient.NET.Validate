@@ -146,6 +146,22 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         {
             // TODO unit test for the property 'CurrencyEnglishName'
         }
+        /// <summary>
+        /// Test the property 'Region'
+        /// </summary>
+        [Test]
+        public void RegionTest()
+        {
+            // TODO unit test for the property 'Region'
+        }
+        /// <summary>
+        /// Test the property 'Subregion'
+        /// </summary>
+        [Test]
+        public void SubregionTest()
+        {
+            // TODO unit test for the property 'Subregion'
+        }
 
     }
 

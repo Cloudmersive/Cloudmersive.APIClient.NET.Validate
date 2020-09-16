@@ -112,6 +112,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test AddressGetCountryRegion
+        /// </summary>
+        [Test]
+        public void AddressGetCountryRegionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateCountryRequest input = null;
+            //var response = instance.AddressGetCountryRegion(input);
+            //Assert.IsInstanceOf<ValidateCountryResponse> (response, "response is ValidateCountryResponse");
+        }
+        
+        /// <summary>
         /// Test AddressGetTimezone
         /// </summary>
         [Test]
