@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.1.2
+- SDK version: 3.1.3
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**AddressValidateState**](docs/AddressApi.md#addressvalidatestate) | **POST** /validate/address/state | Validate a state or province, name or abbreviation, get location information about it
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
+*DomainApi* | [**DomainQualityScore**](docs/DomainApi.md#domainqualityscore) | **POST** /validate/domain/quality-score | Validate a domain name's quality score
 *DomainApi* | [**DomainUrlFull**](docs/DomainApi.md#domainurlfull) | **POST** /validate/domain/url/full | Validate a URL fully
 *DomainApi* | [**DomainUrlSyntaxOnly**](docs/DomainApi.md#domainurlsyntaxonly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 *EmailApi* | [**EmailAddressGetServers**](docs/EmailApi.md#emailaddressgetservers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
@@ -141,6 +142,7 @@ Class | Method | HTTP request | Description
  - [Model.CheckResponse](docs/CheckResponse.md)
  - [Model.CountryDetails](docs/CountryDetails.md)
  - [Model.CountryListResult](docs/CountryListResult.md)
+ - [Model.DomainQualityResponse](docs/DomainQualityResponse.md)
  - [Model.FirstNameValidationRequest](docs/FirstNameValidationRequest.md)
  - [Model.FirstNameValidationResponse](docs/FirstNameValidationResponse.md)
  - [Model.FullEmailValidationResponse](docs/FullEmailValidationResponse.md)

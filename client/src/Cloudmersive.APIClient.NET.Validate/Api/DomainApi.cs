@@ -67,6 +67,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of WhoisResponse</returns>
         ApiResponse<WhoisResponse> DomainPostWithHttpInfo (string domain);
         /// <summary>
+        /// Validate a domain name&#39;s quality score
+        /// </summary>
+        /// <remarks>
+        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>DomainQualityResponse</returns>
+        DomainQualityResponse DomainQualityScore (string domain);
+
+        /// <summary>
+        /// Validate a domain name&#39;s quality score
+        /// </summary>
+        /// <remarks>
+        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>ApiResponse of DomainQualityResponse</returns>
+        ApiResponse<DomainQualityResponse> DomainQualityScoreWithHttpInfo (string domain);
+        /// <summary>
         /// Validate a URL fully
         /// </summary>
         /// <remarks>
@@ -152,6 +173,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.   The input is a string so be sure to enclose it in double-quotes.</param>
         /// <returns>Task of ApiResponse (WhoisResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WhoisResponse>> DomainPostAsyncWithHttpInfo (string domain);
+        /// <summary>
+        /// Validate a domain name&#39;s quality score
+        /// </summary>
+        /// <remarks>
+        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>Task of DomainQualityResponse</returns>
+        System.Threading.Tasks.Task<DomainQualityResponse> DomainQualityScoreAsync (string domain);
+
+        /// <summary>
+        /// Validate a domain name&#39;s quality score
+        /// </summary>
+        /// <remarks>
+        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>Task of ApiResponse (DomainQualityResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DomainQualityResponse>> DomainQualityScoreAsyncWithHttpInfo (string domain);
         /// <summary>
         /// Validate a URL fully
         /// </summary>
@@ -630,6 +672,175 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<WhoisResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WhoisResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhoisResponse)));
+        }
+
+        /// <summary>
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>DomainQualityResponse</returns>
+        public DomainQualityResponse DomainQualityScore (string domain)
+        {
+             ApiResponse<DomainQualityResponse> localVarResponse = DomainQualityScoreWithHttpInfo(domain);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>ApiResponse of DomainQualityResponse</returns>
+        public ApiResponse< DomainQualityResponse > DomainQualityScoreWithHttpInfo (string domain)
+        {
+            // verify the required parameter 'domain' is set
+            if (domain == null)
+                throw new ApiException(400, "Missing required parameter 'domain' when calling DomainApi->DomainQualityScore");
+
+            var localVarPath = "/validate/domain/quality-score";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "text/javascript", 
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (domain != null && domain.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(domain); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = domain; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainQualityScore", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DomainQualityResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DomainQualityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainQualityResponse)));
+        }
+
+        /// <summary>
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>Task of DomainQualityResponse</returns>
+        public async System.Threading.Tasks.Task<DomainQualityResponse> DomainQualityScoreAsync (string domain)
+        {
+             ApiResponse<DomainQualityResponse> localVarResponse = await DomainQualityScoreAsyncWithHttpInfo(domain);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
+        /// <returns>Task of ApiResponse (DomainQualityResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DomainQualityResponse>> DomainQualityScoreAsyncWithHttpInfo (string domain)
+        {
+            // verify the required parameter 'domain' is set
+            if (domain == null)
+                throw new ApiException(400, "Missing required parameter 'domain' when calling DomainApi->DomainQualityScore");
+
+            var localVarPath = "/validate/domain/quality-score";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "text/javascript", 
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (domain != null && domain.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(domain); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = domain; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainQualityScore", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DomainQualityResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DomainQualityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainQualityResponse)));
         }
 
         /// <summary>

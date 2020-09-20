@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test DomainQualityScore
+        /// </summary>
+        [Test]
+        public void DomainQualityScoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string domain = null;
+            //var response = instance.DomainQualityScore(domain);
+            //Assert.IsInstanceOf<DomainQualityResponse> (response, "response is DomainQualityResponse");
+        }
+        
+        /// <summary>
         /// Test DomainUrlFull
         /// </summary>
         [Test]
