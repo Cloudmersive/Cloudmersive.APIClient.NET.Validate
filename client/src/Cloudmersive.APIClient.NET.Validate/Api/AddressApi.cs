@@ -86,6 +86,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of CountryListResult</returns>
         ApiResponse<CountryListResult> AddressCountryListWithHttpInfo ();
         /// <summary>
+        /// Geocode a street address into latitude and longitude
+        /// </summary>
+        /// <remarks>
+        /// Geocodes a street address into latitude and longitude.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateAddressResponse</returns>
+        ValidateAddressResponse AddressGeocode (ValidateAddressRequest input);
+
+        /// <summary>
+        /// Geocode a street address into latitude and longitude
+        /// </summary>
+        /// <remarks>
+        /// Geocodes a street address into latitude and longitude.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateAddressResponse</returns>
+        ApiResponse<ValidateAddressResponse> AddressGeocodeWithHttpInfo (ValidateAddressRequest input);
+        /// <summary>
         /// Get the currency of the input country
         /// </summary>
         /// <remarks>
@@ -169,6 +190,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input parse request</param>
         /// <returns>ApiResponse of ParseAddressResponse</returns>
         ApiResponse<ParseAddressResponse> AddressParseStringWithHttpInfo (ParseAddressRequest input);
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address
+        /// </summary>
+        /// <remarks>
+        /// Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>ReverseGeocodeAddressResponse</returns>
+        ReverseGeocodeAddressResponse AddressReverseGeocodeAddress (ReverseGeocodeAddressRequest input);
+
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address
+        /// </summary>
+        /// <remarks>
+        /// Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>ApiResponse of ReverseGeocodeAddressResponse</returns>
+        ApiResponse<ReverseGeocodeAddressResponse> AddressReverseGeocodeAddressWithHttpInfo (ReverseGeocodeAddressRequest input);
         /// <summary>
         /// Validate a street address
         /// </summary>
@@ -317,6 +359,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>Task of ApiResponse (CountryListResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<CountryListResult>> AddressCountryListAsyncWithHttpInfo ();
         /// <summary>
+        /// Geocode a street address into latitude and longitude
+        /// </summary>
+        /// <remarks>
+        /// Geocodes a street address into latitude and longitude.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateAddressResponse</returns>
+        System.Threading.Tasks.Task<ValidateAddressResponse> AddressGeocodeAsync (ValidateAddressRequest input);
+
+        /// <summary>
+        /// Geocode a street address into latitude and longitude
+        /// </summary>
+        /// <remarks>
+        /// Geocodes a street address into latitude and longitude.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> AddressGeocodeAsyncWithHttpInfo (ValidateAddressRequest input);
+        /// <summary>
         /// Get the currency of the input country
         /// </summary>
         /// <remarks>
@@ -400,6 +463,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input parse request</param>
         /// <returns>Task of ApiResponse (ParseAddressResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ParseAddressResponse>> AddressParseStringAsyncWithHttpInfo (ParseAddressRequest input);
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address
+        /// </summary>
+        /// <remarks>
+        /// Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>Task of ReverseGeocodeAddressResponse</returns>
+        System.Threading.Tasks.Task<ReverseGeocodeAddressResponse> AddressReverseGeocodeAddressAsync (ReverseGeocodeAddressRequest input);
+
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address
+        /// </summary>
+        /// <remarks>
+        /// Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>Task of ApiResponse (ReverseGeocodeAddressResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReverseGeocodeAddressResponse>> AddressReverseGeocodeAddressAsyncWithHttpInfo (ReverseGeocodeAddressRequest input);
         /// <summary>
         /// Validate a street address
         /// </summary>
@@ -1053,6 +1137,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<CountryListResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CountryListResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CountryListResult)));
+        }
+
+        /// <summary>
+        /// Geocode a street address into latitude and longitude Geocodes a street address into latitude and longitude.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ValidateAddressResponse</returns>
+        public ValidateAddressResponse AddressGeocode (ValidateAddressRequest input)
+        {
+             ApiResponse<ValidateAddressResponse> localVarResponse = AddressGeocodeWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Geocode a street address into latitude and longitude Geocodes a street address into latitude and longitude.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of ValidateAddressResponse</returns>
+        public ApiResponse< ValidateAddressResponse > AddressGeocodeWithHttpInfo (ValidateAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressGeocode");
+
+            var localVarPath = "/validate/address/geocode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressGeocode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateAddressResponse)));
+        }
+
+        /// <summary>
+        /// Geocode a street address into latitude and longitude Geocodes a street address into latitude and longitude.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ValidateAddressResponse</returns>
+        public async System.Threading.Tasks.Task<ValidateAddressResponse> AddressGeocodeAsync (ValidateAddressRequest input)
+        {
+             ApiResponse<ValidateAddressResponse> localVarResponse = await AddressGeocodeAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Geocode a street address into latitude and longitude Geocodes a street address into latitude and longitude.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> AddressGeocodeAsyncWithHttpInfo (ValidateAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressGeocode");
+
+            var localVarPath = "/validate/address/geocode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressGeocode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateAddressResponse)));
         }
 
         /// <summary>
@@ -1721,6 +1972,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<ParseAddressResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ParseAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ParseAddressResponse)));
+        }
+
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>ReverseGeocodeAddressResponse</returns>
+        public ReverseGeocodeAddressResponse AddressReverseGeocodeAddress (ReverseGeocodeAddressRequest input)
+        {
+             ApiResponse<ReverseGeocodeAddressResponse> localVarResponse = AddressReverseGeocodeAddressWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>ApiResponse of ReverseGeocodeAddressResponse</returns>
+        public ApiResponse< ReverseGeocodeAddressResponse > AddressReverseGeocodeAddressWithHttpInfo (ReverseGeocodeAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressReverseGeocodeAddress");
+
+            var localVarPath = "/validate/address/geocode/reverse";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressReverseGeocodeAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReverseGeocodeAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReverseGeocodeAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReverseGeocodeAddressResponse)));
+        }
+
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>Task of ReverseGeocodeAddressResponse</returns>
+        public async System.Threading.Tasks.Task<ReverseGeocodeAddressResponse> AddressReverseGeocodeAddressAsync (ReverseGeocodeAddressRequest input)
+        {
+             ApiResponse<ReverseGeocodeAddressResponse> localVarResponse = await AddressReverseGeocodeAddressAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reverse geocode a lattitude and longitude into an address Converts lattitude and longitude coordinates into an address through reverse-geocoding.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input reverse geocoding request</param>
+        /// <returns>Task of ApiResponse (ReverseGeocodeAddressResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReverseGeocodeAddressResponse>> AddressReverseGeocodeAddressAsyncWithHttpInfo (ReverseGeocodeAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressReverseGeocodeAddress");
+
+            var localVarPath = "/validate/address/geocode/reverse";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressReverseGeocodeAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReverseGeocodeAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReverseGeocodeAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReverseGeocodeAddressResponse)));
         }
 
         /// <summary>

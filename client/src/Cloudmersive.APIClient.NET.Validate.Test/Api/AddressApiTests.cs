@@ -100,6 +100,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test AddressGeocode
+        /// </summary>
+        [Test]
+        public void AddressGeocodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateAddressRequest input = null;
+            //var response = instance.AddressGeocode(input);
+            //Assert.IsInstanceOf<ValidateAddressResponse> (response, "response is ValidateAddressResponse");
+        }
+        
+        /// <summary>
         /// Test AddressGetCountryCurrency
         /// </summary>
         [Test]
@@ -145,6 +157,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //ParseAddressRequest input = null;
             //var response = instance.AddressParseString(input);
             //Assert.IsInstanceOf<ParseAddressResponse> (response, "response is ParseAddressResponse");
+        }
+        
+        /// <summary>
+        /// Test AddressReverseGeocodeAddress
+        /// </summary>
+        [Test]
+        public void AddressReverseGeocodeAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ReverseGeocodeAddressRequest input = null;
+            //var response = instance.AddressReverseGeocodeAddress(input);
+            //Assert.IsInstanceOf<ReverseGeocodeAddressResponse> (response, "response is ReverseGeocodeAddressResponse");
         }
         
         /// <summary>

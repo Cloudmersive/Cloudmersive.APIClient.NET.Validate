@@ -70,7 +70,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a domain name&#39;s quality score
         /// </summary>
         /// <remarks>
-        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
@@ -81,7 +81,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a domain name&#39;s quality score
         /// </summary>
         /// <remarks>
-        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
@@ -177,7 +177,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a domain name&#39;s quality score
         /// </summary>
         /// <remarks>
-        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
@@ -188,7 +188,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Validate a domain name&#39;s quality score
         /// </summary>
         /// <remarks>
-        /// Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
@@ -675,7 +675,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
@@ -687,7 +687,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
@@ -759,7 +759,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
@@ -772,7 +772,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Higher quality scores indicate more trust and authority in the domain name.
+        /// Validate a domain name&#39;s quality score Check the quality of a domain name.  Supports over 9 million domain names.  Higher quality scores indicate more trust and authority in the domain name, with values ranging from 0.0 (low quality) to 10.0 (maximum quality).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
