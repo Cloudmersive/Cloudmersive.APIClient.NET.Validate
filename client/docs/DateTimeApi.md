@@ -1,22 +1,22 @@
-# Cloudmersive.APIClient.NET.Validate.Api.IPAddressApi
+# Cloudmersive.APIClient.NET.Validate.Api.DateTimeApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**IPAddressGeolocateStreetAddress**](IPAddressApi.md#ipaddressgeolocatestreetaddress) | **POST** /validate/ip/geolocate/street-address | Geolocate an IP address to a street address
-[**IPAddressIsThreat**](IPAddressApi.md#ipaddressisthreat) | **POST** /validate/ip/is-threat | Check if IP address is a known threat
-[**IPAddressIsTorNode**](IPAddressApi.md#ipaddressistornode) | **POST** /validate/ip/is-tor-node | Check if IP address is a Tor node server
-[**IPAddressPost**](IPAddressApi.md#ipaddresspost) | **POST** /validate/ip/geolocate | Geolocate an IP address
+[**DateTimeGetNowSimple**](DateTimeApi.md#datetimegetnowsimple) | **GET** /validate/date-time/get/now | Get current date and time as of now
+[**DateTimeGetPublicHolidays**](DateTimeApi.md#datetimegetpublicholidays) | **POST** /validate/date-time/get/holidays | Get public holidays in the specified country and year
+[**DateTimeParseNaturalLanguageDateTime**](DateTimeApi.md#datetimeparsenaturallanguagedatetime) | **POST** /validate/date-time/parse/date-time/natural-language | Parses a free-form natural language date and time string into a date and time
+[**DateTimeParseStandardDateTime**](DateTimeApi.md#datetimeparsestandarddatetime) | **POST** /validate/date-time/parse/date-time/structured | Parses a standardized date and time string into a date and time
 
 
-<a name="ipaddressgeolocatestreetaddress"></a>
-# **IPAddressGeolocateStreetAddress**
-> GeolocateStreetAddressResponse IPAddressGeolocateStreetAddress (string value)
+<a name="datetimegetnowsimple"></a>
+# **DateTimeGetNowSimple**
+> DateTimeNowResult DateTimeGetNowSimple ()
 
-Geolocate an IP address to a street address
+Get current date and time as of now
 
-Identify an IP address's street address.  Useful for security and UX applications.
+Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
 
 ### Example
 ```csharp
@@ -28,7 +28,7 @@ using Cloudmersive.APIClient.NET.Validate.Model;
 
 namespace Example
 {
-    public class IPAddressGeolocateStreetAddressExample
+    public class DateTimeGetNowSimpleExample
     {
         public void main()
         {
@@ -37,18 +37,80 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
-            var apiInstance = new IPAddressApi();
-            var value = value_example;  // string | IP address to geolocate, e.g. \"55.55.55.55\".  The input is a string so be sure to enclose it in double-quotes.
+            var apiInstance = new DateTimeApi();
 
             try
             {
-                // Geolocate an IP address to a street address
-                GeolocateStreetAddressResponse result = apiInstance.IPAddressGeolocateStreetAddress(value);
+                // Get current date and time as of now
+                DateTimeNowResult result = apiInstance.DateTimeGetNowSimple();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling IPAddressApi.IPAddressGeolocateStreetAddress: " + e.Message );
+                Debug.Print("Exception when calling DateTimeApi.DateTimeGetNowSimple: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DateTimeNowResult**](DateTimeNowResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="datetimegetpublicholidays"></a>
+# **DateTimeGetPublicHolidays**
+> PublicHolidaysResponse DateTimeGetPublicHolidays (GetPublicHolidaysRequest input)
+
+Get public holidays in the specified country and year
+
+Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class DateTimeGetPublicHolidaysExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new DateTimeApi();
+            var input = new GetPublicHolidaysRequest(); // GetPublicHolidaysRequest | Input request
+
+            try
+            {
+                // Get public holidays in the specified country and year
+                PublicHolidaysResponse result = apiInstance.DateTimeGetPublicHolidays(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DateTimeApi.DateTimeGetPublicHolidays: " + e.Message );
             }
         }
     }
@@ -59,11 +121,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **value** | **string**| IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes. | 
+ **input** | [**GetPublicHolidaysRequest**](GetPublicHolidaysRequest.md)| Input request | 
 
 ### Return type
 
-[**GeolocateStreetAddressResponse**](GeolocateStreetAddressResponse.md)
+[**PublicHolidaysResponse**](PublicHolidaysResponse.md)
 
 ### Authorization
 
@@ -76,13 +138,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="ipaddressisthreat"></a>
-# **IPAddressIsThreat**
-> IPThreatResponse IPAddressIsThreat (string value)
+<a name="datetimeparsenaturallanguagedatetime"></a>
+# **DateTimeParseNaturalLanguageDateTime**
+> DateTimeStandardizedParseResponse DateTimeParseNaturalLanguageDateTime (DateTimeNaturalLanguageParseRequest input)
 
-Check if IP address is a known threat
+Parses a free-form natural language date and time string into a date and time
 
-Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \"tomorrow at 3pm\" or \"tuesday\".
 
 ### Example
 ```csharp
@@ -94,7 +156,7 @@ using Cloudmersive.APIClient.NET.Validate.Model;
 
 namespace Example
 {
-    public class IPAddressIsThreatExample
+    public class DateTimeParseNaturalLanguageDateTimeExample
     {
         public void main()
         {
@@ -103,18 +165,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
-            var apiInstance = new IPAddressApi();
-            var value = value_example;  // string | IP address to check, e.g. \"55.55.55.55\".  The input is a string so be sure to enclose it in double-quotes.
+            var apiInstance = new DateTimeApi();
+            var input = new DateTimeNaturalLanguageParseRequest(); // DateTimeNaturalLanguageParseRequest | Input request
 
             try
             {
-                // Check if IP address is a known threat
-                IPThreatResponse result = apiInstance.IPAddressIsThreat(value);
+                // Parses a free-form natural language date and time string into a date and time
+                DateTimeStandardizedParseResponse result = apiInstance.DateTimeParseNaturalLanguageDateTime(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling IPAddressApi.IPAddressIsThreat: " + e.Message );
+                Debug.Print("Exception when calling DateTimeApi.DateTimeParseNaturalLanguageDateTime: " + e.Message );
             }
         }
     }
@@ -125,11 +187,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **value** | **string**| IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes. | 
+ **input** | [**DateTimeNaturalLanguageParseRequest**](DateTimeNaturalLanguageParseRequest.md)| Input request | 
 
 ### Return type
 
-[**IPThreatResponse**](IPThreatResponse.md)
+[**DateTimeStandardizedParseResponse**](DateTimeStandardizedParseResponse.md)
 
 ### Authorization
 
@@ -142,79 +204,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="ipaddressistornode"></a>
-# **IPAddressIsTorNode**
-> TorNodeResponse IPAddressIsTorNode (string value)
+<a name="datetimeparsestandarddatetime"></a>
+# **DateTimeParseStandardDateTime**
+> DateTimeStandardizedParseResponse DateTimeParseStandardDateTime (DateTimeStandardizedParseRequest input)
 
-Check if IP address is a Tor node server
+Parses a standardized date and time string into a date and time
 
-Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Cloudmersive.APIClient.NET.Validate.Api;
-using Cloudmersive.APIClient.NET.Validate.Client;
-using Cloudmersive.APIClient.NET.Validate.Model;
-
-namespace Example
-{
-    public class IPAddressIsTorNodeExample
-    {
-        public void main()
-        {
-            // Configure API key authorization: Apikey
-            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
-
-            var apiInstance = new IPAddressApi();
-            var value = value_example;  // string | IP address to check, e.g. \"55.55.55.55\".  The input is a string so be sure to enclose it in double-quotes.
-
-            try
-            {
-                // Check if IP address is a Tor node server
-                TorNodeResponse result = apiInstance.IPAddressIsTorNode(value);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IPAddressApi.IPAddressIsTorNode: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **string**| IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes. | 
-
-### Return type
-
-[**TorNodeResponse**](TorNodeResponse.md)
-
-### Authorization
-
-[Apikey](../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="ipaddresspost"></a>
-# **IPAddressPost**
-> GeolocateResponse IPAddressPost (string value)
-
-Geolocate an IP address
-
-Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
+Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
 
 ### Example
 ```csharp
@@ -226,7 +222,7 @@ using Cloudmersive.APIClient.NET.Validate.Model;
 
 namespace Example
 {
-    public class IPAddressPostExample
+    public class DateTimeParseStandardDateTimeExample
     {
         public void main()
         {
@@ -235,18 +231,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
-            var apiInstance = new IPAddressApi();
-            var value = value_example;  // string | IP address to geolocate, e.g. \"55.55.55.55\".  The input is a string so be sure to enclose it in double-quotes.
+            var apiInstance = new DateTimeApi();
+            var input = new DateTimeStandardizedParseRequest(); // DateTimeStandardizedParseRequest | Input request
 
             try
             {
-                // Geolocate an IP address
-                GeolocateResponse result = apiInstance.IPAddressPost(value);
+                // Parses a standardized date and time string into a date and time
+                DateTimeStandardizedParseResponse result = apiInstance.DateTimeParseStandardDateTime(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling IPAddressApi.IPAddressPost: " + e.Message );
+                Debug.Print("Exception when calling DateTimeApi.DateTimeParseStandardDateTime: " + e.Message );
             }
         }
     }
@@ -257,11 +253,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **value** | **string**| IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes. | 
+ **input** | [**DateTimeStandardizedParseRequest**](DateTimeStandardizedParseRequest.md)| Input request | 
 
 ### Return type
 
-[**GeolocateResponse**](GeolocateResponse.md)
+[**DateTimeStandardizedParseResponse**](DateTimeStandardizedParseResponse.md)
 
 ### Authorization
 

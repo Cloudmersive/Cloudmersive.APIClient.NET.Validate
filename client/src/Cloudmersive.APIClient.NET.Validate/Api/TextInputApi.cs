@@ -244,7 +244,6 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "text/javascript", 
                 "application/json", 
                 "text/json"
             };
@@ -329,7 +328,6 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "text/javascript", 
                 "application/json", 
                 "text/json"
             };
@@ -413,7 +411,6 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "text/javascript", 
                 "application/json", 
                 "text/json"
             };
@@ -498,7 +495,6 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "text/javascript", 
                 "application/json", 
                 "text/json"
             };

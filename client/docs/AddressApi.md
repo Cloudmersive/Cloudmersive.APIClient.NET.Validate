@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**AddressGetCountryCurrency**](AddressApi.md#addressgetcountrycurrency) | **POST** /validate/address/country/get-currency | Get the currency of the input country
 [**AddressGetCountryRegion**](AddressApi.md#addressgetcountryregion) | **POST** /validate/address/country/get-region | Get the region, subregion and continent of the country
 [**AddressGetTimezone**](AddressApi.md#addressgettimezone) | **POST** /validate/address/country/get-timezones | Gets IANA/Olsen time zones for a country
+[**AddressNormalizeAddress**](AddressApi.md#addressnormalizeaddress) | **POST** /validate/address/street-address/normalize | Normalize a street address
 [**AddressParseString**](AddressApi.md#addressparsestring) | **POST** /validate/address/parse | Parse an unstructured input text string into an international, formatted address
 [**AddressReverseGeocodeAddress**](AddressApi.md#addressreversegeocodeaddress) | **POST** /validate/address/geocode/reverse | Reverse geocode a lattitude and longitude into an address
 [**AddressValidateAddress**](AddressApi.md#addressvalidateaddress) | **POST** /validate/address/street-address | Validate a street address
@@ -465,6 +466,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetTimezonesResponse**](GetTimezonesResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="addressnormalizeaddress"></a>
+# **AddressNormalizeAddress**
+> NormalizeAddressResponse AddressNormalizeAddress (ValidateAddressRequest input)
+
+Normalize a street address
+
+Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class AddressNormalizeAddressExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new AddressApi();
+            var input = new ValidateAddressRequest(); // ValidateAddressRequest | Input parse request
+
+            try
+            {
+                // Normalize a street address
+                NormalizeAddressResponse result = apiInstance.AddressNormalizeAddress(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AddressApi.AddressNormalizeAddress: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ValidateAddressRequest**](ValidateAddressRequest.md)| Input parse request | 
+
+### Return type
+
+[**NormalizeAddressResponse**](NormalizeAddressResponse.md)
 
 ### Authorization
 

@@ -148,6 +148,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test AddressNormalizeAddress
+        /// </summary>
+        [Test]
+        public void AddressNormalizeAddressTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateAddressRequest input = null;
+            //var response = instance.AddressNormalizeAddress(input);
+            //Assert.IsInstanceOf<NormalizeAddressResponse> (response, "response is NormalizeAddressResponse");
+        }
+        
+        /// <summary>
         /// Test AddressParseString
         /// </summary>
         [Test]

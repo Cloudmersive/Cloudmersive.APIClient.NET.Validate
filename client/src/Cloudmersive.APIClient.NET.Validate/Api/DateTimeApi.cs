@@ -21,194 +21,190 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IIPAddressApi : IApiAccessor
+    public interface IDateTimeApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Geolocate an IP address to a street address
+        /// Get current date and time as of now
         /// </summary>
         /// <remarks>
-        /// Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>GeolocateStreetAddressResponse</returns>
-        GeolocateStreetAddressResponse IPAddressGeolocateStreetAddress (string value);
+        /// <returns>DateTimeNowResult</returns>
+        DateTimeNowResult DateTimeGetNowSimple ();
 
         /// <summary>
-        /// Geolocate an IP address to a street address
+        /// Get current date and time as of now
         /// </summary>
         /// <remarks>
-        /// Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of GeolocateStreetAddressResponse</returns>
-        ApiResponse<GeolocateStreetAddressResponse> IPAddressGeolocateStreetAddressWithHttpInfo (string value);
+        /// <returns>ApiResponse of DateTimeNowResult</returns>
+        ApiResponse<DateTimeNowResult> DateTimeGetNowSimpleWithHttpInfo ();
         /// <summary>
-        /// Check if IP address is a known threat
+        /// Get public holidays in the specified country and year
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>IPThreatResponse</returns>
-        IPThreatResponse IPAddressIsThreat (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>PublicHolidaysResponse</returns>
+        PublicHolidaysResponse DateTimeGetPublicHolidays (GetPublicHolidaysRequest input);
 
         /// <summary>
-        /// Check if IP address is a known threat
+        /// Get public holidays in the specified country and year
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of IPThreatResponse</returns>
-        ApiResponse<IPThreatResponse> IPAddressIsThreatWithHttpInfo (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of PublicHolidaysResponse</returns>
+        ApiResponse<PublicHolidaysResponse> DateTimeGetPublicHolidaysWithHttpInfo (GetPublicHolidaysRequest input);
         /// <summary>
-        /// Check if IP address is a Tor node server
+        /// Parses a free-form natural language date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>TorNodeResponse</returns>
-        TorNodeResponse IPAddressIsTorNode (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>DateTimeStandardizedParseResponse</returns>
+        DateTimeStandardizedParseResponse DateTimeParseNaturalLanguageDateTime (DateTimeNaturalLanguageParseRequest input);
 
         /// <summary>
-        /// Check if IP address is a Tor node server
+        /// Parses a free-form natural language date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of TorNodeResponse</returns>
-        ApiResponse<TorNodeResponse> IPAddressIsTorNodeWithHttpInfo (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of DateTimeStandardizedParseResponse</returns>
+        ApiResponse<DateTimeStandardizedParseResponse> DateTimeParseNaturalLanguageDateTimeWithHttpInfo (DateTimeNaturalLanguageParseRequest input);
         /// <summary>
-        /// Geolocate an IP address
+        /// Parses a standardized date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
+        /// Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>GeolocateResponse</returns>
-        GeolocateResponse IPAddressPost (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>DateTimeStandardizedParseResponse</returns>
+        DateTimeStandardizedParseResponse DateTimeParseStandardDateTime (DateTimeStandardizedParseRequest input);
 
         /// <summary>
-        /// Geolocate an IP address
+        /// Parses a standardized date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
+        /// Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of GeolocateResponse</returns>
-        ApiResponse<GeolocateResponse> IPAddressPostWithHttpInfo (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of DateTimeStandardizedParseResponse</returns>
+        ApiResponse<DateTimeStandardizedParseResponse> DateTimeParseStandardDateTimeWithHttpInfo (DateTimeStandardizedParseRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Geolocate an IP address to a street address
+        /// Get current date and time as of now
         /// </summary>
         /// <remarks>
-        /// Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of GeolocateStreetAddressResponse</returns>
-        System.Threading.Tasks.Task<GeolocateStreetAddressResponse> IPAddressGeolocateStreetAddressAsync (string value);
+        /// <returns>Task of DateTimeNowResult</returns>
+        System.Threading.Tasks.Task<DateTimeNowResult> DateTimeGetNowSimpleAsync ();
 
         /// <summary>
-        /// Geolocate an IP address to a street address
+        /// Get current date and time as of now
         /// </summary>
         /// <remarks>
-        /// Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (GeolocateStreetAddressResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeolocateStreetAddressResponse>> IPAddressGeolocateStreetAddressAsyncWithHttpInfo (string value);
+        /// <returns>Task of ApiResponse (DateTimeNowResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DateTimeNowResult>> DateTimeGetNowSimpleAsyncWithHttpInfo ();
         /// <summary>
-        /// Check if IP address is a known threat
+        /// Get public holidays in the specified country and year
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of IPThreatResponse</returns>
-        System.Threading.Tasks.Task<IPThreatResponse> IPAddressIsThreatAsync (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>Task of PublicHolidaysResponse</returns>
+        System.Threading.Tasks.Task<PublicHolidaysResponse> DateTimeGetPublicHolidaysAsync (GetPublicHolidaysRequest input);
 
         /// <summary>
-        /// Check if IP address is a known threat
+        /// Get public holidays in the specified country and year
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (IPThreatResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IPThreatResponse>> IPAddressIsThreatAsyncWithHttpInfo (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (PublicHolidaysResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PublicHolidaysResponse>> DateTimeGetPublicHolidaysAsyncWithHttpInfo (GetPublicHolidaysRequest input);
         /// <summary>
-        /// Check if IP address is a Tor node server
+        /// Parses a free-form natural language date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of TorNodeResponse</returns>
-        System.Threading.Tasks.Task<TorNodeResponse> IPAddressIsTorNodeAsync (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>Task of DateTimeStandardizedParseResponse</returns>
+        System.Threading.Tasks.Task<DateTimeStandardizedParseResponse> DateTimeParseNaturalLanguageDateTimeAsync (DateTimeNaturalLanguageParseRequest input);
 
         /// <summary>
-        /// Check if IP address is a Tor node server
+        /// Parses a free-form natural language date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (TorNodeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TorNodeResponse>> IPAddressIsTorNodeAsyncWithHttpInfo (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (DateTimeStandardizedParseResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DateTimeStandardizedParseResponse>> DateTimeParseNaturalLanguageDateTimeAsyncWithHttpInfo (DateTimeNaturalLanguageParseRequest input);
         /// <summary>
-        /// Geolocate an IP address
+        /// Parses a standardized date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
+        /// Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of GeolocateResponse</returns>
-        System.Threading.Tasks.Task<GeolocateResponse> IPAddressPostAsync (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>Task of DateTimeStandardizedParseResponse</returns>
+        System.Threading.Tasks.Task<DateTimeStandardizedParseResponse> DateTimeParseStandardDateTimeAsync (DateTimeStandardizedParseRequest input);
 
         /// <summary>
-        /// Geolocate an IP address
+        /// Parses a standardized date and time string into a date and time
         /// </summary>
         /// <remarks>
-        /// Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
+        /// Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (GeolocateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeolocateResponse>> IPAddressPostAsyncWithHttpInfo (string value);
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (DateTimeStandardizedParseResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DateTimeStandardizedParseResponse>> DateTimeParseStandardDateTimeAsyncWithHttpInfo (DateTimeStandardizedParseRequest input);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class IPAddressApi : IIPAddressApi
+    public partial class DateTimeApi : IDateTimeApi
     {
         private Cloudmersive.APIClient.NET.Validate.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IPAddressApi"/> class.
+        /// Initializes a new instance of the <see cref="DateTimeApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public IPAddressApi(String basePath)
+        public DateTimeApi(String basePath)
         {
             this.Configuration = new Cloudmersive.APIClient.NET.Validate.Client.Configuration { BasePath = basePath };
 
@@ -216,12 +212,12 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="IPAddressApi"/> class
+        /// Initializes a new instance of the <see cref="DateTimeApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public IPAddressApi(Cloudmersive.APIClient.NET.Validate.Client.Configuration configuration = null)
+        public DateTimeApi(Cloudmersive.APIClient.NET.Validate.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Cloudmersive.APIClient.NET.Validate.Client.Configuration.Default;
@@ -295,30 +291,167 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Geolocate an IP address to a street address Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Get current date and time as of now Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>GeolocateStreetAddressResponse</returns>
-        public GeolocateStreetAddressResponse IPAddressGeolocateStreetAddress (string value)
+        /// <returns>DateTimeNowResult</returns>
+        public DateTimeNowResult DateTimeGetNowSimple ()
         {
-             ApiResponse<GeolocateStreetAddressResponse> localVarResponse = IPAddressGeolocateStreetAddressWithHttpInfo(value);
+             ApiResponse<DateTimeNowResult> localVarResponse = DateTimeGetNowSimpleWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Geolocate an IP address to a street address Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Get current date and time as of now Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of GeolocateStreetAddressResponse</returns>
-        public ApiResponse< GeolocateStreetAddressResponse > IPAddressGeolocateStreetAddressWithHttpInfo (string value)
+        /// <returns>ApiResponse of DateTimeNowResult</returns>
+        public ApiResponse< DateTimeNowResult > DateTimeGetNowSimpleWithHttpInfo ()
         {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressGeolocateStreetAddress");
 
-            var localVarPath = "/validate/ip/geolocate/street-address";
+            var localVarPath = "/validate/date-time/get/now";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DateTimeGetNowSimple", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DateTimeNowResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DateTimeNowResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DateTimeNowResult)));
+        }
+
+        /// <summary>
+        /// Get current date and time as of now Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DateTimeNowResult</returns>
+        public async System.Threading.Tasks.Task<DateTimeNowResult> DateTimeGetNowSimpleAsync ()
+        {
+             ApiResponse<DateTimeNowResult> localVarResponse = await DateTimeGetNowSimpleAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get current date and time as of now Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DateTimeNowResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DateTimeNowResult>> DateTimeGetNowSimpleAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/validate/date-time/get/now";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DateTimeGetNowSimple", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DateTimeNowResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DateTimeNowResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DateTimeNowResult)));
+        }
+
+        /// <summary>
+        /// Get public holidays in the specified country and year Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>PublicHolidaysResponse</returns>
+        public PublicHolidaysResponse DateTimeGetPublicHolidays (GetPublicHolidaysRequest input)
+        {
+             ApiResponse<PublicHolidaysResponse> localVarResponse = DateTimeGetPublicHolidaysWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get public holidays in the specified country and year Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of PublicHolidaysResponse</returns>
+        public ApiResponse< PublicHolidaysResponse > DateTimeGetPublicHolidaysWithHttpInfo (GetPublicHolidaysRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling DateTimeApi->DateTimeGetPublicHolidays");
+
+            var localVarPath = "/validate/date-time/get/holidays";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -344,13 +477,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (value != null && value.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = value; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -368,41 +501,41 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IPAddressGeolocateStreetAddress", localVarResponse);
+                Exception exception = ExceptionFactory("DateTimeGetPublicHolidays", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GeolocateStreetAddressResponse>(localVarStatusCode,
+            return new ApiResponse<PublicHolidaysResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GeolocateStreetAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocateStreetAddressResponse)));
+                (PublicHolidaysResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PublicHolidaysResponse)));
         }
 
         /// <summary>
-        /// Geolocate an IP address to a street address Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Get public holidays in the specified country and year Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of GeolocateStreetAddressResponse</returns>
-        public async System.Threading.Tasks.Task<GeolocateStreetAddressResponse> IPAddressGeolocateStreetAddressAsync (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>Task of PublicHolidaysResponse</returns>
+        public async System.Threading.Tasks.Task<PublicHolidaysResponse> DateTimeGetPublicHolidaysAsync (GetPublicHolidaysRequest input)
         {
-             ApiResponse<GeolocateStreetAddressResponse> localVarResponse = await IPAddressGeolocateStreetAddressAsyncWithHttpInfo(value);
+             ApiResponse<PublicHolidaysResponse> localVarResponse = await DateTimeGetPublicHolidaysAsyncWithHttpInfo(input);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Geolocate an IP address to a street address Identify an IP address&#39;s street address.  Useful for security and UX applications.
+        /// Get public holidays in the specified country and year Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (GeolocateStreetAddressResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GeolocateStreetAddressResponse>> IPAddressGeolocateStreetAddressAsyncWithHttpInfo (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (PublicHolidaysResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PublicHolidaysResponse>> DateTimeGetPublicHolidaysAsyncWithHttpInfo (GetPublicHolidaysRequest input)
         {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressGeolocateStreetAddress");
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling DateTimeApi->DateTimeGetPublicHolidays");
 
-            var localVarPath = "/validate/ip/geolocate/street-address";
+            var localVarPath = "/validate/date-time/get/holidays";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -428,13 +561,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (value != null && value.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = value; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -452,40 +585,40 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IPAddressGeolocateStreetAddress", localVarResponse);
+                Exception exception = ExceptionFactory("DateTimeGetPublicHolidays", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GeolocateStreetAddressResponse>(localVarStatusCode,
+            return new ApiResponse<PublicHolidaysResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GeolocateStreetAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocateStreetAddressResponse)));
+                (PublicHolidaysResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PublicHolidaysResponse)));
         }
 
         /// <summary>
-        /// Check if IP address is a known threat Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Parses a free-form natural language date and time string into a date and time Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>IPThreatResponse</returns>
-        public IPThreatResponse IPAddressIsThreat (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>DateTimeStandardizedParseResponse</returns>
+        public DateTimeStandardizedParseResponse DateTimeParseNaturalLanguageDateTime (DateTimeNaturalLanguageParseRequest input)
         {
-             ApiResponse<IPThreatResponse> localVarResponse = IPAddressIsThreatWithHttpInfo(value);
+             ApiResponse<DateTimeStandardizedParseResponse> localVarResponse = DateTimeParseNaturalLanguageDateTimeWithHttpInfo(input);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Check if IP address is a known threat Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Parses a free-form natural language date and time string into a date and time Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of IPThreatResponse</returns>
-        public ApiResponse< IPThreatResponse > IPAddressIsThreatWithHttpInfo (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of DateTimeStandardizedParseResponse</returns>
+        public ApiResponse< DateTimeStandardizedParseResponse > DateTimeParseNaturalLanguageDateTimeWithHttpInfo (DateTimeNaturalLanguageParseRequest input)
         {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIsThreat");
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling DateTimeApi->DateTimeParseNaturalLanguageDateTime");
 
-            var localVarPath = "/validate/ip/is-threat";
+            var localVarPath = "/validate/date-time/parse/date-time/natural-language";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -511,13 +644,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (value != null && value.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = value; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -535,41 +668,41 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IPAddressIsThreat", localVarResponse);
+                Exception exception = ExceptionFactory("DateTimeParseNaturalLanguageDateTime", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<IPThreatResponse>(localVarStatusCode,
+            return new ApiResponse<DateTimeStandardizedParseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (IPThreatResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IPThreatResponse)));
+                (DateTimeStandardizedParseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DateTimeStandardizedParseResponse)));
         }
 
         /// <summary>
-        /// Check if IP address is a known threat Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Parses a free-form natural language date and time string into a date and time Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of IPThreatResponse</returns>
-        public async System.Threading.Tasks.Task<IPThreatResponse> IPAddressIsThreatAsync (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>Task of DateTimeStandardizedParseResponse</returns>
+        public async System.Threading.Tasks.Task<DateTimeStandardizedParseResponse> DateTimeParseNaturalLanguageDateTimeAsync (DateTimeNaturalLanguageParseRequest input)
         {
-             ApiResponse<IPThreatResponse> localVarResponse = await IPAddressIsThreatAsyncWithHttpInfo(value);
+             ApiResponse<DateTimeStandardizedParseResponse> localVarResponse = await DateTimeParseNaturalLanguageDateTimeAsyncWithHttpInfo(input);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Check if IP address is a known threat Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
+        /// Parses a free-form natural language date and time string into a date and time Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (IPThreatResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IPThreatResponse>> IPAddressIsThreatAsyncWithHttpInfo (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (DateTimeStandardizedParseResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DateTimeStandardizedParseResponse>> DateTimeParseNaturalLanguageDateTimeAsyncWithHttpInfo (DateTimeNaturalLanguageParseRequest input)
         {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIsThreat");
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling DateTimeApi->DateTimeParseNaturalLanguageDateTime");
 
-            var localVarPath = "/validate/ip/is-threat";
+            var localVarPath = "/validate/date-time/parse/date-time/natural-language";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -595,13 +728,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (value != null && value.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = value; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -619,40 +752,40 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IPAddressIsThreat", localVarResponse);
+                Exception exception = ExceptionFactory("DateTimeParseNaturalLanguageDateTime", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<IPThreatResponse>(localVarStatusCode,
+            return new ApiResponse<DateTimeStandardizedParseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (IPThreatResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IPThreatResponse)));
+                (DateTimeStandardizedParseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DateTimeStandardizedParseResponse)));
         }
 
         /// <summary>
-        /// Check if IP address is a Tor node server Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses a standardized date and time string into a date and time Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>TorNodeResponse</returns>
-        public TorNodeResponse IPAddressIsTorNode (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>DateTimeStandardizedParseResponse</returns>
+        public DateTimeStandardizedParseResponse DateTimeParseStandardDateTime (DateTimeStandardizedParseRequest input)
         {
-             ApiResponse<TorNodeResponse> localVarResponse = IPAddressIsTorNodeWithHttpInfo(value);
+             ApiResponse<DateTimeStandardizedParseResponse> localVarResponse = DateTimeParseStandardDateTimeWithHttpInfo(input);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Check if IP address is a Tor node server Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses a standardized date and time string into a date and time Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of TorNodeResponse</returns>
-        public ApiResponse< TorNodeResponse > IPAddressIsTorNodeWithHttpInfo (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>ApiResponse of DateTimeStandardizedParseResponse</returns>
+        public ApiResponse< DateTimeStandardizedParseResponse > DateTimeParseStandardDateTimeWithHttpInfo (DateTimeStandardizedParseRequest input)
         {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIsTorNode");
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling DateTimeApi->DateTimeParseStandardDateTime");
 
-            var localVarPath = "/validate/ip/is-tor-node";
+            var localVarPath = "/validate/date-time/parse/date-time/structured";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -678,13 +811,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (value != null && value.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = value; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -702,41 +835,41 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IPAddressIsTorNode", localVarResponse);
+                Exception exception = ExceptionFactory("DateTimeParseStandardDateTime", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TorNodeResponse>(localVarStatusCode,
+            return new ApiResponse<DateTimeStandardizedParseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TorNodeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TorNodeResponse)));
+                (DateTimeStandardizedParseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DateTimeStandardizedParseResponse)));
         }
 
         /// <summary>
-        /// Check if IP address is a Tor node server Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses a standardized date and time string into a date and time Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of TorNodeResponse</returns>
-        public async System.Threading.Tasks.Task<TorNodeResponse> IPAddressIsTorNodeAsync (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>Task of DateTimeStandardizedParseResponse</returns>
+        public async System.Threading.Tasks.Task<DateTimeStandardizedParseResponse> DateTimeParseStandardDateTimeAsync (DateTimeStandardizedParseRequest input)
         {
-             ApiResponse<TorNodeResponse> localVarResponse = await IPAddressIsTorNodeAsyncWithHttpInfo(value);
+             ApiResponse<DateTimeStandardizedParseResponse> localVarResponse = await DateTimeParseStandardDateTimeAsyncWithHttpInfo(input);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Check if IP address is a Tor node server Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
+        /// Parses a standardized date and time string into a date and time Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (TorNodeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TorNodeResponse>> IPAddressIsTorNodeAsyncWithHttpInfo (string value)
+        /// <param name="input">Input request</param>
+        /// <returns>Task of ApiResponse (DateTimeStandardizedParseResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DateTimeStandardizedParseResponse>> DateTimeParseStandardDateTimeAsyncWithHttpInfo (DateTimeStandardizedParseRequest input)
         {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIsTorNode");
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling DateTimeApi->DateTimeParseStandardDateTime");
 
-            var localVarPath = "/validate/ip/is-tor-node";
+            var localVarPath = "/validate/date-time/parse/date-time/structured";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -762,13 +895,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (value != null && value.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = value; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -786,180 +919,13 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IPAddressIsTorNode", localVarResponse);
+                Exception exception = ExceptionFactory("DateTimeParseStandardDateTime", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TorNodeResponse>(localVarStatusCode,
+            return new ApiResponse<DateTimeStandardizedParseResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TorNodeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TorNodeResponse)));
-        }
-
-        /// <summary>
-        /// Geolocate an IP address Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>GeolocateResponse</returns>
-        public GeolocateResponse IPAddressPost (string value)
-        {
-             ApiResponse<GeolocateResponse> localVarResponse = IPAddressPostWithHttpInfo(value);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Geolocate an IP address Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>ApiResponse of GeolocateResponse</returns>
-        public ApiResponse< GeolocateResponse > IPAddressPostWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressPost");
-
-            var localVarPath = "/validate/ip/geolocate";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("IPAddressPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GeolocateResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GeolocateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocateResponse)));
-        }
-
-        /// <summary>
-        /// Geolocate an IP address Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of GeolocateResponse</returns>
-        public async System.Threading.Tasks.Task<GeolocateResponse> IPAddressPostAsync (string value)
-        {
-             ApiResponse<GeolocateResponse> localVarResponse = await IPAddressPostAsyncWithHttpInfo(value);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Geolocate an IP address Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
-        /// <returns>Task of ApiResponse (GeolocateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GeolocateResponse>> IPAddressPostAsyncWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressPost");
-
-            var localVarPath = "/validate/ip/geolocate";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("IPAddressPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<GeolocateResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GeolocateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocateResponse)));
+                (DateTimeStandardizedParseResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DateTimeStandardizedParseResponse)));
         }
 
     }

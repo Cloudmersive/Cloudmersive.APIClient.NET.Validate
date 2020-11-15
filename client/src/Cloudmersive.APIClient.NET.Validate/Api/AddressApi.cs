@@ -170,6 +170,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of GetTimezonesResponse</returns>
         ApiResponse<GetTimezonesResponse> AddressGetTimezoneWithHttpInfo (GetTimezonesRequest input);
         /// <summary>
+        /// Normalize a street address
+        /// </summary>
+        /// <remarks>
+        /// Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>NormalizeAddressResponse</returns>
+        NormalizeAddressResponse AddressNormalizeAddress (ValidateAddressRequest input);
+
+        /// <summary>
+        /// Normalize a street address
+        /// </summary>
+        /// <remarks>
+        /// Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of NormalizeAddressResponse</returns>
+        ApiResponse<NormalizeAddressResponse> AddressNormalizeAddressWithHttpInfo (ValidateAddressRequest input);
+        /// <summary>
         /// Parse an unstructured input text string into an international, formatted address
         /// </summary>
         /// <remarks>
@@ -442,6 +463,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="input">Input request</param>
         /// <returns>Task of ApiResponse (GetTimezonesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetTimezonesResponse>> AddressGetTimezoneAsyncWithHttpInfo (GetTimezonesRequest input);
+        /// <summary>
+        /// Normalize a street address
+        /// </summary>
+        /// <remarks>
+        /// Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of NormalizeAddressResponse</returns>
+        System.Threading.Tasks.Task<NormalizeAddressResponse> AddressNormalizeAddressAsync (ValidateAddressRequest input);
+
+        /// <summary>
+        /// Normalize a street address
+        /// </summary>
+        /// <remarks>
+        /// Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (NormalizeAddressResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NormalizeAddressResponse>> AddressNormalizeAddressAsyncWithHttpInfo (ValidateAddressRequest input);
         /// <summary>
         /// Parse an unstructured input text string into an international, formatted address
         /// </summary>
@@ -1805,6 +1847,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<GetTimezonesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetTimezonesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetTimezonesResponse)));
+        }
+
+        /// <summary>
+        /// Normalize a street address Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>NormalizeAddressResponse</returns>
+        public NormalizeAddressResponse AddressNormalizeAddress (ValidateAddressRequest input)
+        {
+             ApiResponse<NormalizeAddressResponse> localVarResponse = AddressNormalizeAddressWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Normalize a street address Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>ApiResponse of NormalizeAddressResponse</returns>
+        public ApiResponse< NormalizeAddressResponse > AddressNormalizeAddressWithHttpInfo (ValidateAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressNormalizeAddress");
+
+            var localVarPath = "/validate/address/street-address/normalize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressNormalizeAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<NormalizeAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (NormalizeAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NormalizeAddressResponse)));
+        }
+
+        /// <summary>
+        /// Normalize a street address Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of NormalizeAddressResponse</returns>
+        public async System.Threading.Tasks.Task<NormalizeAddressResponse> AddressNormalizeAddressAsync (ValidateAddressRequest input)
+        {
+             ApiResponse<NormalizeAddressResponse> localVarResponse = await AddressNormalizeAddressAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Normalize a street address Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input parse request</param>
+        /// <returns>Task of ApiResponse (NormalizeAddressResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<NormalizeAddressResponse>> AddressNormalizeAddressAsyncWithHttpInfo (ValidateAddressRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AddressApi->AddressNormalizeAddress");
+
+            var localVarPath = "/validate/address/street-address/normalize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressNormalizeAddress", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<NormalizeAddressResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (NormalizeAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NormalizeAddressResponse)));
         }
 
         /// <summary>
