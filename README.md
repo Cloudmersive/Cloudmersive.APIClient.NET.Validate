@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.1.6
+- SDK version: 3.1.7
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -139,6 +139,7 @@ Class | Method | HTTP request | Description
 *NameApi* | [**NameValidateLastName**](docs/NameApi.md#namevalidatelastname) | **POST** /validate/name/last | Validate a last name
 *PhoneNumberApi* | [**PhoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phonenumbersyntaxonly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
 *TextInputApi* | [**TextInputCheckXss**](docs/TextInputApi.md#textinputcheckxss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
+*TextInputApi* | [**TextInputCheckXssBatch**](docs/TextInputApi.md#textinputcheckxssbatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
 *TextInputApi* | [**TextInputProtectXss**](docs/TextInputApi.md#textinputprotectxss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
 *UserAgentApi* | [**UserAgentParse**](docs/UserAgentApi.md#useragentparse) | **POST** /validate/useragent/parse | Parse an HTTP User-Agent string, identify robots
 *VatApi* | [**VatVatLookup**](docs/VatApi.md#vatvatlookup) | **POST** /validate/vat/lookup | Validate a VAT number
@@ -206,6 +207,9 @@ Class | Method | HTTP request | Description
  - [Model.VatLookupRequest](docs/VatLookupRequest.md)
  - [Model.VatLookupResponse](docs/VatLookupResponse.md)
  - [Model.WhoisResponse](docs/WhoisResponse.md)
+ - [Model.XssProtectionBatchRequest](docs/XssProtectionBatchRequest.md)
+ - [Model.XssProtectionBatchResponse](docs/XssProtectionBatchResponse.md)
+ - [Model.XssProtectionRequestItem](docs/XssProtectionRequestItem.md)
  - [Model.XssProtectionResult](docs/XssProtectionResult.md)
 
 

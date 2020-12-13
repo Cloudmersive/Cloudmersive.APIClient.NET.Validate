@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test TextInputCheckXssBatch
+        /// </summary>
+        [Test]
+        public void TextInputCheckXssBatchTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //XssProtectionBatchRequest value = null;
+            //var response = instance.TextInputCheckXssBatch(value);
+            //Assert.IsInstanceOf<XssProtectionBatchResponse> (response, "response is XssProtectionBatchResponse");
+        }
+        
+        /// <summary>
         /// Test TextInputProtectXss
         /// </summary>
         [Test]

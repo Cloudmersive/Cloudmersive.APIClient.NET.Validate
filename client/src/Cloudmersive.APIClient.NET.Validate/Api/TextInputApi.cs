@@ -46,6 +46,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of XssProtectionResult</returns>
         ApiResponse<XssProtectionResult> TextInputCheckXssWithHttpInfo (string value);
         /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>XssProtectionBatchResponse</returns>
+        XssProtectionBatchResponse TextInputCheckXssBatch (XssProtectionBatchRequest value);
+
+        /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>ApiResponse of XssProtectionBatchResponse</returns>
+        ApiResponse<XssProtectionBatchResponse> TextInputCheckXssBatchWithHttpInfo (XssProtectionBatchRequest value);
+        /// <summary>
         /// Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
         /// </summary>
         /// <remarks>
@@ -89,6 +110,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="value">User-facing text input.</param>
         /// <returns>Task of ApiResponse (XssProtectionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<XssProtectionResult>> TextInputCheckXssAsyncWithHttpInfo (string value);
+        /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of XssProtectionBatchResponse</returns>
+        System.Threading.Tasks.Task<XssProtectionBatchResponse> TextInputCheckXssBatchAsync (XssProtectionBatchRequest value);
+
+        /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of ApiResponse (XssProtectionBatchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XssProtectionBatchResponse>> TextInputCheckXssBatchAsyncWithHttpInfo (XssProtectionBatchRequest value);
         /// <summary>
         /// Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
         /// </summary>
@@ -375,6 +417,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<XssProtectionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (XssProtectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XssProtectionResult)));
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>XssProtectionBatchResponse</returns>
+        public XssProtectionBatchResponse TextInputCheckXssBatch (XssProtectionBatchRequest value)
+        {
+             ApiResponse<XssProtectionBatchResponse> localVarResponse = TextInputCheckXssBatchWithHttpInfo(value);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>ApiResponse of XssProtectionBatchResponse</returns>
+        public ApiResponse< XssProtectionBatchResponse > TextInputCheckXssBatchWithHttpInfo (XssProtectionBatchRequest value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckXssBatch");
+
+            var localVarPath = "/validate/text-input/check-and-protect/xss/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckXssBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XssProtectionBatchResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XssProtectionBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XssProtectionBatchResponse)));
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of XssProtectionBatchResponse</returns>
+        public async System.Threading.Tasks.Task<XssProtectionBatchResponse> TextInputCheckXssBatchAsync (XssProtectionBatchRequest value)
+        {
+             ApiResponse<XssProtectionBatchResponse> localVarResponse = await TextInputCheckXssBatchAsyncWithHttpInfo(value);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of ApiResponse (XssProtectionBatchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XssProtectionBatchResponse>> TextInputCheckXssBatchAsyncWithHttpInfo (XssProtectionBatchRequest value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckXssBatch");
+
+            var localVarPath = "/validate/text-input/check-and-protect/xss/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckXssBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XssProtectionBatchResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XssProtectionBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XssProtectionBatchResponse)));
         }
 
         /// <summary>
