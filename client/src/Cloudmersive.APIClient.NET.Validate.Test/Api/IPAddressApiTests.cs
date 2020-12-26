@@ -112,6 +112,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //Assert.IsInstanceOf<GeolocateResponse> (response, "response is GeolocateResponse");
         }
         
+        /// <summary>
+        /// Test IPAddressReverseDomainLookup
+        /// </summary>
+        [Test]
+        public void IPAddressReverseDomainLookupTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //var response = instance.IPAddressReverseDomainLookup(value);
+            //Assert.IsInstanceOf<IPReverseDNSLookupResponse> (response, "response is IPReverseDNSLookupResponse");
+        }
+        
     }
 
 }
