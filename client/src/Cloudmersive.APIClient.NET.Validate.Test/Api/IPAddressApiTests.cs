@@ -77,6 +77,30 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test IPAddressIpIntelligence
+        /// </summary>
+        [Test]
+        public void IPAddressIpIntelligenceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //var response = instance.IPAddressIpIntelligence(value);
+            //Assert.IsInstanceOf<IPIntelligenceResponse> (response, "response is IPIntelligenceResponse");
+        }
+        
+        /// <summary>
+        /// Test IPAddressIsBot
+        /// </summary>
+        [Test]
+        public void IPAddressIsBotTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //var response = instance.IPAddressIsBot(value);
+            //Assert.IsInstanceOf<BotCheckResponse> (response, "response is BotCheckResponse");
+        }
+        
+        /// <summary>
         /// Test IPAddressIsThreat
         /// </summary>
         [Test]

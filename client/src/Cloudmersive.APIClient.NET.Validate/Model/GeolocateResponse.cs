@@ -25,7 +25,7 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.Validate.Client.SwaggerD
 namespace Cloudmersive.APIClient.NET.Validate.Model
 {
     /// <summary>
-    /// Geolocation result
+    /// Geolocation result of performing an IP address geolocation operation.  This product includes GeoLite2 data created by MaxMind, available from www.maxmind.com.
     /// </summary>
     [DataContract]
     public partial class GeolocateResponse :  IEquatable<GeolocateResponse>, IValidatableObject

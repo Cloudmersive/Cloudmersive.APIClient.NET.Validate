@@ -5,6 +5,8 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**IPAddressGeolocateStreetAddress**](IPAddressApi.md#ipaddressgeolocatestreetaddress) | **POST** /validate/ip/geolocate/street-address | Geolocate an IP address to a street address
+[**IPAddressIpIntelligence**](IPAddressApi.md#ipaddressipintelligence) | **POST** /validate/ip/intelligence | Get intelligence on an IP address
+[**IPAddressIsBot**](IPAddressApi.md#ipaddressisbot) | **POST** /validate/ip/is-bot | Check if IP address is a Bot client
 [**IPAddressIsThreat**](IPAddressApi.md#ipaddressisthreat) | **POST** /validate/ip/is-threat | Check if IP address is a known threat
 [**IPAddressIsTorNode**](IPAddressApi.md#ipaddressistornode) | **POST** /validate/ip/is-tor-node | Check if IP address is a Tor node server
 [**IPAddressPost**](IPAddressApi.md#ipaddresspost) | **POST** /validate/ip/geolocate | Geolocate an IP address
@@ -65,6 +67,138 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GeolocateStreetAddressResponse**](GeolocateStreetAddressResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="ipaddressipintelligence"></a>
+# **IPAddressIpIntelligence**
+> IPIntelligenceResponse IPAddressIpIntelligence (string value)
+
+Get intelligence on an IP address
+
+Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class IPAddressIpIntelligenceExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new IPAddressApi();
+            var value = value_example;  // string | IP address to process, e.g. \"55.55.55.55\".  The input is a string so be sure to enclose it in double-quotes.
+
+            try
+            {
+                // Get intelligence on an IP address
+                IPIntelligenceResponse result = apiInstance.IPAddressIpIntelligence(value);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IPAddressApi.IPAddressIpIntelligence: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **value** | **string**| IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes. | 
+
+### Return type
+
+[**IPIntelligenceResponse**](IPIntelligenceResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="ipaddressisbot"></a>
+# **IPAddressIsBot**
+> BotCheckResponse IPAddressIsBot (string value)
+
+Check if IP address is a Bot client
+
+Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class IPAddressIsBotExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new IPAddressApi();
+            var value = value_example;  // string | IP address to check, e.g. \"55.55.55.55\".  The input is a string so be sure to enclose it in double-quotes.
+
+            try
+            {
+                // Check if IP address is a Bot client
+                BotCheckResponse result = apiInstance.IPAddressIsBot(value);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IPAddressApi.IPAddressIsBot: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **value** | **string**| IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes. | 
+
+### Return type
+
+[**BotCheckResponse**](BotCheckResponse.md)
 
 ### Authorization
 

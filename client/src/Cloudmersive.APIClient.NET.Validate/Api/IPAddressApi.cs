@@ -46,6 +46,48 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of GeolocateStreetAddressResponse</returns>
         ApiResponse<GeolocateStreetAddressResponse> IPAddressGeolocateStreetAddressWithHttpInfo (string value);
         /// <summary>
+        /// Get intelligence on an IP address
+        /// </summary>
+        /// <remarks>
+        /// Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>IPIntelligenceResponse</returns>
+        IPIntelligenceResponse IPAddressIpIntelligence (string value);
+
+        /// <summary>
+        /// Get intelligence on an IP address
+        /// </summary>
+        /// <remarks>
+        /// Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>ApiResponse of IPIntelligenceResponse</returns>
+        ApiResponse<IPIntelligenceResponse> IPAddressIpIntelligenceWithHttpInfo (string value);
+        /// <summary>
+        /// Check if IP address is a Bot client
+        /// </summary>
+        /// <remarks>
+        /// Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>BotCheckResponse</returns>
+        BotCheckResponse IPAddressIsBot (string value);
+
+        /// <summary>
+        /// Check if IP address is a Bot client
+        /// </summary>
+        /// <remarks>
+        /// Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>ApiResponse of BotCheckResponse</returns>
+        ApiResponse<BotCheckResponse> IPAddressIsBotWithHttpInfo (string value);
+        /// <summary>
         /// Check if IP address is a known threat
         /// </summary>
         /// <remarks>
@@ -152,6 +194,48 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="value">IP address to geolocate, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
         /// <returns>Task of ApiResponse (GeolocateStreetAddressResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GeolocateStreetAddressResponse>> IPAddressGeolocateStreetAddressAsyncWithHttpInfo (string value);
+        /// <summary>
+        /// Get intelligence on an IP address
+        /// </summary>
+        /// <remarks>
+        /// Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of IPIntelligenceResponse</returns>
+        System.Threading.Tasks.Task<IPIntelligenceResponse> IPAddressIpIntelligenceAsync (string value);
+
+        /// <summary>
+        /// Get intelligence on an IP address
+        /// </summary>
+        /// <remarks>
+        /// Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of ApiResponse (IPIntelligenceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IPIntelligenceResponse>> IPAddressIpIntelligenceAsyncWithHttpInfo (string value);
+        /// <summary>
+        /// Check if IP address is a Bot client
+        /// </summary>
+        /// <remarks>
+        /// Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of BotCheckResponse</returns>
+        System.Threading.Tasks.Task<BotCheckResponse> IPAddressIsBotAsync (string value);
+
+        /// <summary>
+        /// Check if IP address is a Bot client
+        /// </summary>
+        /// <remarks>
+        /// Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of ApiResponse (BotCheckResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BotCheckResponse>> IPAddressIsBotAsyncWithHttpInfo (string value);
         /// <summary>
         /// Check if IP address is a known threat
         /// </summary>
@@ -501,6 +585,340 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<GeolocateStreetAddressResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GeolocateStreetAddressResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GeolocateStreetAddressResponse)));
+        }
+
+        /// <summary>
+        /// Get intelligence on an IP address Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>IPIntelligenceResponse</returns>
+        public IPIntelligenceResponse IPAddressIpIntelligence (string value)
+        {
+             ApiResponse<IPIntelligenceResponse> localVarResponse = IPAddressIpIntelligenceWithHttpInfo(value);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get intelligence on an IP address Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>ApiResponse of IPIntelligenceResponse</returns>
+        public ApiResponse< IPIntelligenceResponse > IPAddressIpIntelligenceWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIpIntelligence");
+
+            var localVarPath = "/validate/ip/intelligence";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IPAddressIpIntelligence", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<IPIntelligenceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IPIntelligenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IPIntelligenceResponse)));
+        }
+
+        /// <summary>
+        /// Get intelligence on an IP address Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of IPIntelligenceResponse</returns>
+        public async System.Threading.Tasks.Task<IPIntelligenceResponse> IPAddressIpIntelligenceAsync (string value)
+        {
+             ApiResponse<IPIntelligenceResponse> localVarResponse = await IPAddressIpIntelligenceAsyncWithHttpInfo(value);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get intelligence on an IP address Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to process, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of ApiResponse (IPIntelligenceResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IPIntelligenceResponse>> IPAddressIpIntelligenceAsyncWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIpIntelligence");
+
+            var localVarPath = "/validate/ip/intelligence";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IPAddressIpIntelligence", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<IPIntelligenceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IPIntelligenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IPIntelligenceResponse)));
+        }
+
+        /// <summary>
+        /// Check if IP address is a Bot client Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>BotCheckResponse</returns>
+        public BotCheckResponse IPAddressIsBot (string value)
+        {
+             ApiResponse<BotCheckResponse> localVarResponse = IPAddressIsBotWithHttpInfo(value);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check if IP address is a Bot client Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>ApiResponse of BotCheckResponse</returns>
+        public ApiResponse< BotCheckResponse > IPAddressIsBotWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIsBot");
+
+            var localVarPath = "/validate/ip/is-bot";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IPAddressIsBot", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BotCheckResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BotCheckResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotCheckResponse)));
+        }
+
+        /// <summary>
+        /// Check if IP address is a Bot client Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of BotCheckResponse</returns>
+        public async System.Threading.Tasks.Task<BotCheckResponse> IPAddressIsBotAsync (string value)
+        {
+             ApiResponse<BotCheckResponse> localVarResponse = await IPAddressIsBotAsyncWithHttpInfo(value);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check if IP address is a Bot client Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">IP address to check, e.g. \&quot;55.55.55.55\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of ApiResponse (BotCheckResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BotCheckResponse>> IPAddressIsBotAsyncWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling IPAddressApi->IPAddressIsBot");
+
+            var localVarPath = "/validate/ip/is-bot";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IPAddressIsBot", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BotCheckResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BotCheckResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BotCheckResponse)));
         }
 
         /// <summary>
