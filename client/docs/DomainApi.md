@@ -5,8 +5,11 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DomainCheck**](DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
+[**DomainGetTopLevelDomainFromUrl**](DomainApi.md#domaingettopleveldomainfromurl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
 [**DomainPost**](DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 [**DomainQualityScore**](DomainApi.md#domainqualityscore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
+[**DomainSsrfCheck**](DomainApi.md#domainssrfcheck) | **POST** /validate/domain/url/ssrf-threat-check | Check a URL for SSRF threats
+[**DomainSsrfCheckBatch**](DomainApi.md#domainssrfcheckbatch) | **POST** /validate/domain/url/ssrf-threat-check/batch | Check a URL for SSRF threats in batches
 [**DomainUrlFull**](DomainApi.md#domainurlfull) | **POST** /validate/domain/url/full | Validate a URL fully
 [**DomainUrlSyntaxOnly**](DomainApi.md#domainurlsyntaxonly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 
@@ -65,6 +68,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CheckResponse**](CheckResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="domaingettopleveldomainfromurl"></a>
+# **DomainGetTopLevelDomainFromUrl**
+> ValidateUrlResponseSyntaxOnly DomainGetTopLevelDomainFromUrl (ValidateUrlRequestSyntaxOnly request)
+
+Get top-level domain name from URL
+
+Gets the top-level domain name from a URL, such as mydomain.com.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class DomainGetTopLevelDomainFromUrlExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new DomainApi();
+            var request = new ValidateUrlRequestSyntaxOnly(); // ValidateUrlRequestSyntaxOnly | Input URL information
+
+            try
+            {
+                // Get top-level domain name from URL
+                ValidateUrlResponseSyntaxOnly result = apiInstance.DomainGetTopLevelDomainFromUrl(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DomainApi.DomainGetTopLevelDomainFromUrl: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**ValidateUrlRequestSyntaxOnly**](ValidateUrlRequestSyntaxOnly.md)| Input URL information | 
+
+### Return type
+
+[**ValidateUrlResponseSyntaxOnly**](ValidateUrlResponseSyntaxOnly.md)
 
 ### Authorization
 
@@ -197,6 +266,138 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainQualityResponse**](DomainQualityResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="domainssrfcheck"></a>
+# **DomainSsrfCheck**
+> UrlSsrfResponseFull DomainSsrfCheck (UrlSsrfRequestFull request)
+
+Check a URL for SSRF threats
+
+Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class DomainSsrfCheckExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new DomainApi();
+            var request = new UrlSsrfRequestFull(); // UrlSsrfRequestFull | Input URL request
+
+            try
+            {
+                // Check a URL for SSRF threats
+                UrlSsrfResponseFull result = apiInstance.DomainSsrfCheck(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DomainApi.DomainSsrfCheck: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**UrlSsrfRequestFull**](UrlSsrfRequestFull.md)| Input URL request | 
+
+### Return type
+
+[**UrlSsrfResponseFull**](UrlSsrfResponseFull.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="domainssrfcheckbatch"></a>
+# **DomainSsrfCheckBatch**
+> UrlSsrfResponseBatch DomainSsrfCheckBatch (UrlSsrfRequestBatch request)
+
+Check a URL for SSRF threats in batches
+
+Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class DomainSsrfCheckBatchExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new DomainApi();
+            var request = new UrlSsrfRequestBatch(); // UrlSsrfRequestBatch | Input URL request as a batch of multiple URLs
+
+            try
+            {
+                // Check a URL for SSRF threats in batches
+                UrlSsrfResponseBatch result = apiInstance.DomainSsrfCheckBatch(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DomainApi.DomainSsrfCheckBatch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**UrlSsrfRequestBatch**](UrlSsrfRequestBatch.md)| Input URL request as a batch of multiple URLs | 
+
+### Return type
+
+[**UrlSsrfResponseBatch**](UrlSsrfResponseBatch.md)
 
 ### Authorization
 

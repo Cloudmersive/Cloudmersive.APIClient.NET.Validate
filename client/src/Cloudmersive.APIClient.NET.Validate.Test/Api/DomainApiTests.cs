@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test DomainGetTopLevelDomainFromUrl
+        /// </summary>
+        [Test]
+        public void DomainGetTopLevelDomainFromUrlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ValidateUrlRequestSyntaxOnly request = null;
+            //var response = instance.DomainGetTopLevelDomainFromUrl(request);
+            //Assert.IsInstanceOf<ValidateUrlResponseSyntaxOnly> (response, "response is ValidateUrlResponseSyntaxOnly");
+        }
+        
+        /// <summary>
         /// Test DomainPost
         /// </summary>
         [Test]
@@ -98,6 +110,30 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //string domain = null;
             //var response = instance.DomainQualityScore(domain);
             //Assert.IsInstanceOf<DomainQualityResponse> (response, "response is DomainQualityResponse");
+        }
+        
+        /// <summary>
+        /// Test DomainSsrfCheck
+        /// </summary>
+        [Test]
+        public void DomainSsrfCheckTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UrlSsrfRequestFull request = null;
+            //var response = instance.DomainSsrfCheck(request);
+            //Assert.IsInstanceOf<UrlSsrfResponseFull> (response, "response is UrlSsrfResponseFull");
+        }
+        
+        /// <summary>
+        /// Test DomainSsrfCheckBatch
+        /// </summary>
+        [Test]
+        public void DomainSsrfCheckBatchTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UrlSsrfRequestBatch request = null;
+            //var response = instance.DomainSsrfCheckBatch(request);
+            //Assert.IsInstanceOf<UrlSsrfResponseBatch> (response, "response is UrlSsrfResponseBatch");
         }
         
         /// <summary>

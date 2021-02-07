@@ -46,6 +46,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of CheckResponse</returns>
         ApiResponse<CheckResponse> DomainCheckWithHttpInfo (string domain);
         /// <summary>
+        /// Get top-level domain name from URL
+        /// </summary>
+        /// <remarks>
+        /// Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>ValidateUrlResponseSyntaxOnly</returns>
+        ValidateUrlResponseSyntaxOnly DomainGetTopLevelDomainFromUrl (ValidateUrlRequestSyntaxOnly request);
+
+        /// <summary>
+        /// Get top-level domain name from URL
+        /// </summary>
+        /// <remarks>
+        /// Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
+        ApiResponse<ValidateUrlResponseSyntaxOnly> DomainGetTopLevelDomainFromUrlWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
+        /// <summary>
         /// Get WHOIS information for a domain
         /// </summary>
         /// <remarks>
@@ -87,6 +108,48 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
         /// <returns>ApiResponse of DomainQualityResponse</returns>
         ApiResponse<DomainQualityResponse> DomainQualityScoreWithHttpInfo (string domain);
+        /// <summary>
+        /// Check a URL for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>UrlSsrfResponseFull</returns>
+        UrlSsrfResponseFull DomainSsrfCheck (UrlSsrfRequestFull request);
+
+        /// <summary>
+        /// Check a URL for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of UrlSsrfResponseFull</returns>
+        ApiResponse<UrlSsrfResponseFull> DomainSsrfCheckWithHttpInfo (UrlSsrfRequestFull request);
+        /// <summary>
+        /// Check a URL for SSRF threats in batches
+        /// </summary>
+        /// <remarks>
+        /// Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>UrlSsrfResponseBatch</returns>
+        UrlSsrfResponseBatch DomainSsrfCheckBatch (UrlSsrfRequestBatch request);
+
+        /// <summary>
+        /// Check a URL for SSRF threats in batches
+        /// </summary>
+        /// <remarks>
+        /// Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>ApiResponse of UrlSsrfResponseBatch</returns>
+        ApiResponse<UrlSsrfResponseBatch> DomainSsrfCheckBatchWithHttpInfo (UrlSsrfRequestBatch request);
         /// <summary>
         /// Validate a URL fully
         /// </summary>
@@ -153,6 +216,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>Task of ApiResponse (CheckResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CheckResponse>> DomainCheckAsyncWithHttpInfo (string domain);
         /// <summary>
+        /// Get top-level domain name from URL
+        /// </summary>
+        /// <remarks>
+        /// Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>Task of ValidateUrlResponseSyntaxOnly</returns>
+        System.Threading.Tasks.Task<ValidateUrlResponseSyntaxOnly> DomainGetTopLevelDomainFromUrlAsync (ValidateUrlRequestSyntaxOnly request);
+
+        /// <summary>
+        /// Get top-level domain name from URL
+        /// </summary>
+        /// <remarks>
+        /// Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainGetTopLevelDomainFromUrlAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
+        /// <summary>
         /// Get WHOIS information for a domain
         /// </summary>
         /// <remarks>
@@ -194,6 +278,48 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
         /// <returns>Task of ApiResponse (DomainQualityResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainQualityResponse>> DomainQualityScoreAsyncWithHttpInfo (string domain);
+        /// <summary>
+        /// Check a URL for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of UrlSsrfResponseFull</returns>
+        System.Threading.Tasks.Task<UrlSsrfResponseFull> DomainSsrfCheckAsync (UrlSsrfRequestFull request);
+
+        /// <summary>
+        /// Check a URL for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (UrlSsrfResponseFull)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UrlSsrfResponseFull>> DomainSsrfCheckAsyncWithHttpInfo (UrlSsrfRequestFull request);
+        /// <summary>
+        /// Check a URL for SSRF threats in batches
+        /// </summary>
+        /// <remarks>
+        /// Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>Task of UrlSsrfResponseBatch</returns>
+        System.Threading.Tasks.Task<UrlSsrfResponseBatch> DomainSsrfCheckBatchAsync (UrlSsrfRequestBatch request);
+
+        /// <summary>
+        /// Check a URL for SSRF threats in batches
+        /// </summary>
+        /// <remarks>
+        /// Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>Task of ApiResponse (UrlSsrfResponseBatch)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UrlSsrfResponseBatch>> DomainSsrfCheckBatchAsyncWithHttpInfo (UrlSsrfRequestBatch request);
         /// <summary>
         /// Validate a URL fully
         /// </summary>
@@ -501,6 +627,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<CheckResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CheckResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckResponse)));
+        }
+
+        /// <summary>
+        /// Get top-level domain name from URL Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>ValidateUrlResponseSyntaxOnly</returns>
+        public ValidateUrlResponseSyntaxOnly DomainGetTopLevelDomainFromUrl (ValidateUrlRequestSyntaxOnly request)
+        {
+             ApiResponse<ValidateUrlResponseSyntaxOnly> localVarResponse = DomainGetTopLevelDomainFromUrlWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get top-level domain name from URL Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
+        public ApiResponse< ValidateUrlResponseSyntaxOnly > DomainGetTopLevelDomainFromUrlWithHttpInfo (ValidateUrlRequestSyntaxOnly request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainGetTopLevelDomainFromUrl");
+
+            var localVarPath = "/validate/domain/url/get-top-level-domain";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainGetTopLevelDomainFromUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateUrlResponseSyntaxOnly>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateUrlResponseSyntaxOnly) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateUrlResponseSyntaxOnly)));
+        }
+
+        /// <summary>
+        /// Get top-level domain name from URL Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>Task of ValidateUrlResponseSyntaxOnly</returns>
+        public async System.Threading.Tasks.Task<ValidateUrlResponseSyntaxOnly> DomainGetTopLevelDomainFromUrlAsync (ValidateUrlRequestSyntaxOnly request)
+        {
+             ApiResponse<ValidateUrlResponseSyntaxOnly> localVarResponse = await DomainGetTopLevelDomainFromUrlAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get top-level domain name from URL Gets the top-level domain name from a URL, such as mydomain.com.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL information</param>
+        /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainGetTopLevelDomainFromUrlAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainGetTopLevelDomainFromUrl");
+
+            var localVarPath = "/validate/domain/url/get-top-level-domain";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainGetTopLevelDomainFromUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidateUrlResponseSyntaxOnly>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidateUrlResponseSyntaxOnly) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateUrlResponseSyntaxOnly)));
         }
 
         /// <summary>
@@ -835,6 +1128,340 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<DomainQualityResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DomainQualityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainQualityResponse)));
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>UrlSsrfResponseFull</returns>
+        public UrlSsrfResponseFull DomainSsrfCheck (UrlSsrfRequestFull request)
+        {
+             ApiResponse<UrlSsrfResponseFull> localVarResponse = DomainSsrfCheckWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of UrlSsrfResponseFull</returns>
+        public ApiResponse< UrlSsrfResponseFull > DomainSsrfCheckWithHttpInfo (UrlSsrfRequestFull request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainSsrfCheck");
+
+            var localVarPath = "/validate/domain/url/ssrf-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainSsrfCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlSsrfResponseFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlSsrfResponseFull) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlSsrfResponseFull)));
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of UrlSsrfResponseFull</returns>
+        public async System.Threading.Tasks.Task<UrlSsrfResponseFull> DomainSsrfCheckAsync (UrlSsrfRequestFull request)
+        {
+             ApiResponse<UrlSsrfResponseFull> localVarResponse = await DomainSsrfCheckAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (UrlSsrfResponseFull)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UrlSsrfResponseFull>> DomainSsrfCheckAsyncWithHttpInfo (UrlSsrfRequestFull request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainSsrfCheck");
+
+            var localVarPath = "/validate/domain/url/ssrf-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainSsrfCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlSsrfResponseFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlSsrfResponseFull) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlSsrfResponseFull)));
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats in batches Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>UrlSsrfResponseBatch</returns>
+        public UrlSsrfResponseBatch DomainSsrfCheckBatch (UrlSsrfRequestBatch request)
+        {
+             ApiResponse<UrlSsrfResponseBatch> localVarResponse = DomainSsrfCheckBatchWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats in batches Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>ApiResponse of UrlSsrfResponseBatch</returns>
+        public ApiResponse< UrlSsrfResponseBatch > DomainSsrfCheckBatchWithHttpInfo (UrlSsrfRequestBatch request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainSsrfCheckBatch");
+
+            var localVarPath = "/validate/domain/url/ssrf-threat-check/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainSsrfCheckBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlSsrfResponseBatch>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlSsrfResponseBatch) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlSsrfResponseBatch)));
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats in batches Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>Task of UrlSsrfResponseBatch</returns>
+        public async System.Threading.Tasks.Task<UrlSsrfResponseBatch> DomainSsrfCheckBatchAsync (UrlSsrfRequestBatch request)
+        {
+             ApiResponse<UrlSsrfResponseBatch> localVarResponse = await DomainSsrfCheckBatchAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check a URL for SSRF threats in batches Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request as a batch of multiple URLs</param>
+        /// <returns>Task of ApiResponse (UrlSsrfResponseBatch)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UrlSsrfResponseBatch>> DomainSsrfCheckBatchAsyncWithHttpInfo (UrlSsrfRequestBatch request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainSsrfCheckBatch");
+
+            var localVarPath = "/validate/domain/url/ssrf-threat-check/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainSsrfCheckBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlSsrfResponseBatch>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlSsrfResponseBatch) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlSsrfResponseBatch)));
         }
 
         /// <summary>
