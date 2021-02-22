@@ -67,6 +67,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
         ApiResponse<ValidateUrlResponseSyntaxOnly> DomainGetTopLevelDomainFromUrlWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         /// <summary>
+        /// Check a URL for Phishing threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>PhishingCheckResponse</returns>
+        PhishingCheckResponse DomainPhishingCheck (PhishingCheckRequest request);
+
+        /// <summary>
+        /// Check a URL for Phishing threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of PhishingCheckResponse</returns>
+        ApiResponse<PhishingCheckResponse> DomainPhishingCheckWithHttpInfo (PhishingCheckRequest request);
+        /// <summary>
         /// Get WHOIS information for a domain
         /// </summary>
         /// <remarks>
@@ -108,6 +129,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
         /// <returns>ApiResponse of DomainQualityResponse</returns>
         ApiResponse<DomainQualityResponse> DomainQualityScoreWithHttpInfo (string domain);
+        /// <summary>
+        /// Check a URL for safety threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>UrlSafetyCheckResponseFull</returns>
+        UrlSafetyCheckResponseFull DomainSafetyCheck (UrlSafetyCheckRequestFull request);
+
+        /// <summary>
+        /// Check a URL for safety threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of UrlSafetyCheckResponseFull</returns>
+        ApiResponse<UrlSafetyCheckResponseFull> DomainSafetyCheckWithHttpInfo (UrlSafetyCheckRequestFull request);
         /// <summary>
         /// Check a URL for SSRF threats
         /// </summary>
@@ -237,6 +279,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainGetTopLevelDomainFromUrlAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         /// <summary>
+        /// Check a URL for Phishing threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of PhishingCheckResponse</returns>
+        System.Threading.Tasks.Task<PhishingCheckResponse> DomainPhishingCheckAsync (PhishingCheckRequest request);
+
+        /// <summary>
+        /// Check a URL for Phishing threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (PhishingCheckResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PhishingCheckResponse>> DomainPhishingCheckAsyncWithHttpInfo (PhishingCheckRequest request);
+        /// <summary>
         /// Get WHOIS information for a domain
         /// </summary>
         /// <remarks>
@@ -278,6 +341,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="domain">Domain name to check, for example \&quot;cloudmersive.com\&quot;.</param>
         /// <returns>Task of ApiResponse (DomainQualityResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainQualityResponse>> DomainQualityScoreAsyncWithHttpInfo (string domain);
+        /// <summary>
+        /// Check a URL for safety threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of UrlSafetyCheckResponseFull</returns>
+        System.Threading.Tasks.Task<UrlSafetyCheckResponseFull> DomainSafetyCheckAsync (UrlSafetyCheckRequestFull request);
+
+        /// <summary>
+        /// Check a URL for safety threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (UrlSafetyCheckResponseFull)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UrlSafetyCheckResponseFull>> DomainSafetyCheckAsyncWithHttpInfo (UrlSafetyCheckRequestFull request);
         /// <summary>
         /// Check a URL for SSRF threats
         /// </summary>
@@ -797,6 +881,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
+        /// Check a URL for Phishing threats Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>PhishingCheckResponse</returns>
+        public PhishingCheckResponse DomainPhishingCheck (PhishingCheckRequest request)
+        {
+             ApiResponse<PhishingCheckResponse> localVarResponse = DomainPhishingCheckWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check a URL for Phishing threats Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of PhishingCheckResponse</returns>
+        public ApiResponse< PhishingCheckResponse > DomainPhishingCheckWithHttpInfo (PhishingCheckRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainPhishingCheck");
+
+            var localVarPath = "/validate/domain/url/phishing-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainPhishingCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PhishingCheckResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PhishingCheckResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhishingCheckResponse)));
+        }
+
+        /// <summary>
+        /// Check a URL for Phishing threats Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of PhishingCheckResponse</returns>
+        public async System.Threading.Tasks.Task<PhishingCheckResponse> DomainPhishingCheckAsync (PhishingCheckRequest request)
+        {
+             ApiResponse<PhishingCheckResponse> localVarResponse = await DomainPhishingCheckAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check a URL for Phishing threats Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (PhishingCheckResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PhishingCheckResponse>> DomainPhishingCheckAsyncWithHttpInfo (PhishingCheckRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainPhishingCheck");
+
+            var localVarPath = "/validate/domain/url/phishing-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainPhishingCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PhishingCheckResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PhishingCheckResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhishingCheckResponse)));
+        }
+
+        /// <summary>
         /// Get WHOIS information for a domain Validate whether a domain name exists, and also return the full WHOIS record for that domain name.  WHOIS records include all the registration details of the domain name, such as information about the domain&#39;s owners.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1128,6 +1379,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<DomainQualityResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DomainQualityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainQualityResponse)));
+        }
+
+        /// <summary>
+        /// Check a URL for safety threats Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>UrlSafetyCheckResponseFull</returns>
+        public UrlSafetyCheckResponseFull DomainSafetyCheck (UrlSafetyCheckRequestFull request)
+        {
+             ApiResponse<UrlSafetyCheckResponseFull> localVarResponse = DomainSafetyCheckWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check a URL for safety threats Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of UrlSafetyCheckResponseFull</returns>
+        public ApiResponse< UrlSafetyCheckResponseFull > DomainSafetyCheckWithHttpInfo (UrlSafetyCheckRequestFull request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainSafetyCheck");
+
+            var localVarPath = "/validate/domain/url/safety-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainSafetyCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlSafetyCheckResponseFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlSafetyCheckResponseFull) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlSafetyCheckResponseFull)));
+        }
+
+        /// <summary>
+        /// Check a URL for safety threats Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of UrlSafetyCheckResponseFull</returns>
+        public async System.Threading.Tasks.Task<UrlSafetyCheckResponseFull> DomainSafetyCheckAsync (UrlSafetyCheckRequestFull request)
+        {
+             ApiResponse<UrlSafetyCheckResponseFull> localVarResponse = await DomainSafetyCheckAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check a URL for safety threats Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (UrlSafetyCheckResponseFull)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UrlSafetyCheckResponseFull>> DomainSafetyCheckAsyncWithHttpInfo (UrlSafetyCheckRequestFull request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainSafetyCheck");
+
+            var localVarPath = "/validate/domain/url/safety-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainSafetyCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlSafetyCheckResponseFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlSafetyCheckResponseFull) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlSafetyCheckResponseFull)));
         }
 
         /// <summary>

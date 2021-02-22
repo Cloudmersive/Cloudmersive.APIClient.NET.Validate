@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test DomainPhishingCheck
+        /// </summary>
+        [Test]
+        public void DomainPhishingCheckTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PhishingCheckRequest request = null;
+            //var response = instance.DomainPhishingCheck(request);
+            //Assert.IsInstanceOf<PhishingCheckResponse> (response, "response is PhishingCheckResponse");
+        }
+        
+        /// <summary>
         /// Test DomainPost
         /// </summary>
         [Test]
@@ -110,6 +122,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //string domain = null;
             //var response = instance.DomainQualityScore(domain);
             //Assert.IsInstanceOf<DomainQualityResponse> (response, "response is DomainQualityResponse");
+        }
+        
+        /// <summary>
+        /// Test DomainSafetyCheck
+        /// </summary>
+        [Test]
+        public void DomainSafetyCheckTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UrlSafetyCheckRequestFull request = null;
+            //var response = instance.DomainSafetyCheck(request);
+            //Assert.IsInstanceOf<UrlSafetyCheckResponseFull> (response, "response is UrlSafetyCheckResponseFull");
         }
         
         /// <summary>

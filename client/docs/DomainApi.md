@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DomainCheck**](DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 [**DomainGetTopLevelDomainFromUrl**](DomainApi.md#domaingettopleveldomainfromurl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
+[**DomainPhishingCheck**](DomainApi.md#domainphishingcheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 [**DomainPost**](DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 [**DomainQualityScore**](DomainApi.md#domainqualityscore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
+[**DomainSafetyCheck**](DomainApi.md#domainsafetycheck) | **POST** /validate/domain/url/safety-threat-check | Check a URL for safety threats
 [**DomainSsrfCheck**](DomainApi.md#domainssrfcheck) | **POST** /validate/domain/url/ssrf-threat-check | Check a URL for SSRF threats
 [**DomainSsrfCheckBatch**](DomainApi.md#domainssrfcheckbatch) | **POST** /validate/domain/url/ssrf-threat-check/batch | Check a URL for SSRF threats in batches
 [**DomainUrlFull**](DomainApi.md#domainurlfull) | **POST** /validate/domain/url/full | Validate a URL fully
@@ -146,6 +148,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="domainphishingcheck"></a>
+# **DomainPhishingCheck**
+> PhishingCheckResponse DomainPhishingCheck (PhishingCheckRequest request)
+
+Check a URL for Phishing threats
+
+Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class DomainPhishingCheckExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new DomainApi();
+            var request = new PhishingCheckRequest(); // PhishingCheckRequest | Input URL request
+
+            try
+            {
+                // Check a URL for Phishing threats
+                PhishingCheckResponse result = apiInstance.DomainPhishingCheck(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DomainApi.DomainPhishingCheck: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**PhishingCheckRequest**](PhishingCheckRequest.md)| Input URL request | 
+
+### Return type
+
+[**PhishingCheckResponse**](PhishingCheckResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="domainpost"></a>
 # **DomainPost**
 > WhoisResponse DomainPost (string domain)
@@ -266,6 +334,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DomainQualityResponse**](DomainQualityResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="domainsafetycheck"></a>
+# **DomainSafetyCheck**
+> UrlSafetyCheckResponseFull DomainSafetyCheck (UrlSafetyCheckRequestFull request)
+
+Check a URL for safety threats
+
+Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class DomainSafetyCheckExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new DomainApi();
+            var request = new UrlSafetyCheckRequestFull(); // UrlSafetyCheckRequestFull | Input URL request
+
+            try
+            {
+                // Check a URL for safety threats
+                UrlSafetyCheckResponseFull result = apiInstance.DomainSafetyCheck(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DomainApi.DomainSafetyCheck: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**UrlSafetyCheckRequestFull**](UrlSafetyCheckRequestFull.md)| Input URL request | 
+
+### Return type
+
+[**UrlSafetyCheckResponseFull**](UrlSafetyCheckResponseFull.md)
 
 ### Authorization
 
