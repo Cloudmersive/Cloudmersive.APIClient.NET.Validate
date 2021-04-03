@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.2.1
+- SDK version: 3.2.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -146,6 +146,8 @@ Class | Method | HTTP request | Description
 *NameApi* | [**NameValidateFullName**](docs/NameApi.md#namevalidatefullname) | **POST** /validate/name/full-name | Parse and validate a full name
 *NameApi* | [**NameValidateLastName**](docs/NameApi.md#namevalidatelastname) | **POST** /validate/name/last | Validate a last name
 *PhoneNumberApi* | [**PhoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phonenumbersyntaxonly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
+*TextInputApi* | [**TextInputCheckSqlInjection**](docs/TextInputApi.md#textinputchecksqlinjection) | **POST** /validate/text-input/check/sql-injection | Check text input for SQL Injection (SQLI) attacks
+*TextInputApi* | [**TextInputCheckSqlInjectionBatch**](docs/TextInputApi.md#textinputchecksqlinjectionbatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
 *TextInputApi* | [**TextInputCheckXss**](docs/TextInputApi.md#textinputcheckxss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
 *TextInputApi* | [**TextInputCheckXssBatch**](docs/TextInputApi.md#textinputcheckxssbatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
 *TextInputApi* | [**TextInputProtectXss**](docs/TextInputApi.md#textinputprotectxss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
@@ -197,6 +199,10 @@ Class | Method | HTTP request | Description
  - [Model.PublicHolidaysResponse](docs/PublicHolidaysResponse.md)
  - [Model.ReverseGeocodeAddressRequest](docs/ReverseGeocodeAddressRequest.md)
  - [Model.ReverseGeocodeAddressResponse](docs/ReverseGeocodeAddressResponse.md)
+ - [Model.SqlInjectionCheckBatchRequest](docs/SqlInjectionCheckBatchRequest.md)
+ - [Model.SqlInjectionCheckBatchResponse](docs/SqlInjectionCheckBatchResponse.md)
+ - [Model.SqlInjectionCheckRequestItem](docs/SqlInjectionCheckRequestItem.md)
+ - [Model.SqlInjectionDetectionResult](docs/SqlInjectionDetectionResult.md)
  - [Model.Timezone](docs/Timezone.md)
  - [Model.TorNodeResponse](docs/TorNodeResponse.md)
  - [Model.UrlSafetyCheckRequestFull](docs/UrlSafetyCheckRequestFull.md)

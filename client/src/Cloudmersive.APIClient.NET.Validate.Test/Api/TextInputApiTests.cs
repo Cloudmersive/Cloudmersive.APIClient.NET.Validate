@@ -65,6 +65,31 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
 
         
         /// <summary>
+        /// Test TextInputCheckSqlInjection
+        /// </summary>
+        [Test]
+        public void TextInputCheckSqlInjectionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //string detectionLevel = null;
+            //var response = instance.TextInputCheckSqlInjection(value, detectionLevel);
+            //Assert.IsInstanceOf<SqlInjectionDetectionResult> (response, "response is SqlInjectionDetectionResult");
+        }
+        
+        /// <summary>
+        /// Test TextInputCheckSqlInjectionBatch
+        /// </summary>
+        [Test]
+        public void TextInputCheckSqlInjectionBatchTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SqlInjectionCheckBatchRequest value = null;
+            //var response = instance.TextInputCheckSqlInjectionBatch(value);
+            //Assert.IsInstanceOf<SqlInjectionCheckBatchResponse> (response, "response is SqlInjectionCheckBatchResponse");
+        }
+        
+        /// <summary>
         /// Test TextInputCheckXss
         /// </summary>
         [Test]

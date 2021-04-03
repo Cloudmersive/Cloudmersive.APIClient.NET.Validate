@@ -25,6 +25,50 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>SqlInjectionDetectionResult</returns>
+        SqlInjectionDetectionResult TextInputCheckSqlInjection (string value, string detectionLevel = null);
+
+        /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>ApiResponse of SqlInjectionDetectionResult</returns>
+        ApiResponse<SqlInjectionDetectionResult> TextInputCheckSqlInjectionWithHttpInfo (string value, string detectionLevel = null);
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>SqlInjectionCheckBatchResponse</returns>
+        SqlInjectionCheckBatchResponse TextInputCheckSqlInjectionBatch (SqlInjectionCheckBatchRequest value);
+
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>ApiResponse of SqlInjectionCheckBatchResponse</returns>
+        ApiResponse<SqlInjectionCheckBatchResponse> TextInputCheckSqlInjectionBatchWithHttpInfo (SqlInjectionCheckBatchRequest value);
+        /// <summary>
         /// Check text input for Cross-Site-Scripting (XSS) attacks
         /// </summary>
         /// <remarks>
@@ -49,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
         /// </summary>
         /// <remarks>
-        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
@@ -60,7 +104,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
         /// </summary>
         /// <remarks>
-        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
@@ -90,6 +134,50 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>Task of SqlInjectionDetectionResult</returns>
+        System.Threading.Tasks.Task<SqlInjectionDetectionResult> TextInputCheckSqlInjectionAsync (string value, string detectionLevel = null);
+
+        /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>Task of ApiResponse (SqlInjectionDetectionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SqlInjectionDetectionResult>> TextInputCheckSqlInjectionAsyncWithHttpInfo (string value, string detectionLevel = null);
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of SqlInjectionCheckBatchResponse</returns>
+        System.Threading.Tasks.Task<SqlInjectionCheckBatchResponse> TextInputCheckSqlInjectionBatchAsync (SqlInjectionCheckBatchRequest value);
+
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
+        /// </summary>
+        /// <remarks>
+        /// Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of ApiResponse (SqlInjectionCheckBatchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SqlInjectionCheckBatchResponse>> TextInputCheckSqlInjectionBatchAsyncWithHttpInfo (SqlInjectionCheckBatchRequest value);
+        /// <summary>
         /// Check text input for Cross-Site-Scripting (XSS) attacks
         /// </summary>
         /// <remarks>
@@ -114,7 +202,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
         /// </summary>
         /// <remarks>
-        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
@@ -125,7 +213,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
         /// </summary>
         /// <remarks>
-        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
@@ -250,6 +338,346 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks Detects SQL Injection (SQLI) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>SqlInjectionDetectionResult</returns>
+        public SqlInjectionDetectionResult TextInputCheckSqlInjection (string value, string detectionLevel = null)
+        {
+             ApiResponse<SqlInjectionDetectionResult> localVarResponse = TextInputCheckSqlInjectionWithHttpInfo(value, detectionLevel);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks Detects SQL Injection (SQLI) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>ApiResponse of SqlInjectionDetectionResult</returns>
+        public ApiResponse< SqlInjectionDetectionResult > TextInputCheckSqlInjectionWithHttpInfo (string value, string detectionLevel = null)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckSqlInjection");
+
+            var localVarPath = "/validate/text-input/check/sql-injection";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (detectionLevel != null) localVarHeaderParams.Add("detectionLevel", this.Configuration.ApiClient.ParameterToString(detectionLevel)); // header parameter
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckSqlInjection", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SqlInjectionDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SqlInjectionDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SqlInjectionDetectionResult)));
+        }
+
+        /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks Detects SQL Injection (SQLI) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>Task of SqlInjectionDetectionResult</returns>
+        public async System.Threading.Tasks.Task<SqlInjectionDetectionResult> TextInputCheckSqlInjectionAsync (string value, string detectionLevel = null)
+        {
+             ApiResponse<SqlInjectionDetectionResult> localVarResponse = await TextInputCheckSqlInjectionAsyncWithHttpInfo(value, detectionLevel);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check text input for SQL Injection (SQLI) attacks Detects SQL Injection (SQLI) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="detectionLevel">Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). (optional)</param>
+        /// <returns>Task of ApiResponse (SqlInjectionDetectionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SqlInjectionDetectionResult>> TextInputCheckSqlInjectionAsyncWithHttpInfo (string value, string detectionLevel = null)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckSqlInjection");
+
+            var localVarPath = "/validate/text-input/check/sql-injection";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (detectionLevel != null) localVarHeaderParams.Add("detectionLevel", this.Configuration.ApiClient.ParameterToString(detectionLevel)); // header parameter
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckSqlInjection", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SqlInjectionDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SqlInjectionDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SqlInjectionDetectionResult)));
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>SqlInjectionCheckBatchResponse</returns>
+        public SqlInjectionCheckBatchResponse TextInputCheckSqlInjectionBatch (SqlInjectionCheckBatchRequest value)
+        {
+             ApiResponse<SqlInjectionCheckBatchResponse> localVarResponse = TextInputCheckSqlInjectionBatchWithHttpInfo(value);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>ApiResponse of SqlInjectionCheckBatchResponse</returns>
+        public ApiResponse< SqlInjectionCheckBatchResponse > TextInputCheckSqlInjectionBatchWithHttpInfo (SqlInjectionCheckBatchRequest value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckSqlInjectionBatch");
+
+            var localVarPath = "/validate/text-input/check/sql-injection/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckSqlInjectionBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SqlInjectionCheckBatchResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SqlInjectionCheckBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SqlInjectionCheckBatchResponse)));
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of SqlInjectionCheckBatchResponse</returns>
+        public async System.Threading.Tasks.Task<SqlInjectionCheckBatchResponse> TextInputCheckSqlInjectionBatchAsync (SqlInjectionCheckBatchRequest value)
+        {
+             ApiResponse<SqlInjectionCheckBatchResponse> localVarResponse = await TextInputCheckSqlInjectionBatchAsyncWithHttpInfo(value);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <returns>Task of ApiResponse (SqlInjectionCheckBatchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SqlInjectionCheckBatchResponse>> TextInputCheckSqlInjectionBatchAsyncWithHttpInfo (SqlInjectionCheckBatchRequest value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckSqlInjectionBatch");
+
+            var localVarPath = "/validate/text-input/check/sql-injection/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckSqlInjectionBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SqlInjectionCheckBatchResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SqlInjectionCheckBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SqlInjectionCheckBatchResponse)));
         }
 
         /// <summary>
@@ -420,7 +848,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
@@ -432,7 +860,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
@@ -503,7 +931,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
@@ -516,7 +944,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text input.  Output preverses order of input items.
+        /// Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing text input.</param>
