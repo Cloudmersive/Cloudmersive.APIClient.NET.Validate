@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**TextInputCheckSqlInjectionBatch**](TextInputApi.md#textinputchecksqlinjectionbatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
 [**TextInputCheckXss**](TextInputApi.md#textinputcheckxss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
 [**TextInputCheckXssBatch**](TextInputApi.md#textinputcheckxssbatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
+[**TextInputCheckXxe**](TextInputApi.md#textinputcheckxxe) | **POST** /validate/text-input/check/xxe | Protect text input from XML External Entity (XXE) attacks
+[**TextInputCheckXxeBatch**](TextInputApi.md#textinputcheckxxebatch) | **POST** /validate/text-input/check/xxe/batch | Protect text input from XML External Entity (XXE) attacks
 [**TextInputProtectXss**](TextInputApi.md#textinputprotectxss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
 
 
@@ -265,6 +267,144 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**XssProtectionBatchResponse**](XssProtectionBatchResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="textinputcheckxxe"></a>
+# **TextInputCheckXxe**
+> XxeDetectionResult TextInputCheckXxe (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null)
+
+Protect text input from XML External Entity (XXE) attacks
+
+Detects XXE (XML External Entity) attacks from text input.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class TextInputCheckXxeExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new TextInputApi();
+            var value = value_example;  // string | User-facing text input.
+            var allowInternetUrls = true;  // bool? | Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional) 
+            var knownSafeUrls = knownSafeUrls_example;  // string | Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional) 
+            var knownUnsafeUrls = knownUnsafeUrls_example;  // string | Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional) 
+
+            try
+            {
+                // Protect text input from XML External Entity (XXE) attacks
+                XxeDetectionResult result = apiInstance.TextInputCheckXxe(value, allowInternetUrls, knownSafeUrls, knownUnsafeUrls);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextInputApi.TextInputCheckXxe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **value** | **string**| User-facing text input. | 
+ **allowInternetUrls** | **bool?**| Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. | [optional] 
+ **knownSafeUrls** | **string**| Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. | [optional] 
+ **knownUnsafeUrls** | **string**| Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. | [optional] 
+
+### Return type
+
+[**XxeDetectionResult**](XxeDetectionResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="textinputcheckxxebatch"></a>
+# **TextInputCheckXxeBatch**
+> XxeDetectionBatchResponse TextInputCheckXxeBatch (XxeDetectionBatchRequest request)
+
+Protect text input from XML External Entity (XXE) attacks
+
+Detects XXE (XML External Entity) attacks from text input.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class TextInputCheckXxeBatchExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new TextInputApi();
+            var request = new XxeDetectionBatchRequest(); // XxeDetectionBatchRequest | 
+
+            try
+            {
+                // Protect text input from XML External Entity (XXE) attacks
+                XxeDetectionBatchResponse result = apiInstance.TextInputCheckXxeBatch(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TextInputApi.TextInputCheckXxeBatch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**XxeDetectionBatchRequest**](XxeDetectionBatchRequest.md)|  | 
+
+### Return type
+
+[**XxeDetectionBatchResponse**](XxeDetectionBatchResponse.md)
 
 ### Authorization
 

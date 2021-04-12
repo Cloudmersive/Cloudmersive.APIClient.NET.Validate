@@ -114,6 +114,33 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test TextInputCheckXxe
+        /// </summary>
+        [Test]
+        public void TextInputCheckXxeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //bool? allowInternetUrls = null;
+            //string knownSafeUrls = null;
+            //string knownUnsafeUrls = null;
+            //var response = instance.TextInputCheckXxe(value, allowInternetUrls, knownSafeUrls, knownUnsafeUrls);
+            //Assert.IsInstanceOf<XxeDetectionResult> (response, "response is XxeDetectionResult");
+        }
+        
+        /// <summary>
+        /// Test TextInputCheckXxeBatch
+        /// </summary>
+        [Test]
+        public void TextInputCheckXxeBatchTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //XxeDetectionBatchRequest request = null;
+            //var response = instance.TextInputCheckXxeBatch(request);
+            //Assert.IsInstanceOf<XxeDetectionBatchResponse> (response, "response is XxeDetectionBatchResponse");
+        }
+        
+        /// <summary>
         /// Test TextInputProtectXss
         /// </summary>
         [Test]

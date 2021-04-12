@@ -111,6 +111,54 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of XssProtectionBatchResponse</returns>
         ApiResponse<XssProtectionBatchResponse> TextInputCheckXssBatchWithHttpInfo (XssProtectionBatchRequest value);
         /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>XxeDetectionResult</returns>
+        XxeDetectionResult TextInputCheckXxe (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null);
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>ApiResponse of XxeDetectionResult</returns>
+        ApiResponse<XxeDetectionResult> TextInputCheckXxeWithHttpInfo (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null);
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>XxeDetectionBatchResponse</returns>
+        XxeDetectionBatchResponse TextInputCheckXxeBatch (XxeDetectionBatchRequest request);
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of XxeDetectionBatchResponse</returns>
+        ApiResponse<XxeDetectionBatchResponse> TextInputCheckXxeBatchWithHttpInfo (XxeDetectionBatchRequest request);
+        /// <summary>
         /// Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
         /// </summary>
         /// <remarks>
@@ -219,6 +267,54 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="value">User-facing text input.</param>
         /// <returns>Task of ApiResponse (XssProtectionBatchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<XssProtectionBatchResponse>> TextInputCheckXssBatchAsyncWithHttpInfo (XssProtectionBatchRequest value);
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>Task of XxeDetectionResult</returns>
+        System.Threading.Tasks.Task<XxeDetectionResult> TextInputCheckXxeAsync (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null);
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>Task of ApiResponse (XxeDetectionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XxeDetectionResult>> TextInputCheckXxeAsyncWithHttpInfo (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null);
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of XxeDetectionBatchResponse</returns>
+        System.Threading.Tasks.Task<XxeDetectionBatchResponse> TextInputCheckXxeBatchAsync (XxeDetectionBatchRequest request);
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects XXE (XML External Entity) attacks from text input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (XxeDetectionBatchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XxeDetectionBatchResponse>> TextInputCheckXxeBatchAsyncWithHttpInfo (XxeDetectionBatchRequest request);
         /// <summary>
         /// Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
         /// </summary>
@@ -1012,6 +1108,358 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<XssProtectionBatchResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (XssProtectionBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XssProtectionBatchResponse)));
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>XxeDetectionResult</returns>
+        public XxeDetectionResult TextInputCheckXxe (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null)
+        {
+             ApiResponse<XxeDetectionResult> localVarResponse = TextInputCheckXxeWithHttpInfo(value, allowInternetUrls, knownSafeUrls, knownUnsafeUrls);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>ApiResponse of XxeDetectionResult</returns>
+        public ApiResponse< XxeDetectionResult > TextInputCheckXxeWithHttpInfo (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckXxe");
+
+            var localVarPath = "/validate/text-input/check/xxe";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (allowInternetUrls != null) localVarHeaderParams.Add("allowInternetUrls", this.Configuration.ApiClient.ParameterToString(allowInternetUrls)); // header parameter
+            if (knownSafeUrls != null) localVarHeaderParams.Add("knownSafeUrls", this.Configuration.ApiClient.ParameterToString(knownSafeUrls)); // header parameter
+            if (knownUnsafeUrls != null) localVarHeaderParams.Add("knownUnsafeUrls", this.Configuration.ApiClient.ParameterToString(knownUnsafeUrls)); // header parameter
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckXxe", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XxeDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XxeDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XxeDetectionResult)));
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>Task of XxeDetectionResult</returns>
+        public async System.Threading.Tasks.Task<XxeDetectionResult> TextInputCheckXxeAsync (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null)
+        {
+             ApiResponse<XxeDetectionResult> localVarResponse = await TextInputCheckXxeAsyncWithHttpInfo(value, allowInternetUrls, knownSafeUrls, knownUnsafeUrls);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing text input.</param>
+        /// <param name="allowInternetUrls">Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. (optional)</param>
+        /// <param name="knownSafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. (optional)</param>
+        /// <param name="knownUnsafeUrls">Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. (optional)</param>
+        /// <returns>Task of ApiResponse (XxeDetectionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XxeDetectionResult>> TextInputCheckXxeAsyncWithHttpInfo (string value, bool? allowInternetUrls = null, string knownSafeUrls = null, string knownUnsafeUrls = null)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckXxe");
+
+            var localVarPath = "/validate/text-input/check/xxe";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (allowInternetUrls != null) localVarHeaderParams.Add("allowInternetUrls", this.Configuration.ApiClient.ParameterToString(allowInternetUrls)); // header parameter
+            if (knownSafeUrls != null) localVarHeaderParams.Add("knownSafeUrls", this.Configuration.ApiClient.ParameterToString(knownSafeUrls)); // header parameter
+            if (knownUnsafeUrls != null) localVarHeaderParams.Add("knownUnsafeUrls", this.Configuration.ApiClient.ParameterToString(knownUnsafeUrls)); // header parameter
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckXxe", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XxeDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XxeDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XxeDetectionResult)));
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>XxeDetectionBatchResponse</returns>
+        public XxeDetectionBatchResponse TextInputCheckXxeBatch (XxeDetectionBatchRequest request)
+        {
+             ApiResponse<XxeDetectionBatchResponse> localVarResponse = TextInputCheckXxeBatchWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of XxeDetectionBatchResponse</returns>
+        public ApiResponse< XxeDetectionBatchResponse > TextInputCheckXxeBatchWithHttpInfo (XxeDetectionBatchRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TextInputApi->TextInputCheckXxeBatch");
+
+            var localVarPath = "/validate/text-input/check/xxe/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckXxeBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XxeDetectionBatchResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XxeDetectionBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XxeDetectionBatchResponse)));
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of XxeDetectionBatchResponse</returns>
+        public async System.Threading.Tasks.Task<XxeDetectionBatchResponse> TextInputCheckXxeBatchAsync (XxeDetectionBatchRequest request)
+        {
+             ApiResponse<XxeDetectionBatchResponse> localVarResponse = await TextInputCheckXxeBatchAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Protect text input from XML External Entity (XXE) attacks Detects XXE (XML External Entity) attacks from text input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (XxeDetectionBatchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XxeDetectionBatchResponse>> TextInputCheckXxeBatchAsyncWithHttpInfo (XxeDetectionBatchRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TextInputApi->TextInputCheckXxeBatch");
+
+            var localVarPath = "/validate/text-input/check/xxe/batch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckXxeBatch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XxeDetectionBatchResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XxeDetectionBatchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XxeDetectionBatchResponse)));
         }
 
         /// <summary>
