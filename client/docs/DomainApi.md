@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DomainCheck**](DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 [**DomainGetTopLevelDomainFromUrl**](DomainApi.md#domaingettopleveldomainfromurl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
+[**DomainIsAdminPath**](DomainApi.md#domainisadminpath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk server administration path
 [**DomainPhishingCheck**](DomainApi.md#domainphishingcheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 [**DomainPost**](DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 [**DomainQualityScore**](DomainApi.md#domainqualityscore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
@@ -136,6 +137,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ValidateUrlResponseSyntaxOnly**](ValidateUrlResponseSyntaxOnly.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="domainisadminpath"></a>
+# **DomainIsAdminPath**
+> IsAdminPathResponse DomainIsAdminPath (string value)
+
+Check if path is a high-risk server administration path
+
+Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.Validate.Api;
+using Cloudmersive.APIClient.NET.Validate.Client;
+using Cloudmersive.APIClient.NET.Validate.Model;
+
+namespace Example
+{
+    public class DomainIsAdminPathExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new DomainApi();
+            var value = value_example;  // string | URL or relative path to check, e.g. \"/admin/login\".  The input is a string so be sure to enclose it in double-quotes.
+
+            try
+            {
+                // Check if path is a high-risk server administration path
+                IsAdminPathResponse result = apiInstance.DomainIsAdminPath(value);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DomainApi.DomainIsAdminPath: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **value** | **string**| URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes. | 
+
+### Return type
+
+[**IsAdminPathResponse**](IsAdminPathResponse.md)
 
 ### Authorization
 

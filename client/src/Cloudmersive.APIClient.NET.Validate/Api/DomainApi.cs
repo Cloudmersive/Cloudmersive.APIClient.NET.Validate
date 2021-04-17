@@ -67,6 +67,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
         ApiResponse<ValidateUrlResponseSyntaxOnly> DomainGetTopLevelDomainFromUrlWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         /// <summary>
+        /// Check if path is a high-risk server administration path
+        /// </summary>
+        /// <remarks>
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>IsAdminPathResponse</returns>
+        IsAdminPathResponse DomainIsAdminPath (string value);
+
+        /// <summary>
+        /// Check if path is a high-risk server administration path
+        /// </summary>
+        /// <remarks>
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>ApiResponse of IsAdminPathResponse</returns>
+        ApiResponse<IsAdminPathResponse> DomainIsAdminPathWithHttpInfo (string value);
+        /// <summary>
         /// Check a URL for Phishing threats
         /// </summary>
         /// <remarks>
@@ -278,6 +299,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="request">Input URL information</param>
         /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainGetTopLevelDomainFromUrlAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
+        /// <summary>
+        /// Check if path is a high-risk server administration path
+        /// </summary>
+        /// <remarks>
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of IsAdminPathResponse</returns>
+        System.Threading.Tasks.Task<IsAdminPathResponse> DomainIsAdminPathAsync (string value);
+
+        /// <summary>
+        /// Check if path is a high-risk server administration path
+        /// </summary>
+        /// <remarks>
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of ApiResponse (IsAdminPathResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IsAdminPathResponse>> DomainIsAdminPathAsyncWithHttpInfo (string value);
         /// <summary>
         /// Check a URL for Phishing threats
         /// </summary>
@@ -878,6 +920,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<ValidateUrlResponseSyntaxOnly>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ValidateUrlResponseSyntaxOnly) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateUrlResponseSyntaxOnly)));
+        }
+
+        /// <summary>
+        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>IsAdminPathResponse</returns>
+        public IsAdminPathResponse DomainIsAdminPath (string value)
+        {
+             ApiResponse<IsAdminPathResponse> localVarResponse = DomainIsAdminPathWithHttpInfo(value);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>ApiResponse of IsAdminPathResponse</returns>
+        public ApiResponse< IsAdminPathResponse > DomainIsAdminPathWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling DomainApi->DomainIsAdminPath");
+
+            var localVarPath = "/validate/domain/url/is-admin-path";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainIsAdminPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<IsAdminPathResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IsAdminPathResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IsAdminPathResponse)));
+        }
+
+        /// <summary>
+        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of IsAdminPathResponse</returns>
+        public async System.Threading.Tasks.Task<IsAdminPathResponse> DomainIsAdminPathAsync (string value)
+        {
+             ApiResponse<IsAdminPathResponse> localVarResponse = await DomainIsAdminPathAsyncWithHttpInfo(value);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
+        /// <returns>Task of ApiResponse (IsAdminPathResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IsAdminPathResponse>> DomainIsAdminPathAsyncWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling DomainApi->DomainIsAdminPath");
+
+            var localVarPath = "/validate/domain/url/is-admin-path";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainIsAdminPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<IsAdminPathResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IsAdminPathResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IsAdminPathResponse)));
         }
 
         /// <summary>

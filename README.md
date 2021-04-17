@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.2.4
+- SDK version: 3.2.5
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -121,6 +121,7 @@ Class | Method | HTTP request | Description
 *DateTimeApi* | [**DateTimeParseStandardDateTime**](docs/DateTimeApi.md#datetimeparsestandarddatetime) | **POST** /validate/date-time/parse/date-time/structured | Parses a standardized date and time string into a date and time
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainGetTopLevelDomainFromUrl**](docs/DomainApi.md#domaingettopleveldomainfromurl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
+*DomainApi* | [**DomainIsAdminPath**](docs/DomainApi.md#domainisadminpath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk server administration path
 *DomainApi* | [**DomainPhishingCheck**](docs/DomainApi.md#domainphishingcheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *DomainApi* | [**DomainQualityScore**](docs/DomainApi.md#domainqualityscore) | **POST** /validate/domain/quality-score | Validate a domain name's quality score
@@ -186,6 +187,7 @@ Class | Method | HTTP request | Description
  - [Model.IPIntelligenceResponse](docs/IPIntelligenceResponse.md)
  - [Model.IPReverseDNSLookupResponse](docs/IPReverseDNSLookupResponse.md)
  - [Model.IPThreatResponse](docs/IPThreatResponse.md)
+ - [Model.IsAdminPathResponse](docs/IsAdminPathResponse.md)
  - [Model.LastNameValidationRequest](docs/LastNameValidationRequest.md)
  - [Model.LastNameValidationResponse](docs/LastNameValidationResponse.md)
  - [Model.LeadEnrichmentRequest](docs/LeadEnrichmentRequest.md)

@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test DomainIsAdminPath
+        /// </summary>
+        [Test]
+        public void DomainIsAdminPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //var response = instance.DomainIsAdminPath(value);
+            //Assert.IsInstanceOf<IsAdminPathResponse> (response, "response is IsAdminPathResponse");
+        }
+        
+        /// <summary>
         /// Test DomainPhishingCheck
         /// </summary>
         [Test]
