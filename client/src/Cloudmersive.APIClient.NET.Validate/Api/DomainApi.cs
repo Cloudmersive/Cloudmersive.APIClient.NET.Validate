@@ -67,10 +67,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of ValidateUrlResponseSyntaxOnly</returns>
         ApiResponse<ValidateUrlResponseSyntaxOnly> DomainGetTopLevelDomainFromUrlWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         /// <summary>
-        /// Check if path is a high-risk server administration path
+        /// Check if path is a high-risk or vulnerable server administration path
         /// </summary>
         /// <remarks>
-        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
@@ -78,10 +78,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         IsAdminPathResponse DomainIsAdminPath (string value);
 
         /// <summary>
-        /// Check if path is a high-risk server administration path
+        /// Check if path is a high-risk or vulnerable server administration path
         /// </summary>
         /// <remarks>
-        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
@@ -300,10 +300,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>Task of ApiResponse (ValidateUrlResponseSyntaxOnly)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseSyntaxOnly>> DomainGetTopLevelDomainFromUrlAsyncWithHttpInfo (ValidateUrlRequestSyntaxOnly request);
         /// <summary>
-        /// Check if path is a high-risk server administration path
+        /// Check if path is a high-risk or vulnerable server administration path
         /// </summary>
         /// <remarks>
-        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
@@ -311,10 +311,10 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         System.Threading.Tasks.Task<IsAdminPathResponse> DomainIsAdminPathAsync (string value);
 
         /// <summary>
-        /// Check if path is a high-risk server administration path
+        /// Check if path is a high-risk or vulnerable server administration path
         /// </summary>
         /// <remarks>
-        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
@@ -923,7 +923,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if path is a high-risk or vulnerable server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
@@ -935,7 +935,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if path is a high-risk or vulnerable server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
@@ -1006,7 +1006,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if path is a high-risk or vulnerable server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>
@@ -1019,7 +1019,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         }
 
         /// <summary>
-        /// Check if path is a high-risk server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+        /// Check if path is a high-risk or vulnerable server administration path Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">URL or relative path to check, e.g. \&quot;/admin/login\&quot;.  The input is a string so be sure to enclose it in double-quotes.</param>

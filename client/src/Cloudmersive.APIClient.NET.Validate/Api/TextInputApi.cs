@@ -25,6 +25,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>HtmlSsrfDetectionResult</returns>
+        HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value);
+
+        /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>ApiResponse of HtmlSsrfDetectionResult</returns>
+        ApiResponse<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfWithHttpInfo (string value);
+        /// <summary>
         /// Check text input for SQL Injection (SQLI) attacks
         /// </summary>
         /// <remarks>
@@ -181,6 +202,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         ApiResponse<XssProtectionResult> TextInputProtectXssWithHttpInfo (string value);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>Task of HtmlSsrfDetectionResult</returns>
+        System.Threading.Tasks.Task<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfAsync (string value);
+
+        /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks
+        /// </summary>
+        /// <remarks>
+        /// Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>Task of ApiResponse (HtmlSsrfDetectionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HtmlSsrfDetectionResult>> TextInputCheckHtmlSsrfAsyncWithHttpInfo (string value);
         /// <summary>
         /// Check text input for SQL Injection (SQLI) attacks
         /// </summary>
@@ -434,6 +476,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>HtmlSsrfDetectionResult</returns>
+        public HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value)
+        {
+             ApiResponse<HtmlSsrfDetectionResult> localVarResponse = TextInputCheckHtmlSsrfWithHttpInfo(value);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>ApiResponse of HtmlSsrfDetectionResult</returns>
+        public ApiResponse< HtmlSsrfDetectionResult > TextInputCheckHtmlSsrfWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckHtmlSsrf");
+
+            var localVarPath = "/validate/text-input/html/check/ssrf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckHtmlSsrf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlSsrfDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlSsrfDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlSsrfDetectionResult)));
+        }
+
+        /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>Task of HtmlSsrfDetectionResult</returns>
+        public async System.Threading.Tasks.Task<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfAsync (string value)
+        {
+             ApiResponse<HtmlSsrfDetectionResult> localVarResponse = await TextInputCheckHtmlSsrfAsyncWithHttpInfo(value);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Protect html input from Server-side Request Forgery (SSRF) attacks Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="value">User-facing HTML input.</param>
+        /// <returns>Task of ApiResponse (HtmlSsrfDetectionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlSsrfDetectionResult>> TextInputCheckHtmlSsrfAsyncWithHttpInfo (string value)
+        {
+            // verify the required parameter 'value' is set
+            if (value == null)
+                throw new ApiException(400, "Missing required parameter 'value' when calling TextInputApi->TextInputCheckHtmlSsrf");
+
+            var localVarPath = "/validate/text-input/html/check/ssrf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (value != null && value.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = value; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TextInputCheckHtmlSsrf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlSsrfDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlSsrfDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlSsrfDetectionResult)));
         }
 
         /// <summary>

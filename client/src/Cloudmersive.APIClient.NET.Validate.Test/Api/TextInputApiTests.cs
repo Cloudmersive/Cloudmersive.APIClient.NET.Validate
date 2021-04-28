@@ -65,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
 
         
         /// <summary>
+        /// Test TextInputCheckHtmlSsrf
+        /// </summary>
+        [Test]
+        public void TextInputCheckHtmlSsrfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string value = null;
+            //var response = instance.TextInputCheckHtmlSsrf(value);
+            //Assert.IsInstanceOf<HtmlSsrfDetectionResult> (response, "response is HtmlSsrfDetectionResult");
+        }
+        
+        /// <summary>
         /// Test TextInputCheckSqlInjection
         /// </summary>
         [Test]

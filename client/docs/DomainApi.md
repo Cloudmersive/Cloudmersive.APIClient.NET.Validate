@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DomainCheck**](DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 [**DomainGetTopLevelDomainFromUrl**](DomainApi.md#domaingettopleveldomainfromurl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
-[**DomainIsAdminPath**](DomainApi.md#domainisadminpath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk server administration path
+[**DomainIsAdminPath**](DomainApi.md#domainisadminpath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk or vulnerable server administration path
 [**DomainPhishingCheck**](DomainApi.md#domainphishingcheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 [**DomainPost**](DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 [**DomainQualityScore**](DomainApi.md#domainqualityscore) | **POST** /validate/domain/quality-score | Validate a domain name&#39;s quality score
@@ -153,9 +153,9 @@ Name | Type | Description  | Notes
 # **DomainIsAdminPath**
 > IsAdminPathResponse DomainIsAdminPath (string value)
 
-Check if path is a high-risk server administration path
+Check if path is a high-risk or vulnerable server administration path
 
-Check if the input URL or relative path is a server Administration Path, and therefore a risk for remote access.
+Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
 
 ### Example
 ```csharp
@@ -181,7 +181,7 @@ namespace Example
 
             try
             {
-                // Check if path is a high-risk server administration path
+                // Check if path is a high-risk or vulnerable server administration path
                 IsAdminPathResponse result = apiInstance.DomainIsAdminPath(value);
                 Debug.WriteLine(result);
             }

@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.2.5
+- SDK version: 3.2.6
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -121,7 +121,7 @@ Class | Method | HTTP request | Description
 *DateTimeApi* | [**DateTimeParseStandardDateTime**](docs/DateTimeApi.md#datetimeparsestandarddatetime) | **POST** /validate/date-time/parse/date-time/structured | Parses a standardized date and time string into a date and time
 *DomainApi* | [**DomainCheck**](docs/DomainApi.md#domaincheck) | **POST** /validate/domain/check | Validate a domain name
 *DomainApi* | [**DomainGetTopLevelDomainFromUrl**](docs/DomainApi.md#domaingettopleveldomainfromurl) | **POST** /validate/domain/url/get-top-level-domain | Get top-level domain name from URL
-*DomainApi* | [**DomainIsAdminPath**](docs/DomainApi.md#domainisadminpath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk server administration path
+*DomainApi* | [**DomainIsAdminPath**](docs/DomainApi.md#domainisadminpath) | **POST** /validate/domain/url/is-admin-path | Check if path is a high-risk or vulnerable server administration path
 *DomainApi* | [**DomainPhishingCheck**](docs/DomainApi.md#domainphishingcheck) | **POST** /validate/domain/url/phishing-threat-check | Check a URL for Phishing threats
 *DomainApi* | [**DomainPost**](docs/DomainApi.md#domainpost) | **POST** /validate/domain/whois | Get WHOIS information for a domain
 *DomainApi* | [**DomainQualityScore**](docs/DomainApi.md#domainqualityscore) | **POST** /validate/domain/quality-score | Validate a domain name's quality score
@@ -147,6 +147,7 @@ Class | Method | HTTP request | Description
 *NameApi* | [**NameValidateFullName**](docs/NameApi.md#namevalidatefullname) | **POST** /validate/name/full-name | Parse and validate a full name
 *NameApi* | [**NameValidateLastName**](docs/NameApi.md#namevalidatelastname) | **POST** /validate/name/last | Validate a last name
 *PhoneNumberApi* | [**PhoneNumberSyntaxOnly**](docs/PhoneNumberApi.md#phonenumbersyntaxonly) | **POST** /validate/phonenumber/basic | Validate phone number (basic)
+*TextInputApi* | [**TextInputCheckHtmlSsrf**](docs/TextInputApi.md#textinputcheckhtmlssrf) | **POST** /validate/text-input/html/check/ssrf | Protect html input from Server-side Request Forgery (SSRF) attacks
 *TextInputApi* | [**TextInputCheckSqlInjection**](docs/TextInputApi.md#textinputchecksqlinjection) | **POST** /validate/text-input/check/sql-injection | Check text input for SQL Injection (SQLI) attacks
 *TextInputApi* | [**TextInputCheckSqlInjectionBatch**](docs/TextInputApi.md#textinputchecksqlinjectionbatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
 *TextInputApi* | [**TextInputCheckXss**](docs/TextInputApi.md#textinputcheckxss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
@@ -184,6 +185,7 @@ Class | Method | HTTP request | Description
  - [Model.GetPublicHolidaysRequest](docs/GetPublicHolidaysRequest.md)
  - [Model.GetTimezonesRequest](docs/GetTimezonesRequest.md)
  - [Model.GetTimezonesResponse](docs/GetTimezonesResponse.md)
+ - [Model.HtmlSsrfDetectionResult](docs/HtmlSsrfDetectionResult.md)
  - [Model.IPIntelligenceResponse](docs/IPIntelligenceResponse.md)
  - [Model.IPReverseDNSLookupResponse](docs/IPReverseDNSLookupResponse.md)
  - [Model.IPThreatResponse](docs/IPThreatResponse.md)
