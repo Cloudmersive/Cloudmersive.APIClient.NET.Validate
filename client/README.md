@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.2.6
+- SDK version: 3.2.7
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *DomainApi* | [**DomainSsrfCheck**](docs/DomainApi.md#domainssrfcheck) | **POST** /validate/domain/url/ssrf-threat-check | Check a URL for SSRF threats
 *DomainApi* | [**DomainSsrfCheckBatch**](docs/DomainApi.md#domainssrfcheckbatch) | **POST** /validate/domain/url/ssrf-threat-check/batch | Check a URL for SSRF threats in batches
 *DomainApi* | [**DomainUrlFull**](docs/DomainApi.md#domainurlfull) | **POST** /validate/domain/url/full | Validate a URL fully
+*DomainApi* | [**DomainUrlHtmlSsrfCheck**](docs/DomainApi.md#domainurlhtmlssrfcheck) | **POST** /validate/domain/url/ssrf-threat-check/html-embedded | Check a URL for HTML embedded SSRF threats
 *DomainApi* | [**DomainUrlSyntaxOnly**](docs/DomainApi.md#domainurlsyntaxonly) | **POST** /validate/domain/url/syntax-only | Validate a URL syntactically
 *EmailApi* | [**EmailAddressGetServers**](docs/EmailApi.md#emailaddressgetservers) | **POST** /validate/email/address/servers | Partially check whether an email address is valid
 *EmailApi* | [**EmailFullValidation**](docs/EmailApi.md#emailfullvalidation) | **POST** /validate/email/address/full | Fully validate an email address
@@ -211,6 +212,8 @@ Class | Method | HTTP request | Description
  - [Model.SqlInjectionDetectionResult](docs/SqlInjectionDetectionResult.md)
  - [Model.Timezone](docs/Timezone.md)
  - [Model.TorNodeResponse](docs/TorNodeResponse.md)
+ - [Model.UrlHtmlSsrfRequestFull](docs/UrlHtmlSsrfRequestFull.md)
+ - [Model.UrlHtmlSsrfResponseFull](docs/UrlHtmlSsrfResponseFull.md)
  - [Model.UrlSafetyCheckRequestFull](docs/UrlSafetyCheckRequestFull.md)
  - [Model.UrlSafetyCheckResponseFull](docs/UrlSafetyCheckResponseFull.md)
  - [Model.UrlSsrfRequestBatch](docs/UrlSsrfRequestBatch.md)

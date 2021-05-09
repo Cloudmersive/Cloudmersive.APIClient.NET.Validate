@@ -185,6 +185,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
         }
         
         /// <summary>
+        /// Test DomainUrlHtmlSsrfCheck
+        /// </summary>
+        [Test]
+        public void DomainUrlHtmlSsrfCheckTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UrlHtmlSsrfRequestFull request = null;
+            //var response = instance.DomainUrlHtmlSsrfCheck(request);
+            //Assert.IsInstanceOf<UrlHtmlSsrfResponseFull> (response, "response is UrlHtmlSsrfResponseFull");
+        }
+        
+        /// <summary>
         /// Test DomainUrlSyntaxOnly
         /// </summary>
         [Test]

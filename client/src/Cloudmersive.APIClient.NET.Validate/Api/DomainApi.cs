@@ -235,6 +235,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <returns>ApiResponse of ValidateUrlResponseFull</returns>
         ApiResponse<ValidateUrlResponseFull> DomainUrlFullWithHttpInfo (ValidateUrlRequestFull request);
         /// <summary>
+        /// Check a URL for HTML embedded SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>UrlHtmlSsrfResponseFull</returns>
+        UrlHtmlSsrfResponseFull DomainUrlHtmlSsrfCheck (UrlHtmlSsrfRequestFull request);
+
+        /// <summary>
+        /// Check a URL for HTML embedded SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of UrlHtmlSsrfResponseFull</returns>
+        ApiResponse<UrlHtmlSsrfResponseFull> DomainUrlHtmlSsrfCheckWithHttpInfo (UrlHtmlSsrfRequestFull request);
+        /// <summary>
         /// Validate a URL syntactically
         /// </summary>
         /// <remarks>
@@ -467,6 +488,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="request">Input URL request</param>
         /// <returns>Task of ApiResponse (ValidateUrlResponseFull)</returns>
         System.Threading.Tasks.Task<ApiResponse<ValidateUrlResponseFull>> DomainUrlFullAsyncWithHttpInfo (ValidateUrlRequestFull request);
+        /// <summary>
+        /// Check a URL for HTML embedded SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of UrlHtmlSsrfResponseFull</returns>
+        System.Threading.Tasks.Task<UrlHtmlSsrfResponseFull> DomainUrlHtmlSsrfCheckAsync (UrlHtmlSsrfRequestFull request);
+
+        /// <summary>
+        /// Check a URL for HTML embedded SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (UrlHtmlSsrfResponseFull)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UrlHtmlSsrfResponseFull>> DomainUrlHtmlSsrfCheckAsyncWithHttpInfo (UrlHtmlSsrfRequestFull request);
         /// <summary>
         /// Validate a URL syntactically
         /// </summary>
@@ -2256,6 +2298,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             return new ApiResponse<ValidateUrlResponseFull>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ValidateUrlResponseFull) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidateUrlResponseFull)));
+        }
+
+        /// <summary>
+        /// Check a URL for HTML embedded SSRF threats Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>UrlHtmlSsrfResponseFull</returns>
+        public UrlHtmlSsrfResponseFull DomainUrlHtmlSsrfCheck (UrlHtmlSsrfRequestFull request)
+        {
+             ApiResponse<UrlHtmlSsrfResponseFull> localVarResponse = DomainUrlHtmlSsrfCheckWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Check a URL for HTML embedded SSRF threats Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>ApiResponse of UrlHtmlSsrfResponseFull</returns>
+        public ApiResponse< UrlHtmlSsrfResponseFull > DomainUrlHtmlSsrfCheckWithHttpInfo (UrlHtmlSsrfRequestFull request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainUrlHtmlSsrfCheck");
+
+            var localVarPath = "/validate/domain/url/ssrf-threat-check/html-embedded";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainUrlHtmlSsrfCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlHtmlSsrfResponseFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlHtmlSsrfResponseFull) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlHtmlSsrfResponseFull)));
+        }
+
+        /// <summary>
+        /// Check a URL for HTML embedded SSRF threats Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of UrlHtmlSsrfResponseFull</returns>
+        public async System.Threading.Tasks.Task<UrlHtmlSsrfResponseFull> DomainUrlHtmlSsrfCheckAsync (UrlHtmlSsrfRequestFull request)
+        {
+             ApiResponse<UrlHtmlSsrfResponseFull> localVarResponse = await DomainUrlHtmlSsrfCheckAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Check a URL for HTML embedded SSRF threats Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input URL request</param>
+        /// <returns>Task of ApiResponse (UrlHtmlSsrfResponseFull)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UrlHtmlSsrfResponseFull>> DomainUrlHtmlSsrfCheckAsyncWithHttpInfo (UrlHtmlSsrfRequestFull request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling DomainApi->DomainUrlHtmlSsrfCheck");
+
+            var localVarPath = "/validate/domain/url/ssrf-threat-check/html-embedded";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DomainUrlHtmlSsrfCheck", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlHtmlSsrfResponseFull>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlHtmlSsrfResponseFull) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlHtmlSsrfResponseFull)));
         }
 
         /// <summary>
