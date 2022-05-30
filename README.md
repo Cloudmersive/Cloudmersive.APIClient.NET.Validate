@@ -5,7 +5,7 @@ The validation APIs help you validate data. Check if an E-mail address is real. 
 This C# SDK is for the [Cloudmersive Validate API](https://www.cloudmersive.com/validate-api):
 
 - API version: v1
-- SDK version: 3.2.8
+- SDK version: 3.2.9
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -142,6 +142,7 @@ Class | Method | HTTP request | Description
 *IPAddressApi* | [**IPAddressPost**](docs/IPAddressApi.md#ipaddresspost) | **POST** /validate/ip/geolocate | Geolocate an IP address
 *IPAddressApi* | [**IPAddressReverseDomainLookup**](docs/IPAddressApi.md#ipaddressreversedomainlookup) | **POST** /validate/ip/reverse-domain-lookup | Perform a reverse domain name (DNS) lookup on an IP address
 *LeadEnrichmentApi* | [**LeadEnrichmentEnrichLead**](docs/LeadEnrichmentApi.md#leadenrichmentenrichlead) | **POST** /validate/lead-enrichment/lead/enrich | Enrich an input lead with additional fields of data
+*LeadEnrichmentApi* | [**LeadEnrichmentGetCompanyInformation**](docs/LeadEnrichmentApi.md#leadenrichmentgetcompanyinformation) | **POST** /validate/lead-enrichment/lead/email/company-information | Get company information from email address
 *NameApi* | [**NameGetGender**](docs/NameApi.md#namegetgender) | **POST** /validate/name/get-gender | Get the gender of a first name
 *NameApi* | [**NameIdentifier**](docs/NameApi.md#nameidentifier) | **POST** /validate/name/identifier | Validate a code identifier
 *NameApi* | [**NameValidateFirstName**](docs/NameApi.md#namevalidatefirstname) | **POST** /validate/name/first | Validate a first name
@@ -174,6 +175,7 @@ Class | Method | HTTP request | Description
  - [Model.DateTimeStandardizedParseRequest](docs/DateTimeStandardizedParseRequest.md)
  - [Model.DateTimeStandardizedParseResponse](docs/DateTimeStandardizedParseResponse.md)
  - [Model.DomainQualityResponse](docs/DomainQualityResponse.md)
+ - [Model.EmailLead](docs/EmailLead.md)
  - [Model.FirstNameValidationRequest](docs/FirstNameValidationRequest.md)
  - [Model.FirstNameValidationResponse](docs/FirstNameValidationResponse.md)
  - [Model.FullEmailValidationResponse](docs/FullEmailValidationResponse.md)

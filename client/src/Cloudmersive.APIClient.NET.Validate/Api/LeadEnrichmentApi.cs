@@ -45,6 +45,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
         /// <returns>ApiResponse of LeadEnrichmentResponse</returns>
         ApiResponse<LeadEnrichmentResponse> LeadEnrichmentEnrichLeadWithHttpInfo (LeadEnrichmentRequest request);
+        /// <summary>
+        /// Get company information from email address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>LeadEnrichmentResponse</returns>
+        LeadEnrichmentResponse LeadEnrichmentGetCompanyInformation (EmailLead request);
+
+        /// <summary>
+        /// Get company information from email address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>ApiResponse of LeadEnrichmentResponse</returns>
+        ApiResponse<LeadEnrichmentResponse> LeadEnrichmentGetCompanyInformationWithHttpInfo (EmailLead request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -68,6 +89,27 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// <param name="request">Input lead with known fields set, and unknown fields left blank (null)</param>
         /// <returns>Task of ApiResponse (LeadEnrichmentResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LeadEnrichmentResponse>> LeadEnrichmentEnrichLeadAsyncWithHttpInfo (LeadEnrichmentRequest request);
+        /// <summary>
+        /// Get company information from email address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>Task of LeadEnrichmentResponse</returns>
+        System.Threading.Tasks.Task<LeadEnrichmentResponse> LeadEnrichmentGetCompanyInformationAsync (EmailLead request);
+
+        /// <summary>
+        /// Get company information from email address
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>Task of ApiResponse (LeadEnrichmentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LeadEnrichmentResponse>> LeadEnrichmentGetCompanyInformationAsyncWithHttpInfo (EmailLead request);
         #endregion Asynchronous Operations
     }
 
@@ -327,6 +369,173 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("LeadEnrichmentEnrichLead", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LeadEnrichmentResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LeadEnrichmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LeadEnrichmentResponse)));
+        }
+
+        /// <summary>
+        /// Get company information from email address 
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>LeadEnrichmentResponse</returns>
+        public LeadEnrichmentResponse LeadEnrichmentGetCompanyInformation (EmailLead request)
+        {
+             ApiResponse<LeadEnrichmentResponse> localVarResponse = LeadEnrichmentGetCompanyInformationWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get company information from email address 
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>ApiResponse of LeadEnrichmentResponse</returns>
+        public ApiResponse< LeadEnrichmentResponse > LeadEnrichmentGetCompanyInformationWithHttpInfo (EmailLead request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling LeadEnrichmentApi->LeadEnrichmentGetCompanyInformation");
+
+            var localVarPath = "/validate/lead-enrichment/lead/email/company-information";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LeadEnrichmentGetCompanyInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LeadEnrichmentResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LeadEnrichmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LeadEnrichmentResponse)));
+        }
+
+        /// <summary>
+        /// Get company information from email address 
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>Task of LeadEnrichmentResponse</returns>
+        public async System.Threading.Tasks.Task<LeadEnrichmentResponse> LeadEnrichmentGetCompanyInformationAsync (EmailLead request)
+        {
+             ApiResponse<LeadEnrichmentResponse> localVarResponse = await LeadEnrichmentGetCompanyInformationAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get company information from email address 
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input email address lead</param>
+        /// <returns>Task of ApiResponse (LeadEnrichmentResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LeadEnrichmentResponse>> LeadEnrichmentGetCompanyInformationAsyncWithHttpInfo (EmailLead request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling LeadEnrichmentApi->LeadEnrichmentGetCompanyInformation");
+
+            var localVarPath = "/validate/lead-enrichment/lead/email/company-information";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LeadEnrichmentGetCompanyInformation", localVarResponse);
                 if (exception != null) throw exception;
             }
 

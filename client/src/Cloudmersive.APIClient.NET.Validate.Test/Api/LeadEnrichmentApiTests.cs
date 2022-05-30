@@ -76,6 +76,18 @@ namespace Cloudmersive.APIClient.NET.Validate.Test
             //Assert.IsInstanceOf<LeadEnrichmentResponse> (response, "response is LeadEnrichmentResponse");
         }
         
+        /// <summary>
+        /// Test LeadEnrichmentGetCompanyInformation
+        /// </summary>
+        [Test]
+        public void LeadEnrichmentGetCompanyInformationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EmailLead request = null;
+            //var response = instance.LeadEnrichmentGetCompanyInformation(request);
+            //Assert.IsInstanceOf<LeadEnrichmentResponse> (response, "response is LeadEnrichmentResponse");
+        }
+        
     }
 
 }
