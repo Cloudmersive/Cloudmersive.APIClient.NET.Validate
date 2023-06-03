@@ -32,8 +32,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>HtmlSsrfDetectionResult</returns>
-        HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value);
+        HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value, bool? allowCidScheme = null);
 
         /// <summary>
         /// Protect html input from Server-side Request Forgery (SSRF) attacks
@@ -43,8 +44,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>ApiResponse of HtmlSsrfDetectionResult</returns>
-        ApiResponse<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfWithHttpInfo (string value);
+        ApiResponse<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfWithHttpInfo (string value, bool? allowCidScheme = null);
         /// <summary>
         /// Check text input for SQL Injection (SQLI) attacks
         /// </summary>
@@ -210,8 +212,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>Task of HtmlSsrfDetectionResult</returns>
-        System.Threading.Tasks.Task<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfAsync (string value);
+        System.Threading.Tasks.Task<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfAsync (string value, bool? allowCidScheme = null);
 
         /// <summary>
         /// Protect html input from Server-side Request Forgery (SSRF) attacks
@@ -221,8 +224,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>Task of ApiResponse (HtmlSsrfDetectionResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HtmlSsrfDetectionResult>> TextInputCheckHtmlSsrfAsyncWithHttpInfo (string value);
+        System.Threading.Tasks.Task<ApiResponse<HtmlSsrfDetectionResult>> TextInputCheckHtmlSsrfAsyncWithHttpInfo (string value, bool? allowCidScheme = null);
         /// <summary>
         /// Check text input for SQL Injection (SQLI) attacks
         /// </summary>
@@ -483,10 +487,11 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>HtmlSsrfDetectionResult</returns>
-        public HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value)
+        public HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value, bool? allowCidScheme = null)
         {
-             ApiResponse<HtmlSsrfDetectionResult> localVarResponse = TextInputCheckHtmlSsrfWithHttpInfo(value);
+             ApiResponse<HtmlSsrfDetectionResult> localVarResponse = TextInputCheckHtmlSsrfWithHttpInfo(value, allowCidScheme);
              return localVarResponse.Data;
         }
 
@@ -495,8 +500,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>ApiResponse of HtmlSsrfDetectionResult</returns>
-        public ApiResponse< HtmlSsrfDetectionResult > TextInputCheckHtmlSsrfWithHttpInfo (string value)
+        public ApiResponse< HtmlSsrfDetectionResult > TextInputCheckHtmlSsrfWithHttpInfo (string value, bool? allowCidScheme = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -528,6 +534,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (allowCidScheme != null) localVarHeaderParams.Add("allowCidScheme", this.Configuration.ApiClient.ParameterToString(allowCidScheme)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
@@ -566,10 +573,11 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>Task of HtmlSsrfDetectionResult</returns>
-        public async System.Threading.Tasks.Task<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfAsync (string value)
+        public async System.Threading.Tasks.Task<HtmlSsrfDetectionResult> TextInputCheckHtmlSsrfAsync (string value, bool? allowCidScheme = null)
         {
-             ApiResponse<HtmlSsrfDetectionResult> localVarResponse = await TextInputCheckHtmlSsrfAsyncWithHttpInfo(value);
+             ApiResponse<HtmlSsrfDetectionResult> localVarResponse = await TextInputCheckHtmlSsrfAsyncWithHttpInfo(value, allowCidScheme);
              return localVarResponse.Data;
 
         }
@@ -579,8 +587,9 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.Validate.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">User-facing HTML input.</param>
+        /// <param name="allowCidScheme">Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)</param>
         /// <returns>Task of ApiResponse (HtmlSsrfDetectionResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HtmlSsrfDetectionResult>> TextInputCheckHtmlSsrfAsyncWithHttpInfo (string value)
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlSsrfDetectionResult>> TextInputCheckHtmlSsrfAsyncWithHttpInfo (string value, bool? allowCidScheme = null)
         {
             // verify the required parameter 'value' is set
             if (value == null)
@@ -612,6 +621,7 @@ namespace Cloudmersive.APIClient.NET.Validate.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (allowCidScheme != null) localVarHeaderParams.Add("allowCidScheme", this.Configuration.ApiClient.ParameterToString(allowCidScheme)); // header parameter
             if (value != null && value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter

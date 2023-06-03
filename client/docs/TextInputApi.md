@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="textinputcheckhtmlssrf"></a>
 # **TextInputCheckHtmlSsrf**
-> HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value)
+> HtmlSsrfDetectionResult TextInputCheckHtmlSsrf (string value, bool? allowCidScheme = null)
 
 Protect html input from Server-side Request Forgery (SSRF) attacks
 
@@ -43,11 +43,12 @@ namespace Example
 
             var apiInstance = new TextInputApi();
             var value = value_example;  // string | User-facing HTML input.
+            var allowCidScheme = true;  // bool? | Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional) 
 
             try
             {
                 // Protect html input from Server-side Request Forgery (SSRF) attacks
-                HtmlSsrfDetectionResult result = apiInstance.TextInputCheckHtmlSsrf(value);
+                HtmlSsrfDetectionResult result = apiInstance.TextInputCheckHtmlSsrf(value, allowCidScheme);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -64,6 +65,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **value** | **string**| User-facing HTML input. | 
+ **allowCidScheme** | **bool?**| Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. | [optional] 
 
 ### Return type
 
